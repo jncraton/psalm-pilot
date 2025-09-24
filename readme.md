@@ -1,7 +1,7 @@
 PsalmPilot
 ==========
 
-ML-driven hymn recommendation system
+Hymn recommendation system
 
 Overview
 --------
