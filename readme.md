@@ -3,6 +3,8 @@ PsalmPilot
 
 Hymn recommendation system
 
+![Hymnal](https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Scottish_Prayer_Book_1929.jpg/330px-Scottish_Prayer_Book_1929.jpg)
+
 Overview
 --------
 
