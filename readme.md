@@ -33,5 +33,3 @@ Installation
 ------------
 
 This application can be installed on mobile devices as a [progressive web app](https://en.wikipedia.org/wiki/Progressive_web_app) for offline use.
-
-![PWA Logo](https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Progressive_Web_Apps_Logo.svg/330px-Progressive_Web_Apps_Logo.svg.png)
