@@ -25,7 +25,7 @@ Leaders are able to filter on any or all of the following features:
 Installation
 ------------
 
-This application can be installed locally and can be run without active access to the Internet for use in environments where access may be restricted, limited, or unreliable.
+This application can be installed locally and can be run without active access to the Internet for use in environments where access may be restricted, limited, or unreliable. This application leverages [progressive enhancement](https://en.wikipedia.org/wiki/Progressive_enhancement) to ensure that the web application can be used offline with more advanced capabilities requiring an active internet connection.
 
 Hosted Demo
 -----------
