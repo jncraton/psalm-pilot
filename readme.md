@@ -5,6 +5,8 @@ Hymn recommendation system
 
 ![Hymnal](https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Photographs_of_%C3%89glise_Saint-Thomas-d%27Aquin%2C_Qu%C3%A9bec%2C_Canada_02.jpg/330px-Photographs_of_%C3%89glise_Saint-Thomas-d%27Aquin%2C_Qu%C3%A9bec%2C_Canada_02.jpg)
 
+[Hosted Demo](https://jncraton.github.io/psalm-pilot/)
+
 Overview
 --------
 
@@ -22,10 +24,14 @@ Leaders are able to filter on any or all of the following features:
 - Role of the song in the service (prelude, closing, etc)
 - Song popularity
 
+Design
+------
+
+This application server can be installed locally and can be run without active access to the Internet for use in environments where access may be restricted, limited, or unreliable. This application leverages [progressive enhancement](https://en.wikipedia.org/wiki/Progressive_enhancement) to ensure that the web application can be used offline with more advanced capabilities requiring an active internet connection.
+
 Installation
 ------------
 
-This application can be installed locally and can be run without active access to the Internet for use in environments where access may be restricted, limited, or unreliable. This application leverages [progressive enhancement](https://en.wikipedia.org/wiki/Progressive_enhancement) to ensure that the web application can be used offline with more advanced capabilities requiring an active internet connection.
+This application can be installed on mobile devices as a [progressive web app](https://en.wikipedia.org/wiki/Progressive_web_app) for offline use.
 
-Hosted Demo
------------
+![PWA Logo](https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Progressive_Web_Apps_Logo.svg/330px-Progressive_Web_Apps_Logo.svg.png)
