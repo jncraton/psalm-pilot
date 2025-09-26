@@ -21,3 +21,11 @@ Leaders are able to filter on any or all of the following features:
 - Congregational music and hymnal preferences
 - Role of the song in the service (prelude, closing, etc)
 - Song popularity
+
+Installation
+------------
+
+This application can be installed locally and can be run without active access to the Internet for use in environments where access may be restricted, limited, or unreliable.
+
+Hosted Demo
+-----------
