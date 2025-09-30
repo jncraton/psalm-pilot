@@ -3,5 +3,5 @@
 lint:
 	npx prettier@3.6.2 --check .
 
-lint-write
+lint-write:
 	npx prettier@3.6.2 --write .
