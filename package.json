@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "lint": "npx prettier --check .",
+    "lint-fix": "npx prettier --write ."
+  },
+  "devDependencies": {
+    "prettier": "^3.6.2"
+  }
+}
