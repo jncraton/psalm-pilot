@@ -1,5 +1,4 @@
-PsalmPilot
-==========
+# PsalmPilot
 
 Hymn recommendation system
 
@@ -7,15 +6,13 @@ Hymn recommendation system
 
 [Hosted Demo](https://jncraton.github.io/psalm-pilot/)
 
-Overview
---------
+## Overview
 
-PsalmPilot helps worship leaders to more effectively  match hymns to scripture, liturgical season, and congregation preferences, so planners can choose songs that fit the sermon and service flow.
+PsalmPilot helps worship leaders to more effectively match hymns to scripture, liturgical season, and congregation preferences, so planners can choose songs that fit the sermon and service flow.
 
 Over time, it surfaces trends and recommends diverse options that balances familiarity and freshness, improving congregational participation and cohesion. Leaders get reasoned, adjustable suggestions that support consistent, thoughtful worship planning across regular services and special events.
 
-Filters
--------
+## Filters
 
 Leaders are able to filter on any or all of the following features:
 
@@ -24,12 +21,10 @@ Leaders are able to filter on any or all of the following features:
 - Role of the song in the service (prelude, closing, etc)
 - Song popularity
 
-Design
-------
+## Design
 
 This application server can be installed locally and can be run without active access to the Internet for use in environments where access may be restricted, limited, or unreliable. This application leverages [progressive enhancement](https://en.wikipedia.org/wiki/Progressive_enhancement) to ensure that the web application can be used offline with more advanced capabilities requiring an active internet connection.
 
-Installation
-------------
+## Installation
 
 This application can be installed on mobile devices as a [progressive web app](https://en.wikipedia.org/wiki/Progressive_web_app) for offline use.
