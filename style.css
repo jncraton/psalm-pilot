@@ -35,10 +35,6 @@ table {
 thead {
   border-bottom: 2px solid #333;
 }
-thead td {
-  font-weight: bold;
-  background-color: #f4f4f4;
-}
 
 /* Rows */
 tbody tr:nth-child(even) {
@@ -56,12 +52,11 @@ td {
 }
 
 /* Alignment utilities */
-td.left,
-th.left {
+td, th {
   text-align: left;
 }
 
-#title-of-table {
+th {
   text-transform: uppercase;
   padding-left: 12px;
 }
