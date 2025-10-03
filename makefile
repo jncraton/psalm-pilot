@@ -15,7 +15,7 @@ lint-js-fix:
 
 #Python lint
 lint-py:
-	pipx run --spec ruff==0.13.7 ruff check .
+	pipx run --spec ruff==0.13.3 ruff check .
 
 lint-py-fix:
-	pipx run --spec ruff==0.13.7 ruff check . --fix
+	pipx run --spec ruff==0.13.3 ruff check . --fix
