@@ -22,18 +22,12 @@ jobs:
       - name: Run Prettier check
         run: npx prettier --check .
 
-      - name: Run Prettier autofix
-        run: npx prettier --write .
-
       # Ruff setup
       - name: Set up Python
         uses: actions/setup-python@v5
 
       - name: Install Ruff
-        run: pip install ruff
+        run: pipx install ruff
 
       - name: Run Ruff check
         run: ruff check .
-
-      - name: Run Ruff autofix
-        run: ruff check . --fix
