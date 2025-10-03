@@ -52,7 +52,8 @@ td {
 }
 
 /* Alignment utilities */
-td, th {
+td,
+th {
   text-align: left;
 }
 
