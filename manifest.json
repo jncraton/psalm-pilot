@@ -1,0 +1,15 @@
+{
+  "background_color": "white",
+  "description": "Shows hymns",
+  "display": "fullscreen",
+  "icons": [
+    {
+      "src": "icon/icon.png",
+      "sizes": "size-here",
+      "type": "image/png"
+    }
+  ],
+  "name": "Psalm Pilot - Hymn Recommendation System",
+  "short_name": "Psalm Pilot",
+  "start_url": "./index.html"
+}
