@@ -8,7 +8,7 @@ td {
   align-items: left;
 }
 
-#title-div {
+header {
   max-width: 100%;
   background-color: #a70000;
   margin: 0;
@@ -16,7 +16,7 @@ td {
   color: white;
 }
 
-#whole-box {
+main {
   margin-left: 3%;
   margin-right: 3%;
   padding: 1% 1%;
