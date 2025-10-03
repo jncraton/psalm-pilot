@@ -1,4 +1,5 @@
 name: Lint
+
 on:
   push:
     branches:
@@ -6,9 +7,33 @@ on:
   pull_request:
     branches:
       - main
+
 jobs:
-  Lint:
+  lint:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
-      - run: make lint
+
+      # Prettier setup
+
+      - name: Install prettier
+        run: npm install prettier
+
+      - name: Run Prettier check
+        run: npx prettier --check .
+
+      - name: Run Prettier autofix
+        run: npx prettier --write .
+
+      # Ruff setup
+      - name: Set up Python
+        uses: actions/setup-python@v5
+
+      - name: Install Ruff
+        run: pip install ruff
+
+      - name: Run Ruff check
+        run: ruff check .
+
+      - name: Run Ruff autofix
+        run: ruff check . --fix
