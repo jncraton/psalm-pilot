@@ -1,6 +1,2 @@
-<<<<<<< HEAD
 .venv
-=======
 .vscode/
-venv/
->>>>>>> 2f75d50 (Add .prettierignore file to skip over python environment and other local config files)
