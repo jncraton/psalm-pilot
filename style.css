@@ -6,7 +6,6 @@
 
 td {
   align-items: left;
-
 }
 
 #title-div {
@@ -65,6 +64,5 @@ th.left {
 #title-of-table {
   text-transform: uppercase;
   padding-left: 12px;
-
 }
 /* End of Table Edit */
