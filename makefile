@@ -1,12 +1,12 @@
 .PHONY: lint lint-fix lint-js lint-py lint-py-fix
 
-#Run both JS/TS + Python linters
+# Run both JS/TS + Python linters
 lint: lint-js lint-py
 
-#Fix both JS/TS + Python
+# Fix both JS/TS + Python
 lint-fix: lint-js-fix lint-py-fix
 
-#JS/TS lint
+# JS/TS lint
 lint-js:
 	npx prettier@3.6.2 --check .
 
@@ -15,8 +15,7 @@ lint-js-fix:
 
 #Python lint
 lint-py:
-	ruff@0.13.7 check .
+	pipx run --spec ruff==0.13.7 ruff check .
 
 lint-py-fix:
-	black@25.9.0 .
- 
+	pipx run --spec ruff==0.13.7 ruff check . --fix
