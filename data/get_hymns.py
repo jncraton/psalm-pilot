@@ -20,4 +20,4 @@ hymns = pd.read_csv(url)
 hymn_titles = hymns['displayTitle']
 
 # export as .json
-hymn_titles.to_json("hymns.json", compression='infer', index=False)
+hymn_titles.to_json("hymns.json")
