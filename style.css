@@ -38,7 +38,7 @@ tbody tr:hover {
   background-color: #eef; /*Highlight row on hover*/
 }
 /*Cellstyle*/
-/* Alignment utilities */
+/* Alignment and style */
 td,
 th {
   text-align: left;
@@ -55,4 +55,3 @@ td {
   vertical-align: top;
   padding: 12px 8px;
 }
-/* End of Table Edit */
