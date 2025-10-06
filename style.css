@@ -41,7 +41,8 @@ td,
 th {
   text-align: left;
   border: none;
-  padding: 12px 8px;
+  padding-right: 8px;
+  padding-left: 8px;
 }
 
 th {
@@ -53,4 +54,6 @@ th {
 
 td {
   vertical-align: top;
+  padding-top: 12px;
+  padding-bottom: 12px;
 }
