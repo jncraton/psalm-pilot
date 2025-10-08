@@ -19,3 +19,6 @@ lint-py:
 
 lint-py-fix:
 	pipx run --spec ruff==0.13.3 ruff check . --fix
+
+clean:
+	rm -rf .ruff_cache
