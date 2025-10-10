@@ -19,21 +19,11 @@
           </tr>
         </thead>
         <tbody>
+          {% for index, hymn in hymns.items() %}
           <tr>
-            <td>Winters Ankunft</td>
+            <td>{{ hymn }}</td>
           </tr>
-          <tr>
-            <td>Winters Ankunft</td>
-          </tr>
-          <tr>
-            <td>Winters Ankunft</td>
-          </tr>
-          <tr>
-            <td>Winters Ankunft</td>
-          </tr>
-          <tr>
-            <td>Winters Ankunft</td>
-          </tr>
+          {% endfor %}
         </tbody>
       </table>
     </main>
