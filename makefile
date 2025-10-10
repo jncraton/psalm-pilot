@@ -1,4 +1,4 @@
-.PHONY: lint lint-fix lint-js lint-py lint-py-fix
+.PHONY: lint lint-fix lint-js lint-py lint-py-fix install build
 
 # Run both JS/TS + Python linters
 lint: lint-js lint-py
@@ -19,6 +19,12 @@ lint-py:
 
 lint-py-fix:
 	pipx run --spec ruff==0.13.3 ruff check . --fix
+
+install:
+	pip install -r requirements.txt
+
+build:
+	python render.py
 
 clean:
 	rm -rf .ruff_cache
