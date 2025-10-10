@@ -19,6 +19,11 @@
           </tr>
         </thead>
         <tbody>
+          {% for index, hymn in hymns.items() %}
+          <tr>
+            <td>{{ hymn }}</td>
+          </tr>
+          {% endfor %}
         </tbody>
       </table>
     </main>
