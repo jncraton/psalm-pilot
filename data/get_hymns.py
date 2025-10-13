@@ -17,7 +17,7 @@ query_string = urlencode(params)
 url = f"{base_url}?{query_string}"
 
 hymns = pd.read_csv(url)
-hymn_titles = hymns['displayTitle']
+hymn_titles = hymns['displayTitle', 'authors']
 
 # export as .json
 hymn_titles.to_json("hymns.json")
