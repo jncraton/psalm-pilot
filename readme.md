@@ -1,5 +1,7 @@
 # PsalmPilot
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/2a6231be-694f-4150-b8b4-fcfc77e78d0b/deploy-status)](https://app.netlify.com/projects/psalm-pilot/deploys)
+
 Hymn recommendation system
 
 ![Hymnal](https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Photographs_of_%C3%89glise_Saint-Thomas-d%27Aquin%2C_Qu%C3%A9bec%2C_Canada_02.jpg/330px-Photographs_of_%C3%89glise_Saint-Thomas-d%27Aquin%2C_Qu%C3%A9bec%2C_Canada_02.jpg)
