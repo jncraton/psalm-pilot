@@ -16,13 +16,14 @@
         <thead>
           <tr>
             <th>Hymn Title</th>
+            <th>Hymn Author</th>
           </tr>
         </thead>
         <tbody>
           {% for index, hymn in hymns.items() %}
           <tr>
-            <td>{{ hymn }}</td>
-            <td>{{ author }}</td>
+            <td>{{ hymn.title }}</td>
+            <td>{{ hymn.author }}</td>
           </tr>
           {% endfor %}
         </tbody>
