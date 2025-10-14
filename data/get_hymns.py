@@ -19,9 +19,9 @@ url = f"{base_url}?{query_string}"
 hymns = pd.read_csv(url)
 hymn_titles = hymns[['displayTitle', 'authors']]
 
+# logic for if an author is not recorded so it doesn't show up as an error
 hymn_titles.fillna(value={"authors": "Author not recorded."}, inplace=True)
 
-# logic for if an author is not recorded so it doesn't show up as an error
 output = {
     str(field): {
         "title": row['displayTitle'],
