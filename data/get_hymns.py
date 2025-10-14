@@ -1,6 +1,5 @@
 import pandas as pd
 from urllib.parse import urlencode
-import json
 
 # import csv from Hymnary
 # the url uses advanced search to filter for multiple things outlined in the params
