@@ -21,6 +21,6 @@ hymns_data = hymns[['displayTitle', 'authors']]
 
 # logic for if an author is not recorded so it doesn't show up as an error
 hymns_data.fillna(value={"authors": "Author not recorded."}, inplace=True)
-
+        
 # export as .json
-hymns_data.to_json("hymns.json", indent=2)
+hymns_data.to_json("hymns.json", orient="records", indent=2)
