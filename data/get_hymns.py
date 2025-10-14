@@ -20,17 +20,16 @@ url = f"{base_url}?{query_string}"
 hymns = pd.read_csv(url)
 hymn_titles = hymns[['displayTitle', 'authors']]
 
-output = {}
+hymn_titles.fillna(value={"authors": "Author not recorded."}, inplace=True)
 
 # logic for if an author is not recorded so it doesn't show up as an error
-for field, row in hymn_titles.iterrows():
-    author = row['authors']
-    if pd.isna(author):
-        author = "Author not recorded"
-    output[str(field)] = {
+output = {
+    str(field): {
         "title": row['displayTitle'],
-        "author": author
+        "author": row['authors']
     }
+    for field, row in hymn_titles.iterrows()
+}
         
 # export as .json
 with open("hymns.json", "w") as f:
