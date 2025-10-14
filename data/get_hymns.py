@@ -19,6 +19,7 @@ url = f"{base_url}?{query_string}"
 
 hymns = pd.read_csv(url)
 hymns = hymns[['displayTitle', 'authors']]
+hymns = hymns.rename(columns={'displayTitle': 'title'})
 
 hymns.replace({np.nan: None}, inplace=True)
         
