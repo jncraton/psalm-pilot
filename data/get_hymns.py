@@ -17,10 +17,10 @@ query_string = urlencode(params)
 url = f"{base_url}?{query_string}"
 
 hymns = pd.read_csv(url)
-hymn_titles = hymns[['displayTitle', 'authors']]
+hymns_info = hymns[['displayTitle', 'authors']]
 
 # logic for if an author is not recorded so it doesn't show up as an error
-hymn_titles.fillna(value={"authors": "Author not recorded."}, inplace=True)
+hymns_info.fillna(value={"authors": "Author not recorded."}, inplace=True)
         
 # export as .json
-hymn_titles.to_json("hymns.json", indent=2)
+hymns_info.to_json("hymns.json", indent=2)
