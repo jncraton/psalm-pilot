@@ -1,5 +1,6 @@
 import pandas as pd
 from urllib.parse import urlencode
+import numpy as np
 
 # import csv from Hymnary
 # the url uses advanced search to filter for multiple things outlined in the params
@@ -17,10 +18,9 @@ query_string = urlencode(params)
 url = f"{base_url}?{query_string}"
 
 hymns = pd.read_csv(url)
-hymns_data = hymns[['displayTitle', 'authors']]
+hymns = hymns[['displayTitle', 'authors']]
 
-# logic for if an author is not recorded so it doesn't show up as an error
-hymns_data.fillna(value={"authors": "Author not recorded."}, inplace=True)
+hymns.replace({np.nan: None}, inplace=True)
         
-# export as .json
-hymns_data.to_json("hymns.json", orient="records", indent=2)
+# export to json
+hymns.to_json("hymns.json", orient="records", indent=2)
