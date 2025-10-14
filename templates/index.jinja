@@ -20,10 +20,10 @@
           </tr>
         </thead>
         <tbody>
-          {% for index, hymn in hymns.items() %}
+          {% for hymn in hymns %}
           <tr>
             <td>{{ hymn.title }}</td>
-            <td>{{ hymn.author }}</td>
+            <td>{{ hymn.authors or ''}}</td>
           </tr>
           {% endfor %}
         </tbody>
