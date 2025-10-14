@@ -32,5 +32,4 @@ output = {
 }
         
 # export as .json
-with open("hymns.json", "w") as f:
-    json.dump(output, f, indent=2)
+hymn_titles.to_json("hymns.json", indent=2)
