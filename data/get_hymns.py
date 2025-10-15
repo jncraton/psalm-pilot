@@ -1,5 +1,6 @@
 import pandas as pd
 from urllib.parse import urlencode
+import numpy as np
 
 # import csv from Hymnary
 # the url uses advanced search to filter for multiple things outlined in the params
@@ -17,7 +18,10 @@ query_string = urlencode(params)
 url = f"{base_url}?{query_string}"
 
 hymns = pd.read_csv(url)
-hymn_titles = hymns['displayTitle']
+hymns = hymns[['displayTitle', 'authors']]
+hymns = hymns.rename(columns={'displayTitle': 'title'})
 
-# export as .json
-hymn_titles.to_json("hymns.json")
+hymns.replace({np.nan: None}, inplace=True)
+        
+# export to json
+hymns.to_json("hymns.json", orient="records", indent=2)
