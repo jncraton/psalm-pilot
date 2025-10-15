@@ -1,0 +1,21 @@
+{
+  "name": "Psalm Pilot - Hymn Recommendation System",
+  "short_name": "Psalm Pilot",
+  "id": "/",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "white",
+  "theme_color": "#a70100",
+
+  "description": "Shows hymns with authors",
+
+  "display_override": ["window-controls-overlay"],
+
+  "protocol_handlers": [
+    {
+      "protocol": "web+psalm",
+      "url": "/open-from-protocol?url=%s"
+    }
+  ]
+}
