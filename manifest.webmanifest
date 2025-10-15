@@ -10,11 +10,6 @@
 
   "description": "Shows hymns with authors",
 
-  "icons": [
-    { "src": "/images/square.png", "sizes": "174x174", "type": "image/png" },
-    { "src": "/images/logo.png", "sizes": "512x512", "type": "image/png" }
-  ],
-
   "display_override": ["window-controls-overlay"],
 
   "protocol_handlers": [
