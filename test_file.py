@@ -12,6 +12,4 @@ def test_table_not_empty(page: Page):
     page.goto(f"file://{path}")
 
     row_locator = page.locator("table tbody tr")
-    # row_count=row_locator.count()
-    # print({row_count})
     expect(row_locator).not_to_have_count(0)
