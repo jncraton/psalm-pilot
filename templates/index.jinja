@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Song pilot" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>Psalm Pilot</title>
+  </head>
+  <body>
+    <header>
+      <h1>Psalm Pilot</h1>
+    </header>
+    <main>
+      <table>
+        <thead>
+          <tr>
+            <th>Hymn Title</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for index, hymn in hymns.items() %}
+          <tr>
+            <td>{{ hymn }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </main>
+  </body>
+</html>
