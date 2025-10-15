@@ -1,15 +1,41 @@
 {
-  "background_color": "white",
-  "description": "Shows hymns",
-  "display": "fullscreen",
-  "icons": [
-    {
-      "src": "icon/icon.png",
-      "sizes": "size-here",
-      "type": "image/png"
-    }
-  ],
   "name": "Psalm Pilot - Hymn Recommendation System",
   "short_name": "Psalm Pilot",
-  "start_url": "/"
+  "id": "/",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "white",
+  "theme_color": "red",
+
+  "description": "Shows hymns with authors",
+
+  "icons": [
+    { "src": "/images/square.png", "sizes": "174x174", "type": "image/png" },
+    { "src": "/images/logo.png", "sizes": "512x512", "type": "image/png" }
+  ],
+
+  "screenshots": [
+    {
+      "src": "/images/wide.png",
+      "sizes": "3428x1810",
+      "type": "image/png",
+      "form_factor": "wide"
+    },
+    {
+      "src": "/images/mobile.png",
+      "sizes": "704x1534",
+      "type": "image/png",
+      "form_factor": "narrow"
+    }
+  ],
+
+  "display_override": ["window-controls-overlay"],
+
+  "protocol_handlers": [
+    {
+      "protocol": "web+psalm",
+      "url": "/open-from-protocol?url=%s"
+    }
+  ]
 }
