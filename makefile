@@ -1,4 +1,4 @@
-.PHONY: lint lint-fix lint-js lint-py lint-py-fix test
+.PHONY: lint lint-fix lint-js lint-py lint-py-fix
 
 # Run both JS/TS + Python linters
 lint: lint-js lint-py
