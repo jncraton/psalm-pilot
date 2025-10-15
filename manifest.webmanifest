@@ -15,21 +15,6 @@
     { "src": "/images/logo.png", "sizes": "512x512", "type": "image/png" }
   ],
 
-  "screenshots": [
-    {
-      "src": "/images/wide.png",
-      "sizes": "3428x1810",
-      "type": "image/png",
-      "form_factor": "wide"
-    },
-    {
-      "src": "/images/mobile.png",
-      "sizes": "704x1534",
-      "type": "image/png",
-      "form_factor": "narrow"
-    }
-  ],
-
   "display_override": ["window-controls-overlay"],
 
   "protocol_handlers": [
