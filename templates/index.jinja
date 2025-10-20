@@ -16,24 +16,16 @@
         <thead>
           <tr>
             <th>Hymn Title</th>
+            <th>Hymn Author</th>
           </tr>
         </thead>
         <tbody>
+          {% for hymn in hymns %}
           <tr>
-            <td>Winters Ankunft</td>
+            <td>{{ hymn.title }}</td>
+            <td>{{ hymn.authors or ''}}</td>
           </tr>
-          <tr>
-            <td>Winters Ankunft</td>
-          </tr>
-          <tr>
-            <td>Winters Ankunft</td>
-          </tr>
-          <tr>
-            <td>Winters Ankunft</td>
-          </tr>
-          <tr>
-            <td>Winters Ankunft</td>
-          </tr>
+          {% endfor %}
         </tbody>
       </table>
     </main>

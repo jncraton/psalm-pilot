@@ -4,14 +4,13 @@
   font-family: system-ui, sans-serif;
 }
 
-header {
-  background-color: #a70000;
+body > * {
   padding: 1% 3%;
-  color: white;
 }
 
-main {
-  padding: 1% 3%;
+header {
+  background-color: #a70000;
+  color: white;
 }
 
 /*General table cleanup*/
@@ -39,21 +38,14 @@ tbody tr:hover {
 /* Alignment and style */
 td,
 th {
-  text-align: left;
+  padding: 12px 8px;
   border: none;
-  padding-right: 8px;
-  padding-left: 8px;
+  vertical-align: top;
+  text-align: left;
 }
 
 th {
-  text-transform: uppercase;
+  padding-block: 1px;
   vertical-align: bottom;
-  padding-top: 1px;
-  padding-bottom: 1px;
-}
-
-td {
-  vertical-align: top;
-  padding-top: 12px;
-  padding-bottom: 12px;
+  text-transform: uppercase;
 }
