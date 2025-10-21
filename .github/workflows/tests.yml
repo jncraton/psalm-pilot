@@ -24,6 +24,9 @@ jobs:
       - name: Install dependencies
         run: make install
 
+      - name: Install Playwright Browsers
+        run: playwright install --with-deps
+
       - name: Build Site
         run: make build
 
