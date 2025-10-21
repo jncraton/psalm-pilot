@@ -2,30 +2,30 @@ name: Run Tests
 
 on:
   push:
-    branches: 
+    branches:
       - main
   pull_request:
     branches:
       - main
 
 jobs:
- test:
+  test:
     runs-on: ubuntu-latest
 
     steps:
-        - name: Checkout
-          uses: actions/checkout@v5
+      - name: Checkout
+        uses: actions/checkout@v5
 
-        - name: Set Python
-          uses: actions/setup-python@v6
-          with:
-            python-version: '3.13'
+      - name: Set Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.13'
 
-        - name: Install dependencies
-          run: make install
+      - name: Install dependencies
+        run: make install
 
-        - name: Build Site
-          run: make build
+      - name: Build Site
+        run: make build
 
-        - name: Run Test
-          run: pytest
+      - name: Run Test
+        run: pytest
