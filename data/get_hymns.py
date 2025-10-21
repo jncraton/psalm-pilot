@@ -7,13 +7,20 @@ import numpy as np
 base_url = "https://hymnary.org/search"
 
 params = {
-    "qu": "textLanguages:english denominations:church of god media:text "
-    "textClassification:textispublicdomain tuneClassification:tuneispublicdomain in:texts",
+    "qu": {
+        "textLanguages": "english",
+        "denominations": "church of god",
+        "media": "text",
+        "textClassification": "textispublicdomain",
+        "tuneClassification": "tuneispublicdomain",
+        "in": "texts",
+    },
     "sort": "totalInstances",
     "export": "csv",
     "limit": 100
 }
 
+params["qu"] = " ".join([f"{k}:{v}" for k, v in params["qu"].items()])
 query_string = urlencode(params)
 url = f"{base_url}?{query_string}"
 
