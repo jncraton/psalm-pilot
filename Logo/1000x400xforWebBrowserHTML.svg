@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 986.77 299.4">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: #fff;
+      }
+
+      .cls-3 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-4 {
+        fill: none;
+        stroke: #fff;
+        stroke-miterlimit: 10;
+        stroke-width: 9px;
+      }
+
+      .cls-2 {
+        font-family: MyriadPro-Regular, 'Myriad Pro';
+        font-size: 211px;
+      }
+    </style>
+  </defs>
+  <g>
+    <path class="cls-1" d="M10,209.15v-120H0v-10h80v10h10v10h10v40h-10v10h-20v-10h10v-40h-10v-10H30v70h20v10h-20v40h20v10H0v-10h10ZM70,149.15v10h-20v-10h20Z"/>
+    <path class="cls-1" d="M180,189.15h-10v-10h-20v-10h-20v-10h-10v-30h10v-10h50v10h-40v20h10v10h20v10h20v10h10v30h-10v10h-50v-10h40v-20ZM140,199.15v10h-10v10h-10v-30h10v10h10ZM180,139.15v-10h10v-10h10v30h-10v-10h-10Z"/>
+    <path class="cls-1" d="M220,209.15v-30h10v-10h20v10h-10v20h10v10h20v10h-40v-10h-10ZM240,129.15v-10h50v10h-40v20h-20v-20h10ZM290,159.15v-30h10v10h10v70h10v10h-30v-20h-10v-10h10v-20h-40v-10h40ZM280,199.15v10h-10v-10h10Z"/>
+    <path class="cls-1" d="M350,209.15v-110h-10v-10h20v-10h10v130h10v10h-40v-10h10Z"/>
+    <path class="cls-1" d="M409.99,209.15v-70h-10v-10h20v-10h10v30h10v10h-10v50h10v10h-40v-10h10ZM449.99,139.15v10h-10v-10h10ZM459.99,129.15v10h-10v-10h10ZM479.99,209.15v-80h-20v-10h30v10h10v20h10v10h-10v50h10v10h-40v-10h10ZM519.99,139.15v10h-10v-10h10ZM529.99,129.15v10h-10v-10h10ZM549.99,209.15v-80h-20v-10h30v10h10v80h10v10h-40v-10h10Z"/>
+  </g>
+  <text class="cls-2" transform="translate(593.05 219.15)"><tspan class="cls-3" x="0" y="0">P</tspan><tspan x="108.88" y="0">ilot</tspan></text>
+  <path class="cls-4" d="M22.55,66.96V18.86c0-8.33,6.66-14.78,14.75-14.34l533.34,28.96c5.16.28,9.36,5.91,9.36,12.51v207.43c0,6.6-4.2,12.23-9.36,12.51l-533.34,28.96c-8.09.44-14.75-6.01-14.75-14.34v-53.58"/>
+</svg>

@@ -27,6 +27,11 @@ table {
   margin-top: 1rem;
 }
 
+#h1 {
+  max-height: 80px;
+  max-width: 680px;
+}
+
 /*Header row*/
 thead {
   border-bottom: 2px solid #333;
