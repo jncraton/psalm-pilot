@@ -6,6 +6,7 @@
     <meta name="description" content="Song pilot" />
     <link rel="stylesheet" type="text/css" href="style.css" />
     <link rel="icon" type="image/svg+xml" href="Logo/favicon.svg">
+    <link rel="manifest" href="manifest.webmanifest">
     <title>Psalm Pilot</title>
   </head>
   <body>
@@ -30,5 +31,12 @@
         </tbody>
       </table>
     </main>
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('service-worker.js')
+          });
+      }
+    </script>
   </body>
 </html>
