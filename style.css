@@ -30,6 +30,7 @@ table {
 #h1 {
   max-height: 80px;
   max-width: 680px;
+  min-width: 200px;
 }
 
 /*Header row*/
