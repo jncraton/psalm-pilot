@@ -8,7 +8,7 @@ self.addEventListener('install', e => {
         const base = self.registration.scope
         return cache.addAll([
           new URL('index.html', base).toString(),
-          new URL('styles.css', base).toString(),
+          new URL('style.css', base).toString(),
         ])
       })
       .then(() => self.skipWaiting()),
