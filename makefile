@@ -28,7 +28,7 @@ build:
 	python render.py
 
 clean:
-	rm -rf .ruff_cache
+	rm -rf __pycache__ .pytest_cache .ruff_cache
   
  #run test_file tests
 test:

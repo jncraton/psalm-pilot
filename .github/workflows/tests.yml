@@ -25,7 +25,7 @@ jobs:
         run: make install
 
       - name: Install Playwright Browsers
-        run: playwright install --with-deps
+        run: playwright install chromium --with-deps
 
       - name: Build Site
         run: make build
