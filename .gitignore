@@ -2,6 +2,7 @@
 node_modules/
 venv/
 .venv/
+__pycache__/
 
 # Ignore the rendered version of the web app
 index.html
