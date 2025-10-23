@@ -1,6 +1,7 @@
 # PsalmPilot
 
 [![Lint](https://github.com/jncraton/psalm-pilot/actions/workflows/lint.yml/badge.svg)](https://github.com/jncraton/psalm-pilot/actions/workflows/lint.yml)
+[![Run Tests](https://github.com/jncraton/psalm-pilot/actions/workflows/tests.yml/badge.svg)](https://github.com/jncraton/psalm-pilot/actions/workflows/tests.yml)
 [![Deploy Status](https://github.com/jncraton/psalm-pilot/actions/workflows/pages.yml/badge.svg)](https://github.com/jncraton/psalm-pilot/actions/workflows/pages.yml)
 
 Hymn recommendation system
