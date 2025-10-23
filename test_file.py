@@ -8,12 +8,15 @@ def main_page(page: Page) -> Page:
 
     return page
 
+
 def test_html_file(main_page: Page):
     expect(main_page).to_have_title("Psalm Pilot")
+
 
 def test_table_not_empty(main_page: Page):
     row_locator = main_page.locator("table tbody tr")
     expect(row_locator).not_to_have_count(0)
+
 
 def test_browse_hymns(main_page: Page):
     hymn_title_cells = main_page.locator("table tbody tr td:nth-child(1)")
