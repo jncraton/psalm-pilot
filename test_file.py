@@ -1,15 +1,16 @@
 import os
+import pytest
 from playwright.sync_api import Page, expect
 
-def test_html_file(page: Page):
-    path = os.path.abspath('index.html')
-    page.goto(f"file://{path}")
+@pytest.fixture
+def main_page(page: Page) -> Page:
+    page.goto(f"file://{os.path.abspath('index.html')}")
 
-    expect(page).to_have_title("Psalm Pilot")
+    return page
 
-def test_table_not_empty(page: Page):
-    path = os.path.abspath('index.html')
-    page.goto(f"file://{path}")
+def test_html_file(main_page: Page):
+    expect(main_page).to_have_title("Psalm Pilot")
 
-    row_locator = page.locator("table tbody tr")
+def test_table_not_empty(main_page: Page):
+    row_locator = main_page.locator("table tbody tr")
     expect(row_locator).not_to_have_count(0)
