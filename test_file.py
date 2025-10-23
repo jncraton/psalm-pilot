@@ -14,3 +14,9 @@ def test_html_file(main_page: Page):
 def test_table_not_empty(main_page: Page):
     row_locator = main_page.locator("table tbody tr")
     expect(row_locator).not_to_have_count(0)
+
+def test_browse_hymns(main_page: Page):
+    hymn_title_cells = main_page.locator("table tbody tr td:nth-child(1)")
+
+    for i in range(hymn_title_cells.count()):
+        expect(hymn_title_cells.nth(i)).not_to_be_empty()
