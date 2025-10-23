@@ -27,10 +27,8 @@ table {
   margin-top: 1rem;
 }
 
-#h1 {
-  max-height: 80px;
-  max-width: 680px;
-  min-width: 200px;
+h1 {
+  font-size: 42px;
 }
 
 /*Header row*/
