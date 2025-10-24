@@ -3,7 +3,8 @@ from urllib.parse import urlencode
 import json
 import numpy as np
 
-# --- Step 1: Retrieve hymns from Hymnary ---
+# import csv from Hymnary
+# the url uses advanced search to filter for multiple things outlined in the params
 base_url = "https://hymnary.org/search"
 
 params = {
