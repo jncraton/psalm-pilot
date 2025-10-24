@@ -47,7 +47,7 @@ for _, row in merged.iterrows():
     pub_date = (
         str(row.get("yearsWrote", "")).strip()
         if pd.notna(row.get("yearsWrote"))
-        else "No Written Year found"
+        else ""
     )
 
     results.append({
