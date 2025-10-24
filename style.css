@@ -22,6 +22,10 @@ table {
   margin-top: 1rem;
 }
 
+caption {
+  font-size: 125%;
+}
+
 /*Header row*/
 thead {
   border-bottom: 2px solid #333;
@@ -37,15 +41,18 @@ tbody tr:hover {
 /*Cellstyle*/
 /* Alignment and style */
 td,
-th {
+th,
+caption {
   padding: 12px 8px;
   border: none;
   vertical-align: top;
   text-align: left;
 }
 
-th {
+th,
+caption {
   padding-block: 1px;
   vertical-align: bottom;
   text-transform: uppercase;
+  font-weight: bold;
 }
