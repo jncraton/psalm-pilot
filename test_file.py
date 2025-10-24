@@ -1,4 +1,5 @@
 import os
+import json
 import pytest
 from playwright.sync_api import Page, expect
 
@@ -20,7 +21,14 @@ def test_table_not_empty(main_page: Page):
 
 
 def test_browse_hymns(main_page: Page):
+    # Grab the hymn source data
+    with open('data/hymns.json', 'r') as file:
+        hymns = json.load(file)
+
+    hymn_titles = [hymn['title'] for hymn in hymns]
+
+    # Grab the hymn title column cells
     hymn_title_cells = main_page.locator("tr td:nth-child(1)")
 
-    for i in range(hymn_title_cells.count()):
-        expect(hymn_title_cells.nth(i)).not_to_be_empty()
+    # Verify the data matches
+    expect(hymn_title_cells).to_have_text(hymn_titles)
