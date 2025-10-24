@@ -32,5 +32,5 @@ hymns['popularity'] = (hymns['totalInstances'] / hymns['totalInstances'].max()).
 hymns.replace({np.nan: None}, inplace=True)
         
 # export to json
-hymns = hymns[['title', 'authors', 'popularity']]
+hymns = hymns[['title', 'popularity', 'authors']]
 hymns.to_json("hymns.json", orient="records", indent=2)

@@ -1,502 +1,502 @@
 [
   {
     "title": "All Hail the Power of Jesus' Name",
-    "authors": "Edward Perronet; John Rippon",
-    "popularity": 1.0
+    "popularity": 1.0,
+    "authors": "Edward Perronet; John Rippon"
   },
   {
     "title": "Jesus, Lover of my soul",
-    "authors": "Charles Wesley",
-    "popularity": 0.94
+    "popularity": 0.94,
+    "authors": "Charles Wesley"
   },
   {
     "title": "Rock of Ages, Cleft for Me",
-    "authors": "Augustus M. Toplady ",
-    "popularity": 0.85
+    "popularity": 0.85,
+    "authors": "Augustus M. Toplady "
   },
   {
     "title": "Nearer, My God, to Thee",
-    "authors": "Sarah F. Adams",
-    "popularity": 0.73
+    "popularity": 0.73,
+    "authors": "Sarah F. Adams"
   },
   {
     "title": "There Is a Fountain Filled with Blood",
-    "authors": "William Cowper",
-    "popularity": 0.72
+    "popularity": 0.72,
+    "authors": "William Cowper"
   },
   {
     "title": "At the Cross",
-    "authors": "Isaac Watts; Ralph E. Hudson",
-    "popularity": 0.67
+    "popularity": 0.67,
+    "authors": "Isaac Watts; Ralph E. Hudson"
   },
   {
     "title": "Blest Be the Tie That Binds",
-    "authors": "John Fawcett ",
-    "popularity": 0.67
+    "popularity": 0.67,
+    "authors": "John Fawcett "
   },
   {
     "title": "Come, Thou Fount of Every Blessing",
-    "authors": "Robert Robinson",
-    "popularity": 0.64
+    "popularity": 0.64,
+    "authors": "Robert Robinson"
   },
   {
     "title": "Just As I Am, Without One Plea",
-    "authors": "Charlotte Elliott",
-    "popularity": 0.64
+    "popularity": 0.64,
+    "authors": "Charlotte Elliott"
   },
   {
     "title": "How Firm A Foundation",
-    "authors": null,
-    "popularity": 0.62
+    "popularity": 0.62,
+    "authors": null
   },
   {
     "title": "When I Survey the Wondrous Cross",
-    "authors": "Isaac Watts",
-    "popularity": 0.58
+    "popularity": 0.58,
+    "authors": "Isaac Watts"
   },
   {
     "title": "Am I a Soldier of the Cross?",
-    "authors": "Isaac Watts",
-    "popularity": 0.57
+    "popularity": 0.57,
+    "authors": "Isaac Watts"
   },
   {
     "title": "My Country, 'Tis of Thee",
-    "authors": "Samuel F. Smith",
-    "popularity": 0.56
+    "popularity": 0.56,
+    "authors": "Samuel F. Smith"
   },
   {
     "title": "Joy to the World!",
-    "authors": "Isaac Watts",
-    "popularity": 0.54
+    "popularity": 0.54,
+    "authors": "Isaac Watts"
   },
   {
     "title": "Love Divine, All Loves Excelling",
-    "authors": "Charles Wesley",
-    "popularity": 0.54
+    "popularity": 0.54,
+    "authors": "Charles Wesley"
   },
   {
     "title": "Guide Me, O Thou Great Jehovah",
-    "authors": "William Williams",
-    "popularity": 0.53
+    "popularity": 0.53,
+    "authors": "William Williams"
   },
   {
     "title": "Stand Up, Stand Up for Jesus",
-    "authors": "George Duffield",
-    "popularity": 0.52
+    "popularity": 0.52,
+    "authors": "George Duffield"
   },
   {
     "title": "Onward Christian Soldiers",
-    "authors": "Sabine Baring-Gould",
-    "popularity": 0.52
+    "popularity": 0.52,
+    "authors": "Sabine Baring-Gould"
   },
   {
     "title": "Come, We That Love the Lord",
-    "authors": "Isaac Watts; Robert Lowry",
-    "popularity": 0.52
+    "popularity": 0.52,
+    "authors": "Isaac Watts; Robert Lowry"
   },
   {
     "title": "Come, Thou Almighty King",
-    "authors": "Anonymous",
-    "popularity": 0.51
+    "popularity": 0.51,
+    "authors": "Anonymous"
   },
   {
     "title": "What a Friend We Have in Jesus",
-    "authors": "Joseph M. Scriven",
-    "popularity": 0.5
+    "popularity": 0.5,
+    "authors": "Joseph M. Scriven"
   },
   {
     "title": "O For a Thousand Tongues to Sing",
-    "authors": "Charles Wesley",
-    "popularity": 0.5
+    "popularity": 0.5,
+    "authors": "Charles Wesley"
   },
   {
     "title": "Abide with Me",
-    "authors": "Henry F. Lyte",
-    "popularity": 0.49
+    "popularity": 0.49,
+    "authors": "Henry F. Lyte"
   },
   {
     "title": "Holy, Holy, Holy, Lord God Almighty",
-    "authors": "Reginald Heber",
-    "popularity": 0.48
+    "popularity": 0.48,
+    "authors": "Reginald Heber"
   },
   {
     "title": "How Sweet the Name of Jesus Sounds",
-    "authors": "John Newton",
-    "popularity": 0.47
+    "popularity": 0.47,
+    "authors": "John Newton"
   },
   {
     "title": "Amazing Grace",
-    "authors": "John Newton; John P. Rees",
-    "popularity": 0.44
+    "popularity": 0.44,
+    "authors": "John Newton; John P. Rees"
   },
   {
     "title": "In the Cross of Christ I Glory",
-    "authors": "John Bowring",
-    "popularity": 0.43
+    "popularity": 0.43,
+    "authors": "John Bowring"
   },
   {
     "title": "Sun of My Soul",
-    "authors": "John Keble",
-    "popularity": 0.42
+    "popularity": 0.42,
+    "authors": "John Keble"
   },
   {
     "title": "I Am Bound for the Promised Land",
-    "authors": "Samuel Stennett",
-    "popularity": 0.41
+    "popularity": 0.41,
+    "authors": "Samuel Stennett"
   },
   {
     "title": "A Charge to Keep I Have",
-    "authors": "Charles Wesley",
-    "popularity": 0.39
+    "popularity": 0.39,
+    "authors": "Charles Wesley"
   },
   {
     "title": "I Love Your Kingdom, Lord",
-    "authors": "Timothy Dwight",
-    "popularity": 0.39
+    "popularity": 0.39,
+    "authors": "Timothy Dwight"
   },
   {
     "title": "Hark! the Herald Angels Sing",
-    "authors": "Charles Wesley",
-    "popularity": 0.39
+    "popularity": 0.39,
+    "authors": "Charles Wesley"
   },
   {
     "title": "Sweet Hour of Prayer",
-    "authors": "William W. Walford",
-    "popularity": 0.38
+    "popularity": 0.38,
+    "authors": "William W. Walford"
   },
   {
     "title": "Doxology",
-    "authors": "Thomas Ken",
-    "popularity": 0.38
+    "popularity": 0.38,
+    "authors": "Thomas Ken"
   },
   {
     "title": "He Leadeth Me, O Blessed Thought",
-    "authors": "Joseph H. Gilmore",
-    "popularity": 0.37
+    "popularity": 0.37,
+    "authors": "Joseph H. Gilmore"
   },
   {
     "title": "Revive Us Again",
-    "authors": "William P. Mackay",
-    "popularity": 0.37
+    "popularity": 0.37,
+    "authors": "William P. Mackay"
   },
   {
     "title": "O God, Our Help in Ages Past",
-    "authors": "Isaac Watts",
-    "popularity": 0.36
+    "popularity": 0.36,
+    "authors": "Isaac Watts"
   },
   {
     "title": "Must Jesus Bear the Cross Alone?",
-    "authors": "Thomas Shepherd",
-    "popularity": 0.36
+    "popularity": 0.36,
+    "authors": "Thomas Shepherd"
   },
   {
     "title": "I Love to Tell the Story",
-    "authors": "Katherine Hankey",
-    "popularity": 0.36
+    "popularity": 0.36,
+    "authors": "Katherine Hankey"
   },
   {
     "title": "Take My Life and Let It Be Consecrated",
-    "authors": "Francis B. Havergal",
-    "popularity": 0.35
+    "popularity": 0.35,
+    "authors": "Francis B. Havergal"
   },
   {
     "title": "I Heard the Voice of Jesus Say",
-    "authors": "Horatius Bonar",
-    "popularity": 0.35
+    "popularity": 0.35,
+    "authors": "Horatius Bonar"
   },
   {
     "title": "God Be with You",
-    "authors": "Jeremiah E. Rankin",
-    "popularity": 0.35
+    "popularity": 0.35,
+    "authors": "Jeremiah E. Rankin"
   },
   {
     "title": "Come, Holy Spirit, Heavenly Dove",
-    "authors": "Isaac Watts",
-    "popularity": 0.35
+    "popularity": 0.35,
+    "authors": "Isaac Watts"
   },
   {
     "title": "Jesus, Savior, Pilot Me",
-    "authors": "Edward Hopper",
-    "popularity": 0.35
+    "popularity": 0.35,
+    "authors": "Edward Hopper"
   },
   {
     "title": "Christ, the Lord, Is Risen Today",
-    "authors": "Charles Wesley",
-    "popularity": 0.34
+    "popularity": 0.34,
+    "authors": "Charles Wesley"
   },
   {
     "title": "Savior, Like a Shepherd, Lead Us",
-    "authors": "Dorothy A. Thrupp",
-    "popularity": 0.33
+    "popularity": 0.33,
+    "authors": "Dorothy A. Thrupp"
   },
   {
     "title": "O Worship the King",
-    "authors": "Robert Grant",
-    "popularity": 0.33
+    "popularity": 0.33,
+    "authors": "Robert Grant"
   },
   {
     "title": "My Jesus, I Love Thee",
-    "authors": "William R. Featherston",
-    "popularity": 0.32
+    "popularity": 0.32,
+    "authors": "William R. Featherston"
   },
   {
     "title": "While Shepherds Watched Their Flocks By Night",
-    "authors": "Nahum Tate",
-    "popularity": 0.32
+    "popularity": 0.32,
+    "authors": "Nahum Tate"
   },
   {
     "title": "Blessed Assurance",
-    "authors": "Fanny J. Crosby",
-    "popularity": 0.32
+    "popularity": 0.32,
+    "authors": "Fanny J. Crosby"
   },
   {
     "title": "The Solid Rock",
-    "authors": "Edward Mote",
-    "popularity": 0.32
+    "popularity": 0.32,
+    "authors": "Edward Mote"
   },
   {
     "title": "Come, Ye Disconsolate",
-    "authors": "Thomas Moore; Thomas Hastings",
-    "popularity": 0.3
+    "popularity": 0.3,
+    "authors": "Thomas Moore; Thomas Hastings"
   },
   {
     "title": "Threefold Amen",
-    "authors": null,
-    "popularity": 0.3
+    "popularity": 0.3,
+    "authors": null
   },
   {
     "title": "Gloria Patri",
-    "authors": null,
-    "popularity": 0.29
+    "popularity": 0.29,
+    "authors": null
   },
   {
     "title": "I Need Thee Every Hour",
-    "authors": "Annie S. Hawks; Robert Lowry",
-    "popularity": 0.29
+    "popularity": 0.29,
+    "authors": "Annie S. Hawks; Robert Lowry"
   },
   {
     "title": "Now the Day Is Over",
-    "authors": "Sabine Baring-Gould",
-    "popularity": 0.28
+    "popularity": 0.28,
+    "authors": "Sabine Baring-Gould"
   },
   {
     "title": "Pass Me Not, O Gentle Savior",
-    "authors": "Fanny J. Crosby",
-    "popularity": 0.27
+    "popularity": 0.27,
+    "authors": "Fanny J. Crosby"
   },
   {
     "title": "Softly and Tenderly",
-    "authors": "Will L. Thompson",
-    "popularity": 0.26
+    "popularity": 0.26,
+    "authors": "Will L. Thompson"
   },
   {
     "title": "There's a Wideness in God's Mercy",
-    "authors": "Frederick W. Faber",
-    "popularity": 0.26
+    "popularity": 0.26,
+    "authors": "Frederick W. Faber"
   },
   {
     "title": "It Came Upon the Midnight Clear",
-    "authors": "Edmund H. Sears",
-    "popularity": 0.26
+    "popularity": 0.26,
+    "authors": "Edmund H. Sears"
   },
   {
     "title": "The Church's One Foundation",
-    "authors": "Samuel J. Stone",
-    "popularity": 0.25
+    "popularity": 0.25,
+    "authors": "Samuel J. Stone"
   },
   {
     "title": "Only Trust Him",
-    "authors": "John H. Stockton",
-    "popularity": 0.25
+    "popularity": 0.25,
+    "authors": "John H. Stockton"
   },
   {
     "title": "O Little Town of Bethlehem",
-    "authors": "Phillips Brooks",
-    "popularity": 0.25
+    "popularity": 0.25,
+    "authors": "Phillips Brooks"
   },
   {
     "title": "Even Me",
-    "authors": null,
-    "popularity": 0.24
+    "popularity": 0.24,
+    "authors": null
   },
   {
     "title": "Faith of Our Fathers",
-    "authors": "Frederick W. Faber",
-    "popularity": 0.24
+    "popularity": 0.24,
+    "authors": "Frederick W. Faber"
   },
   {
     "title": "More Love to Thee, O Christ",
-    "authors": "Elizabeth P. Prentiss",
-    "popularity": 0.24
+    "popularity": 0.24,
+    "authors": "Elizabeth P. Prentiss"
   },
   {
     "title": "Jesus Paid It All",
-    "authors": "Elvina M. Hall",
-    "popularity": 0.24
+    "popularity": 0.24,
+    "authors": "Elvina M. Hall"
   },
   {
     "title": "Down at the Cross",
-    "authors": "Elisha A. Hoffman",
-    "popularity": 0.24
+    "popularity": 0.24,
+    "authors": "Elisha A. Hoffman"
   },
   {
     "title": "Where He Leads Me",
-    "authors": "E. W. Blandy",
-    "popularity": 0.24
+    "popularity": 0.24,
+    "authors": "E. W. Blandy"
   },
   {
     "title": "Rescue the Perishing",
-    "authors": "Fanny J. Crosby",
-    "popularity": 0.23
+    "popularity": 0.23,
+    "authors": "Fanny J. Crosby"
   },
   {
     "title": "Almost Persuaded",
-    "authors": "Philip P. Bliss",
-    "popularity": 0.22
+    "popularity": 0.22,
+    "authors": "Philip P. Bliss"
   },
   {
     "title": "Angels from the Realms of Glory",
-    "authors": "James Montgomery",
-    "popularity": 0.22
+    "popularity": 0.22,
+    "authors": "James Montgomery"
   },
   {
     "title": "Praise the Lord! Ye Heavens Adore Him",
-    "authors": "Edward Osler",
-    "popularity": 0.22
+    "popularity": 0.22,
+    "authors": "Edward Osler"
   },
   {
     "title": "O Come, All Ye Faithful",
-    "authors": "John F. Wade; Frederick Oakeley",
-    "popularity": 0.22
+    "popularity": 0.22,
+    "authors": "John F. Wade; Frederick Oakeley"
   },
   {
     "title": "Bringing in the Sheaves",
-    "authors": "Knowles Shaw",
-    "popularity": 0.22
+    "popularity": 0.22,
+    "authors": "Knowles Shaw"
   },
   {
     "title": "Yield Not to Temptation",
-    "authors": "Horatio R. Palmer",
-    "popularity": 0.21
+    "popularity": 0.21,
+    "authors": "Horatio R. Palmer"
   },
   {
     "title": "Rejoice the Lord Is King",
-    "authors": "Charles Wesley",
-    "popularity": 0.21
+    "popularity": 0.21,
+    "authors": "Charles Wesley"
   },
   {
     "title": "Break Thou the Bread of Life",
-    "authors": "Mary A. Lathbury; Alexander Groves",
-    "popularity": 0.21
+    "popularity": 0.21,
+    "authors": "Mary A. Lathbury; Alexander Groves"
   },
   {
     "title": "I Feel Like Traveling On",
-    "authors": "Willliam Hunter",
-    "popularity": 0.21
+    "popularity": 0.21,
+    "authors": "Willliam Hunter"
   },
   {
     "title": "I Am Thine, O Lord",
-    "authors": "Fanny J. Crosby",
-    "popularity": 0.21
+    "popularity": 0.21,
+    "authors": "Fanny J. Crosby"
   },
   {
     "title": "Near the Cross",
-    "authors": "Fanny J. Crosby",
-    "popularity": 0.21
+    "popularity": 0.21,
+    "authors": "Fanny J. Crosby"
   },
   {
     "title": "Sweet By and By",
-    "authors": "Sanford F. Bennett",
-    "popularity": 0.2
+    "popularity": 0.2,
+    "authors": "Sanford F. Bennett"
   },
   {
     "title": "Whiter Than Snow",
-    "authors": "James Nicholson",
-    "popularity": 0.2
+    "popularity": 0.2,
+    "authors": "James Nicholson"
   },
   {
     "title": "Take the Name of Jesus with You",
-    "authors": "Lydia Baxter",
-    "popularity": 0.19
+    "popularity": 0.19,
+    "authors": "Lydia Baxter"
   },
   {
     "title": "A Mighty Fortress Is Our God",
-    "authors": "Martin Luther; Frederick H. Hedge",
-    "popularity": 0.19
+    "popularity": 0.19,
+    "authors": "Martin Luther; Frederick H. Hedge"
   },
   {
     "title": "Silent Night, Holy Night",
-    "authors": "Joseph Mohr; John F. Young",
-    "popularity": 0.19
+    "popularity": 0.19,
+    "authors": "Joseph Mohr; John F. Young"
   },
   {
     "title": "Leaning on the Everlasting Arms",
-    "authors": "Elisha A. Hoffman",
-    "popularity": 0.19
+    "popularity": 0.19,
+    "authors": "Elisha A. Hoffman"
   },
   {
     "title": "For the Beauty of the Earth",
-    "authors": "Folliott S. Pierpoint",
-    "popularity": 0.18
+    "popularity": 0.18,
+    "authors": "Folliott S. Pierpoint"
   },
   {
     "title": "Jesus Loves Me, This I Know",
-    "authors": "Anna B. Warner",
-    "popularity": 0.18
+    "popularity": 0.18,
+    "authors": "Anna B. Warner"
   },
   {
     "title": "May the Grace of Christ Our Savior",
-    "authors": "John Newton",
-    "popularity": 0.17
+    "popularity": 0.17,
+    "authors": "John Newton"
   },
   {
     "title": "Wonderful Words of Life",
-    "authors": "Philip P. Bliss",
-    "popularity": 0.17
+    "popularity": 0.17,
+    "authors": "Philip P. Bliss"
   },
   {
     "title": "The Lord's My Shepherd, I'll Not Want",
-    "authors": null,
-    "popularity": 0.17
+    "popularity": 0.17,
+    "authors": null
   },
   {
     "title": "Fairest Lord Jesus",
-    "authors": null,
-    "popularity": 0.17
+    "popularity": 0.17,
+    "authors": null
   },
   {
     "title": "O How I Love Jesus",
-    "authors": "Frederick Whitfield",
-    "popularity": 0.17
+    "popularity": 0.17,
+    "authors": "Frederick Whitfield"
   },
   {
     "title": "Holy Bible, Book Divine",
-    "authors": "John Burton",
-    "popularity": 0.16
+    "popularity": 0.16,
+    "authors": "John Burton"
   },
   {
     "title": "Away in a Manger",
-    "authors": "John Thomas McFarland",
-    "popularity": 0.16
+    "popularity": 0.16,
+    "authors": "John Thomas McFarland"
   },
   {
     "title": "I Gave my Life for Thee",
-    "authors": "Frances R. Havergal",
-    "popularity": 0.16
+    "popularity": 0.16,
+    "authors": "Frances R. Havergal"
   },
   {
     "title": "Beneath the Cross of Jesus",
-    "authors": "Elizabeth C. Clephane",
-    "popularity": 0.16
+    "popularity": 0.16,
+    "authors": "Elizabeth C. Clephane"
   },
   {
     "title": "I'll Live for Him",
-    "authors": "R. Hudson",
-    "popularity": 0.16
+    "popularity": 0.16,
+    "authors": "R. Hudson"
   },
   {
     "title": "Jesus Saves",
-    "authors": "Priscilla J. Owens",
-    "popularity": 0.16
+    "popularity": 0.16,
+    "authors": "Priscilla J. Owens"
   }
 ]
