@@ -27,7 +27,7 @@ url = f"{base_url}?{query_string}"
 hymns = pd.read_csv(url)
 hymns = hymns.rename(columns={'displayTitle': 'title'})
 
-hymns['popularity'] = (hymns['totalInstances'] / hymns['totalInstances'].max()).round(2)
+hymns['popularity'] = (100 * hymns['totalInstances'] / hymns['totalInstances'].max()).astype(int)
 
 hymns.replace({np.nan: None}, inplace=True)
         
