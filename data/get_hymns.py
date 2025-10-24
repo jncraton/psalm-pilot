@@ -25,10 +25,12 @@ query_string = urlencode(params)
 url = f"{base_url}?{query_string}"
 
 hymns = pd.read_csv(url)
-hymns = hymns[['displayTitle', 'authors']]
 hymns = hymns.rename(columns={'displayTitle': 'title'})
+
+hymns['popularity'] = (100 * hymns['totalInstances'] / hymns['totalInstances'].max()).astype(int)
 
 hymns.replace({np.nan: None}, inplace=True)
         
 # export to json
+hymns = hymns[['title', 'popularity', 'authors']]
 hymns.to_json("hymns.json", orient="records", indent=2)
