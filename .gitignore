@@ -3,5 +3,9 @@ venv/
 .venv/
 __pycache__/
 
+# Ignore the hymns data unless it is in the right directory
+hymns.json
+!data/hymns.json
+
 # Ignore the rendered version of the web app
 index.html
