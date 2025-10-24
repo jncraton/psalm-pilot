@@ -1,5 +1,6 @@
 import pandas as pd
 from urllib.parse import urlencode
+import json
 import numpy as np
 
 # import csv from Hymnary
@@ -25,10 +26,36 @@ query_string = urlencode(params)
 url = f"{base_url}?{query_string}"
 
 hymns = pd.read_csv(url)
-hymns = hymns[['displayTitle', 'authors']]
+
+hymns = hymns[['displayTitle', 'authors', 'textAuthNumber']]
+
 hymns = hymns.rename(columns={'displayTitle': 'title'})
 
 hymns.replace({np.nan: None}, inplace=True)
-        
-# export to json
-hymns.to_json("hymns.json", orient="records", indent=2)
+
+# Retrieve texts
+texts_url = "https://hymnary.org/files/hymnary/other/texts.csv"
+texts = pd.read_csv(texts_url)
+
+merged = pd.merge(hymns, texts[['textAuthNumber', 'yearsWrote']], on='textAuthNumber', how='left')
+
+# File write and appending to JSON file
+results = []
+for _, row in merged.iterrows():
+    title = str(row.get("title", "")).strip()
+    authors = str(row.get("authors", "")).strip()
+    pub_date = (
+        str(row.get("yearsWrote", "")).strip()
+        if pd.notna(row.get("yearsWrote"))
+        else None
+    )
+
+    results.append({
+        "title": title,
+        "authors": authors,
+        "publicationDate": pub_date
+    })
+
+
+with open("data/hymns.json", "w", encoding="utf-8") as f:
+    json.dump(results, f, indent=2)
