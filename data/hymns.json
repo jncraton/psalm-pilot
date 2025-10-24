@@ -1,102 +1,502 @@
-{
-  "0": "All Hail the Power of Jesus' Name",
-  "1": "Jesus, Lover of my soul",
-  "2": "Rock of Ages, Cleft for Me",
-  "3": "Nearer, My God, to Thee",
-  "4": "There Is a Fountain Filled with Blood",
-  "5": "At the Cross",
-  "6": "Blest Be the Tie That Binds",
-  "7": "Come, Thou Fount of Every Blessing",
-  "8": "Just As I Am, Without One Plea",
-  "9": "How Firm A Foundation",
-  "10": "When I Survey the Wondrous Cross",
-  "11": "Am I a Soldier of the Cross?",
-  "12": "My Country, 'Tis of Thee",
-  "13": "Joy to the World!",
-  "14": "Love Divine, All Loves Excelling",
-  "15": "Guide Me, O Thou Great Jehovah",
-  "16": "Onward Christian Soldiers",
-  "17": "Stand Up, Stand Up for Jesus",
-  "18": "Come, We That Love the Lord",
-  "19": "Come, Thou Almighty King",
-  "20": "What a Friend We Have in Jesus",
-  "21": "Blessed Be the Name",
-  "22": "Abide with Me",
-  "23": "Holy, Holy, Holy, Lord God Almighty",
-  "24": "How Sweet the Name of Jesus Sounds",
-  "25": "In the Cross of Christ I Glory",
-  "26": "Amazing Grace",
-  "27": "Sun of My Soul",
-  "28": "I Am Bound for the Promised Land",
-  "29": "A Charge to Keep I Have",
-  "30": "I Love Your Kingdom, Lord",
-  "31": "Hark! the Herald Angels Sing",
-  "32": "Sweet Hour of Prayer",
-  "33": "He Leadeth Me, O Blessed Thought",
-  "34": "Praise God from Who All Blessings Flow",
-  "35": "Revive Us Again",
-  "36": "O God, Our Help in Ages Past",
-  "37": "Take My Life and Let It Be Consecrated",
-  "38": "Must Jesus Bear the Cross Alone?",
-  "39": "I Love to Tell the Story",
-  "40": "I Heard the Voice of Jesus Say",
-  "41": "God Be with You",
-  "42": "Come, Holy Spirit, Heavenly Dove",
-  "43": "Jesus, Savior, Pilot Me",
-  "44": "Christ, the Lord, Is Risen Today",
-  "45": "Savior, Like a Shepherd, Lead Us",
-  "46": "O Worship the King",
-  "47": "My Jesus, I Love Thee",
-  "48": "While Shepherds Watched Their Flocks By Night",
-  "49": "Blessed Assurance",
-  "50": "The Solid Rock",
-  "51": "Come, Ye Disconsolate",
-  "52": "Twofold Amen",
-  "53": "Gloria Patri",
-  "54": "I Need Thee Every Hour",
-  "55": "Now the Day Is Over",
-  "56": "Pass Me Not, O Gentle Savior",
-  "57": "There's a Wideness in God's Mercy",
-  "58": "Softly and Tenderly",
-  "59": "It Came Upon the Midnight Clear",
-  "60": "The Church's One Foundation",
-  "61": "O Little Town of Bethlehem",
-  "62": "Only Trust Him",
-  "63": "Even Me",
-  "64": "Faith of Our Fathers",
-  "65": "More Love to Thee, O Christ",
-  "66": "Jesus Paid It All",
-  "67": "Down at the Cross",
-  "68": "Where He Leads Me",
-  "69": "Rescue the Perishing",
-  "70": "Angels from the Realms of Glory",
-  "71": "Almost Persuaded",
-  "72": "Praise the Lord! Ye Heavens Adore Him",
-  "73": "O Come, All Ye Faithful",
-  "74": "Yield Not to Temptation",
-  "75": "Bringing in the Sheaves",
-  "76": "Rejoice the Lord Is King",
-  "77": "Break Thou the Bread of Life",
-  "78": "I Feel Like Traveling On",
-  "79": "Near the Cross",
-  "80": "I Am Thine, O Lord",
-  "81": "Sweet By and By",
-  "82": "Whiter Than Snow",
-  "83": "A Mighty Fortress Is Our God",
-  "84": "Take the Name of Jesus with You",
-  "85": "Silent Night, Holy Night",
-  "86": "Leaning on the Everlasting Arms",
-  "87": "For the Beauty of the Earth",
-  "88": "Jesus Loves Me, This I Know",
-  "89": "May the Grace of Christ Our Savior",
-  "90": "Wonderful Words of Life",
-  "91": "The Lord's My Shepherd, I'll Not Want",
-  "92": "Fairest Lord Jesus",
-  "93": "O How I Love Jesus",
-  "94": "Holy Bible, Book Divine",
-  "95": "Away in a Manger",
-  "96": "I Gave my Life for Thee",
-  "97": "Beneath the Cross of Jesus",
-  "98": "I'll Live for Him",
-  "99": "Jesus Saves"
-}
+[
+  {
+    "title": "All Hail the Power of Jesus' Name",
+    "authors": "Edward Perronet; John Rippon",
+    "publicationDate": "No Written Year found"
+  },
+  {
+    "title": "Jesus, Lover of my soul",
+    "authors": "Charles Wesley",
+    "publicationDate": "No Written Year found"
+  },
+  {
+    "title": "Rock of Ages, Cleft for Me",
+    "authors": "Augustus M. Toplady",
+    "publicationDate": "No Written Year found"
+  },
+  {
+    "title": "Nearer, My God, to Thee",
+    "authors": "Sarah F. Adams",
+    "publicationDate": "No Written Year found"
+  },
+  {
+    "title": "There Is a Fountain Filled with Blood",
+    "authors": "William Cowper",
+    "publicationDate": "No Written Year found"
+  },
+  {
+    "title": "At the Cross",
+    "authors": "Isaac Watts; Ralph E. Hudson",
+    "publicationDate": "No Written Year found"
+  },
+  {
+    "title": "Blest Be the Tie That Binds",
+    "authors": "John Fawcett",
+    "publicationDate": "1782"
+  },
+  {
+    "title": "Come, Thou Fount of Every Blessing",
+    "authors": "Robert Robinson",
+    "publicationDate": "1758; 1760"
+  },
+  {
+    "title": "Just As I Am, Without One Plea",
+    "authors": "Charlotte Elliott",
+    "publicationDate": "1836"
+  },
+  {
+    "title": "How Firm A Foundation",
+    "authors": "None",
+    "publicationDate": "No Written Year found"
+  },
+  {
+    "title": "When I Survey the Wondrous Cross",
+    "authors": "Isaac Watts",
+    "publicationDate": "No Written Year found"
+  },
+  {
+    "title": "Am I a Soldier of the Cross?",
+    "authors": "Isaac Watts",
+    "publicationDate": "1724"
+  },
+  {
+    "title": "My Country, 'Tis of Thee",
+    "authors": "Samuel F. Smith",
+    "publicationDate": "No Written Year found"
+  },
+  {
+    "title": "Joy to the World!",
+    "authors": "Isaac Watts",
+    "publicationDate": "No Written Year found"
+  },
+  {
+    "title": "Love Divine, All Loves Excelling",
+    "authors": "Charles Wesley",
+    "publicationDate": "No Written Year found"
+  },
+  {
+    "title": "Guide Me, O Thou Great Jehovah",
+    "authors": "William Williams",
+    "publicationDate": "1745; 1771"
+  },
+  {
+    "title": "Stand Up, Stand Up for Jesus",
+    "authors": "George Duffield",
+    "publicationDate": "No Written Year found"
+  },
+  {
+    "title": "Onward Christian Soldiers",
+    "authors": "Sabine Baring-Gould",
+    "publicationDate": "No Written Year found"
+  },
+  {
+    "title": "Come, We That Love the Lord",
+    "authors": "Isaac Watts; Robert Lowry",
+    "publicationDate": "No Written Year found"
+  },
+  {
+    "title": "Come, Thou Almighty King",
+    "authors": "Anonymous",
+    "publicationDate": "No Written Year found"
+  },
+  {
+    "title": "What a Friend We Have in Jesus",
+    "authors": "Joseph M. Scriven",
+    "publicationDate": "No Written Year found"
+  },
+  {
+    "title": "O For a Thousand Tongues to Sing",
+    "authors": "Charles Wesley",
+    "publicationDate": "No Written Year found"
+  },
+  {
+    "title": "Abide with Me",
+    "authors": "Henry F. Lyte",
+    "publicationDate": "No Written Year found"
+  },
+  {
+    "title": "Holy, Holy, Holy, Lord God Almighty",
+    "authors": "Reginald Heber",
+    "publicationDate": "No Written Year found"
+  },
+  {
+    "title": "How Sweet the Name of Jesus Sounds",
+    "authors": "John Newton",
+    "publicationDate": "No Written Year found"
+  },
+  {
+    "title": "Amazing Grace",
+    "authors": "John Newton; John P. Rees",
+    "publicationDate": "No Written Year found"
+  },
+  {
+    "title": "In the Cross of Christ I Glory",
+    "authors": "John Bowring",
+    "publicationDate": "No Written Year found"
+  },
+  {
+    "title": "Sun of My Soul",
+    "authors": "John Keble",
+    "publicationDate": "No Written Year found"
+  },
+  {
+    "title": "I Am Bound for the Promised Land",
+    "authors": "Samuel Stennett",
+    "publicationDate": "No Written Year found"
+  },
+  {
+    "title": "A Charge to Keep I Have",
+    "authors": "Charles Wesley",
+    "publicationDate": "1762"
+  },
+  {
+    "title": "I Love Your Kingdom, Lord",
+    "authors": "Timothy Dwight",
+    "publicationDate": "No Written Year found"
+  },
+  {
+    "title": "Hark! the Herald Angels Sing",
+    "authors": "Charles Wesley",
+    "publicationDate": "No Written Year found"
+  },
+  {
+    "title": "Sweet Hour of Prayer",
+    "authors": "William W. Walford",
+    "publicationDate": "No Written Year found"
+  },
+  {
+    "title": "Doxology",
+    "authors": "Thomas Ken",
+    "publicationDate": "No Written Year found"
+  },
+  {
+    "title": "He Leadeth Me, O Blessed Thought",
+    "authors": "Joseph H. Gilmore",
+    "publicationDate": "1862"
+  },
+  {
+    "title": "Revive Us Again",
+    "authors": "William P. Mackay",
+    "publicationDate": "No Written Year found"
+  },
+  {
+    "title": "O God, Our Help in Ages Past",
+    "authors": "Isaac Watts",
+    "publicationDate": "No Written Year found"
+  },
+  {
+    "title": "Must Jesus Bear the Cross Alone?",
+    "authors": "Thomas Shepherd",
+    "publicationDate": "1693"
+  },
+  {
+    "title": "I Love to Tell the Story",
+    "authors": "Katherine Hankey",
+    "publicationDate": "No Written Year found"
+  },
+  {
+    "title": "Take My Life and Let It Be Consecrated",
+    "authors": "Francis B. Havergal",
+    "publicationDate": "No Written Year found"
+  },
+  {
+    "title": "I Heard the Voice of Jesus Say",
+    "authors": "Horatius Bonar",
+    "publicationDate": "No Written Year found"
+  },
+  {
+    "title": "God Be with You",
+    "authors": "Jeremiah E. Rankin",
+    "publicationDate": "No Written Year found"
+  },
+  {
+    "title": "Come, Holy Spirit, Heavenly Dove",
+    "authors": "Isaac Watts",
+    "publicationDate": "No Written Year found"
+  },
+  {
+    "title": "Jesus, Savior, Pilot Me",
+    "authors": "Edward Hopper",
+    "publicationDate": "1871"
+  },
+  {
+    "title": "Christ, the Lord, Is Risen Today",
+    "authors": "Charles Wesley",
+    "publicationDate": "No Written Year found"
+  },
+  {
+    "title": "Savior, Like a Shepherd, Lead Us",
+    "authors": "Dorothy A. Thrupp",
+    "publicationDate": "1836"
+  },
+  {
+    "title": "O Worship the King",
+    "authors": "Robert Grant",
+    "publicationDate": "No Written Year found"
+  },
+  {
+    "title": "My Jesus, I Love Thee",
+    "authors": "William R. Featherston",
+    "publicationDate": "No Written Year found"
+  },
+  {
+    "title": "While Shepherds Watched Their Flocks By Night",
+    "authors": "Nahum Tate",
+    "publicationDate": "No Written Year found"
+  },
+  {
+    "title": "Blessed Assurance",
+    "authors": "Fanny J. Crosby",
+    "publicationDate": "No Written Year found"
+  },
+  {
+    "title": "The Solid Rock",
+    "authors": "Edward Mote",
+    "publicationDate": "No Written Year found"
+  },
+  {
+    "title": "Come, Ye Disconsolate",
+    "authors": "Thomas Moore; Thomas Hastings",
+    "publicationDate": "No Written Year found"
+  },
+  {
+    "title": "Threefold Amen",
+    "authors": "None",
+    "publicationDate": "No Written Year found"
+  },
+  {
+    "title": "Gloria Patri",
+    "authors": "None",
+    "publicationDate": "No Written Year found"
+  },
+  {
+    "title": "I Need Thee Every Hour",
+    "authors": "Annie S. Hawks; Robert Lowry",
+    "publicationDate": "No Written Year found"
+  },
+  {
+    "title": "Now the Day Is Over",
+    "authors": "Sabine Baring-Gould",
+    "publicationDate": "1865"
+  },
+  {
+    "title": "Pass Me Not, O Gentle Savior",
+    "authors": "Fanny J. Crosby",
+    "publicationDate": "No Written Year found"
+  },
+  {
+    "title": "Softly and Tenderly",
+    "authors": "Will L. Thompson",
+    "publicationDate": "No Written Year found"
+  },
+  {
+    "title": "There's a Wideness in God's Mercy",
+    "authors": "Frederick W. Faber",
+    "publicationDate": "1862"
+  },
+  {
+    "title": "It Came Upon the Midnight Clear",
+    "authors": "Edmund H. Sears",
+    "publicationDate": "1849"
+  },
+  {
+    "title": "The Church's One Foundation",
+    "authors": "Samuel J. Stone",
+    "publicationDate": "1866"
+  },
+  {
+    "title": "Only Trust Him",
+    "authors": "John H. Stockton",
+    "publicationDate": "No Written Year found"
+  },
+  {
+    "title": "O Little Town of Bethlehem",
+    "authors": "Phillips Brooks",
+    "publicationDate": "1868"
+  },
+  {
+    "title": "Even Me",
+    "authors": "None",
+    "publicationDate": "No Written Year found"
+  },
+  {
+    "title": "Faith of Our Fathers",
+    "authors": "Frederick W. Faber",
+    "publicationDate": "No Written Year found"
+  },
+  {
+    "title": "More Love to Thee, O Christ",
+    "authors": "Elizabeth P. Prentiss",
+    "publicationDate": "1856"
+  },
+  {
+    "title": "Jesus Paid It All",
+    "authors": "Elvina M. Hall",
+    "publicationDate": "No Written Year found"
+  },
+  {
+    "title": "Down at the Cross",
+    "authors": "Elisha A. Hoffman",
+    "publicationDate": "No Written Year found"
+  },
+  {
+    "title": "Where He Leads Me",
+    "authors": "E. W. Blandy",
+    "publicationDate": "No Written Year found"
+  },
+  {
+    "title": "Rescue the Perishing",
+    "authors": "Fanny J. Crosby",
+    "publicationDate": "No Written Year found"
+  },
+  {
+    "title": "Almost Persuaded",
+    "authors": "Philip P. Bliss",
+    "publicationDate": "No Written Year found"
+  },
+  {
+    "title": "Angels from the Realms of Glory",
+    "authors": "James Montgomery",
+    "publicationDate": "1816"
+  },
+  {
+    "title": "Praise the Lord! Ye Heavens Adore Him",
+    "authors": "Edward Osler",
+    "publicationDate": "1796"
+  },
+  {
+    "title": "O Come, All Ye Faithful",
+    "authors": "John F. Wade; Frederick Oakeley",
+    "publicationDate": "No Written Year found"
+  },
+  {
+    "title": "Bringing in the Sheaves",
+    "authors": "Knowles Shaw",
+    "publicationDate": "No Written Year found"
+  },
+  {
+    "title": "Yield Not to Temptation",
+    "authors": "Horatio R. Palmer",
+    "publicationDate": "No Written Year found"
+  },
+  {
+    "title": "Rejoice the Lord Is King",
+    "authors": "Charles Wesley",
+    "publicationDate": "No Written Year found"
+  },
+  {
+    "title": "Break Thou the Bread of Life",
+    "authors": "Mary A. Lathbury; Alexander Groves",
+    "publicationDate": "1877"
+  },
+  {
+    "title": "I Feel Like Traveling On",
+    "authors": "Willliam Hunter",
+    "publicationDate": "No Written Year found"
+  },
+  {
+    "title": "I Am Thine, O Lord",
+    "authors": "Fanny J. Crosby",
+    "publicationDate": "No Written Year found"
+  },
+  {
+    "title": "Near the Cross",
+    "authors": "Fanny J. Crosby",
+    "publicationDate": "No Written Year found"
+  },
+  {
+    "title": "Sweet By and By",
+    "authors": "Sanford F. Bennett",
+    "publicationDate": "No Written Year found"
+  },
+  {
+    "title": "Whiter Than Snow",
+    "authors": "James Nicholson",
+    "publicationDate": "No Written Year found"
+  },
+  {
+    "title": "Take the Name of Jesus with You",
+    "authors": "Lydia Baxter",
+    "publicationDate": "No Written Year found"
+  },
+  {
+    "title": "A Mighty Fortress Is Our God",
+    "authors": "Martin Luther; Frederick H. Hedge",
+    "publicationDate": "No Written Year found"
+  },
+  {
+    "title": "Silent Night, Holy Night",
+    "authors": "Joseph Mohr; John F. Young",
+    "publicationDate": "No Written Year found"
+  },
+  {
+    "title": "Leaning on the Everlasting Arms",
+    "authors": "Elisha A. Hoffman",
+    "publicationDate": "No Written Year found"
+  },
+  {
+    "title": "For the Beauty of the Earth",
+    "authors": "Folliott S. Pierpoint",
+    "publicationDate": "1864"
+  },
+  {
+    "title": "Jesus Loves Me, This I Know",
+    "authors": "Anna B. Warner",
+    "publicationDate": "No Written Year found"
+  },
+  {
+    "title": "May the Grace of Christ Our Savior",
+    "authors": "John Newton",
+    "publicationDate": "No Written Year found"
+  },
+  {
+    "title": "Wonderful Words of Life",
+    "authors": "Philip P. Bliss",
+    "publicationDate": "No Written Year found"
+  },
+  {
+    "title": "The Lord's My Shepherd, I'll Not Want",
+    "authors": "None",
+    "publicationDate": "No Written Year found"
+  },
+  {
+    "title": "Fairest Lord Jesus",
+    "authors": "None",
+    "publicationDate": "No Written Year found"
+  },
+  {
+    "title": "O How I Love Jesus",
+    "authors": "Frederick Whitfield",
+    "publicationDate": "No Written Year found"
+  },
+  {
+    "title": "Holy Bible, Book Divine",
+    "authors": "John Burton",
+    "publicationDate": "No Written Year found"
+  },
+  {
+    "title": "Away in a Manger",
+    "authors": "John Thomas McFarland",
+    "publicationDate": "No Written Year found"
+  },
+  {
+    "title": "I Gave my Life for Thee",
+    "authors": "Frances R. Havergal",
+    "publicationDate": "1859"
+  },
+  {
+    "title": "Beneath the Cross of Jesus",
+    "authors": "Elizabeth C. Clephane",
+    "publicationDate": "No Written Year found"
+  },
+  {
+    "title": "I'll Live for Him",
+    "authors": "R. Hudson",
+    "publicationDate": "No Written Year found"
+  },
+  {
+    "title": "Jesus Saves",
+    "authors": "Priscilla J. Owens",
+    "publicationDate": "No Written Year found"
+  }
+]

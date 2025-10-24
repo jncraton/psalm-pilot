@@ -11,17 +11,22 @@
     <header>
       <h1>Psalm Pilot</h1>
     </header>
+
     <main>
       <table>
         <thead>
           <tr>
             <th>Hymn Title</th>
+            <th>Hymn Author</th>
+            <th>Publication Year</th>
           </tr>
         </thead>
         <tbody>
-          {% for index, hymn in hymns.items() %}
+          {% for hymn in hymns %}
           <tr>
-            <td>{{ hymn }}</td>
+            <td>{{ hymn.title }}</td>
+            <td>{{ hymn.authors or '' }}</td>
+            <td>{{ hymn.publicationDate or 'No Written Year found' }}</td>
           </tr>
           {% endfor %}
         </tbody>
