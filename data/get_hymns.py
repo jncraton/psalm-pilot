@@ -25,8 +25,10 @@ query_string = urlencode(params)
 url = f"{base_url}?{query_string}"
 
 hymns = pd.read_csv(url)
-hymns = hymns[['displayTitle', 'authors']]
+hymns = hymns[['displayTitle', 'authors', 'totalInstances']]
 hymns = hymns.rename(columns={'displayTitle': 'title'})
+
+hymns['popularity'] = hymns['totalInstances'] / hymns['totalInstances'].max()
 
 hymns.replace({np.nan: None}, inplace=True)
         

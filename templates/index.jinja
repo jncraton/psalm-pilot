@@ -18,6 +18,7 @@
           <tr>
             <th>Hymn Title</th>
             <th>Hymn Author</th>
+            <th>Hymn Popularity</th>
           </tr>
         </thead>
         <tbody>
@@ -25,6 +26,7 @@
           <tr>
             <td>{{ hymn.title }}</td>
             <td>{{ hymn.authors or ''}}</td>
+            <td>{{ (hymn['popularity'] * 100) | round(0) | int }}%</td>
           </tr>
           {% endfor %}
         </tbody>
