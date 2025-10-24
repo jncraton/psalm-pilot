@@ -28,7 +28,7 @@ def test_browse_hymns(main_page: Page):
     hymn_titles = [hymn['title'] for hymn in hymns]
 
     # Grab the hymn title column cells
-    hymn_title_cells = main_page.locator("tr td:nth-child(1)")
+    hymn_title_cells = main_page.locator("td:nth-child(1)")
 
     # Verify the data matches
     expect(hymn_title_cells).to_have_text(hymn_titles)
