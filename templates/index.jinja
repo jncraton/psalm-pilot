@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="Song pilot" />
     <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="manifest" href="manifest.webmanifest">
     <title>Psalm Pilot</title>
   </head>
   <body>
@@ -32,5 +33,12 @@
         </tbody>
       </table>
     </main>
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('service-worker.js')
+          });
+      }
+    </script>
   </body>
 </html>

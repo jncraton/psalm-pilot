@@ -1,4 +1,5 @@
-.PHONY: lint lint-fix lint-js lint-py lint-py-fix install build
+
+.PHONY: lint lint-fix lint-js lint-py lint-py-fix install build clean test
 
 # Run both JS/TS + Python linters
 lint: lint-js lint-py
@@ -27,4 +28,9 @@ build:
 	python render.py
 
 clean:
-	rm -rf .ruff_cache
+	rm -rf __pycache__ .pytest_cache .ruff_cache
+  
+ #run test_file tests
+test:
+	pytest
+

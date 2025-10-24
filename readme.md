@@ -1,5 +1,9 @@
 # PsalmPilot
 
+[![Lint](https://github.com/jncraton/psalm-pilot/actions/workflows/lint.yml/badge.svg)](https://github.com/jncraton/psalm-pilot/actions/workflows/lint.yml)
+[![Run Tests](https://github.com/jncraton/psalm-pilot/actions/workflows/tests.yml/badge.svg)](https://github.com/jncraton/psalm-pilot/actions/workflows/tests.yml)
+[![Deploy To Pages](https://github.com/jncraton/psalm-pilot/actions/workflows/pages.yml/badge.svg)](https://github.com/jncraton/psalm-pilot/actions/workflows/pages.yml)
+
 Hymn recommendation system
 
 ![Hymnal](https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Photographs_of_%C3%89glise_Saint-Thomas-d%27Aquin%2C_Qu%C3%A9bec%2C_Canada_02.jpg/330px-Photographs_of_%C3%89glise_Saint-Thomas-d%27Aquin%2C_Qu%C3%A9bec%2C_Canada_02.jpg)
