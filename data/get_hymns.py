@@ -26,33 +26,20 @@ query_string = urlencode(params)
 url = f"{base_url}?{query_string}"
 
 hymns = pd.read_csv(url)
-hymns = hymns[['displayTitle', 'authors']]
+
+hymns = hymns[['displayTitle', 'authors', 'textAuthNumber']]
+
 hymns = hymns.rename(columns={'displayTitle': 'title'})
 
 hymns.replace({np.nan: None}, inplace=True)
 
+# Retrieve texts
 texts_url = "https://hymnary.org/files/hymnary/other/texts.csv"
 texts = pd.read_csv(texts_url)
 
-def normalize_title(title: str):
-    return (
-        str(title)
-        .strip()
-        .lower()
-        .replace(" ", "_")
-        .replace("!", "")
-        .replace("?", "")
-        .replace(",", "")
-        .replace("'", "")
-        .replace(":", "")
-        .replace(";", "")
-    )
+merged = pd.merge(hymns, texts[['textAuthNumber', 'yearsWrote']], on='textAuthNumber', how='left')
 
-hymns["normTitle"] = hymns["title"].apply(normalize_title)
-texts["normTitle"] = texts["textAuthNumber"].astype(str).str.strip().str.lower()
-
-merged = pd.merge(hymns, texts[["normTitle", "yearsWrote"]], on="normTitle", how="left")
-
+# File write and appending to JSON file
 results = []
 for _, row in merged.iterrows():
     title = str(row.get("title", "")).strip()
