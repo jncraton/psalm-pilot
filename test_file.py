@@ -38,3 +38,22 @@ def test_browse_hymns(main_page: Page, hymn_data: list):
 
     # Verify the data matches
     expect(hymn_title_cells).to_have_text(hymn_titles)
+
+
+def test_song_authors(main_page: Page, hymn_data: list):
+    # Grab hymn authors source data
+    hymn_authors = [hymn['authors'] for hymn in hymn_data]
+
+    # Grab the hymn authors column cells
+    hymn_author_cells = main_page.locator("td:nth-child(2)")
+
+    # Verify the cells and data are of same length
+    expect(hymn_author_cells).to_have_count(len(hymn_authors))
+
+    # Verify the data matches
+    for hymn_authors_cell, hymn_author in zip(hymn_author_cells.all(), hymn_authors):
+        
+        if hymn_author is not None:
+            expect(hymn_authors_cell).to_have_text(hymn_author)
+        else:
+            expect(hymn_authors_cell).to_be_empty()
