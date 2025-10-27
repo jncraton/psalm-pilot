@@ -21,6 +21,7 @@
           <tr>
             <th>Title</th>
             <th>Author</th>
+            <th>Popularity</th>
           </tr>
         </thead>
         <tbody>
@@ -28,6 +29,7 @@
           <tr>
             <td>{{ hymn.title }}</td>
             <td>{{ hymn.authors or ''}}</td>
+            <td>{{ hymn.popularity }}%</td>
           </tr>
           {% endfor %}
         </tbody>
