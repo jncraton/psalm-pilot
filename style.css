@@ -9,8 +9,16 @@ body > * {
 }
 
 header {
+  display: flex;
   background-color: #a70000;
   color: white;
+  align-items: center;
+}
+
+header img {
+  max-width: 85px;
+  max-height: 85px;
+  padding-right: 1%;
 }
 
 /*General table cleanup*/
