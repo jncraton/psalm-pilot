@@ -29,22 +29,14 @@ url = f"{base_url}?{query_string}"
 hymns = pd.read_csv(url)
 texts = pd.read_csv(texts_url)
 
+hymns = hymns.merge(texts[['textAuthNumber', 'yearsWrote']], on='textAuthNumber', how='left')
+
 hymns.replace({np.nan: None}, inplace=True)
-hymns = hymns[['displayTitle', 'authors', 'textAuthNumber']]
+hymns = hymns[['displayTitle', 'authors','yearsWrote']]
 hymns = hymns.rename(columns={
     'displayTitle': 'title',
-    'textAuthNumber':'authNum'
+    'yearsWrote': 'publicationDate'
 })
-texts = texts[['displayTitle', 'authors', 'textAuthNumber', 'yearsWrote']]
-texts = texts.rename(columns={
-    'displayTitle': 'title',
-    'textAuthNumber':'authNum',
-    'yearsWrote':'publicationDate'
-})
-
-merged_txts = pd.merge(hymns, texts[['authNum', 'publicationDate']], on='authNum', how='left')
-
-merged_txts = merged_txts.drop(columns=['authNum'])
 
 # export to json
-merged_txts.to_json("data/hymns.json", orient="records", indent=2)
+hymns.to_json("data/hymns.json", orient="records", indent=2)
