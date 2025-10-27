@@ -27,14 +27,15 @@ query_string = urlencode(params)
 url = f"{base_url}?{query_string}"
 
 hymns = pd.read_csv(url)
-texts = pd.read_csv(texts_url)
 
+texts = pd.read_csv(texts_url)
 hymns = hymns.merge(texts[['textAuthNumber', 'yearsWrote']], on='textAuthNumber', how='left')
 
 hymns['popularity'] = (100 * hymns['totalInstances'] / hymns['totalInstances'].max()).astype(int)
 
 hymns.replace({np.nan: None}, inplace=True)
 hymns = hymns[['displayTitle', 'authors', 'popularity', 'yearsWrote']]
+
 hymns = hymns.rename(columns={
     'displayTitle': 'title',
     'yearsWrote': 'publicationDate'
