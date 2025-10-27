@@ -15,6 +15,12 @@ header {
   align-items: center;
 }
 
+header img {
+  max-width: 85px;
+  max-height: 85px;
+  padding-right: 1%;
+}
+
 /*General table cleanup*/
 table {
   border-collapse: collapse;
@@ -57,11 +63,4 @@ caption {
   vertical-align: bottom;
   text-transform: uppercase;
   font-weight: bold;
-}
-
-/* Logo */
-header img {
-  max-width: 85px;
-  max-height: 85px;
-  padding-right: 1%;
 }
