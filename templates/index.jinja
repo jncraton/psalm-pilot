@@ -21,6 +21,7 @@
             <th>Title</th>
             <th>Author</th>
             <th>Publication Year</th>
+            <th>Popularity</th>
           </tr>
         </thead>
         <tbody>
@@ -29,6 +30,7 @@
             <td>{{ hymn.title }}</td>
             <td>{{ hymn.authors or '' }}</td>
             <td>{{ hymn.publicationDate or '' }}</td>
+            <td>{{ hymn.popularity }}%</td>
           </tr>
           {% endfor %}
         </tbody>
