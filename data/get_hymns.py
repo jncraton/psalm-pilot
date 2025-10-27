@@ -39,4 +39,4 @@ hymns = hymns.rename(columns={
 })
 
 # export to json
-hymns.to_json("data/hymns.json", orient="records", indent=2)
+hymns.to_json("hymns.json", orient="records", indent=2)
