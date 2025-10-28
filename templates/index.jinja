@@ -80,11 +80,8 @@
 
       document.querySelector("#chat").addEventListener("click", async e => {
         const msg = document.querySelector("[name=gemini-msg]").value || "Hi!"
-        console.log(msg)
-        const res = await chat(msg)
-        console.log(res)
 
-        document.querySelector("#gemini-out").textContent = res
+        document.querySelector("#gemini-out").textContent = await chat(msg)
       })
 
       if ('serviceWorker' in navigator) {
