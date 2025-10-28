@@ -22,10 +22,9 @@ header img {
   padding-right: 1%;
 }
 
-input,
-button,
-output {
-  display: block;
+footer summary {
+  display: inline;
+  text-decoration: underline;
 }
 
 /*General table cleanup*/

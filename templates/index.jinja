@@ -38,12 +38,10 @@
       </table>
     </main>
     <footer>
-    <details><summary>Gemini Config</summary>
-      <label>Gemini Key<input name="gemini-key"></label>
-      <button id=set-key>Set Key</button>
-      <label>Test Message<input name="gemini-msg"></label>
-      <button id=chat>Test Chat</button>
-      <pre id=gemini-out></pre>
+    <details><summary>AI Settings</summary>
+      <label>Gemini Key <input name="gemini-key"></label>
+      <button id=set-key>Save Key</button>
+      <output id=gemini-out></output>
     </details>
     </footer>
     <script>
@@ -53,7 +51,7 @@
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
-            'x-goog-api-key': document.querySelector("[name=gemini-key]").value
+            'x-goog-api-key': localStorage.geminiKey
           },
           body: JSON.stringify({
             contents: [
@@ -73,13 +71,11 @@
         return json.candidates[0].content.parts[0].text
       }
 
-      document.querySelector("#set-key").addEventListener("click", e => {
-        localStorage.geminiKey = e.target.value
+      document.querySelector("#set-key").addEventListener("click", async e => {
+        localStorage.geminiKey = document.querySelector("[name=gemini-key]").value
         e.target.value = ""
-      })
 
-      document.querySelector("#chat").addEventListener("click", async e => {
-        const msg = document.querySelector("[name=gemini-msg]").value || "Hi!"
+        const msg = 'Respond with the just the words: Gemini Ready'
 
         document.querySelector("#gemini-out").textContent = await chat(msg)
       })

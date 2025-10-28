@@ -20,11 +20,10 @@ def test_table_not_empty(main_page: Page):
     expect(row_locator).not_to_have_count(0)
 
 def test_chat(main_page: Page):
-    main_page.locator("summary").click()
+    main_page.get_by_text("AI Settings").click()
     main_page.get_by_label("Gemini Key").fill(os.environ["GEMINI_KEY"])
-    main_page.get_by_label("Test Message").fill("What is the capital of France?")
-    main_page.get_by_text("Test Chat").click()
-    expect(main_page.get_by_text("Paris")).to_be_visible()
+    main_page.get_by_text("Save Key").click()
+    expect(main_page.get_by_text("Gemini Ready")).to_be_visible()
 
 def test_browse_hymns(main_page: Page):
     # Grab the hymn source data
