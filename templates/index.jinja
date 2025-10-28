@@ -61,7 +61,6 @@
 
       document.querySelector("#set-key").addEventListener("click", async e => {
         localStorage.geminiKey = document.querySelector("[name=gemini-key]").value
-        e.target.value = ""
 
         const msg = 'Respond with the just the words: Gemini Ready'
 
