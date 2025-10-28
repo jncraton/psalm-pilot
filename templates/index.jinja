@@ -53,22 +53,10 @@
             'Content-Type': 'application/json',
             'x-goog-api-key': localStorage.geminiKey
           },
-          body: JSON.stringify({
-            contents: [
-              {
-                parts: [
-                  {
-                    text: message
-                  }
-                ]
-              }
-            ]
-          })
+          body: `{contents:[{parts:[{text:${JSON.stringify(message)}}]}]}`
         })
 
-        const json = await res.json()
-
-        return json.candidates[0].content.parts[0].text
+        return (await res.json()).candidates[0].content.parts[0].text
       }
 
       document.querySelector("#set-key").addEventListener("click", async e => {
