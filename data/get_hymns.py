@@ -5,6 +5,8 @@ import numpy as np
 # import csv from Hymnary
 # the url uses advanced search to filter for multiple things outlined in the params
 base_url = "https://hymnary.org/search"
+# General database for identifying the years and to match authNums
+texts_url = "https://hymnary.org/files/hymnary/other/texts.csv"
 
 params = {
     "qu": {
@@ -25,12 +27,19 @@ query_string = urlencode(params)
 url = f"{base_url}?{query_string}"
 
 hymns = pd.read_csv(url)
-hymns = hymns.rename(columns={'displayTitle': 'title'})
+
+texts = pd.read_csv(texts_url)
+hymns = hymns.merge(texts[['textAuthNumber', 'yearsWrote']], on='textAuthNumber', how='left')
 
 hymns['popularity'] = (100 * hymns['totalInstances'] / hymns['totalInstances'].max()).astype(int)
 
 hymns.replace({np.nan: None}, inplace=True)
-        
+hymns = hymns[['displayTitle', 'authors', 'popularity', 'yearsWrote']]
+
+hymns = hymns.rename(columns={
+    'displayTitle': 'title',
+    'yearsWrote': 'publicationYear'
+})
+
 # export to json
-hymns = hymns[['title', 'popularity', 'authors']]
 hymns.to_json("hymns.json", orient="records", indent=2)
