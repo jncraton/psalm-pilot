@@ -16,6 +16,7 @@
     </header>
     <main>
       <table>
+      <caption>Hymns</caption>
         <thead>
           <tr>
             <th>Title</th>
@@ -29,7 +30,7 @@
           <tr>
             <td>{{ hymn.title }}</td>
             <td>{{ hymn.authors or '' }}</td>
-            <td>{{ hymn.publicationDate or '' }}</td>
+            <td>{{ hymn.publicationYear or '' }}</td>
             <td>{{ hymn.popularity }}%</td>
           </tr>
           {% endfor %}

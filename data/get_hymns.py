@@ -38,7 +38,7 @@ hymns = hymns[['displayTitle', 'authors', 'popularity', 'yearsWrote']]
 
 hymns = hymns.rename(columns={
     'displayTitle': 'title',
-    'yearsWrote': 'publicationDate'
+    'yearsWrote': 'publicationYear'
 })
 
 # export to json
