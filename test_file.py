@@ -65,7 +65,7 @@ def test_song_titles(main_page: Page, hymn_data: list):
 
 def test_song_authors(main_page: Page, hymn_data: list):
     # Grab hymn authors source data, converting None to empty string
-    hymn_authors = [hymn['authors'] if hymn['authors'] is not None else '' for hymn in hymn_data]
+    hymn_authors = [hymn['authors'] or '' for hymn in hymn_data]
 
     # Grab the hymn authors column cells
     hymn_author_cells = get_column_cells(main_page, 'Author')
