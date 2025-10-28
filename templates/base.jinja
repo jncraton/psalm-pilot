@@ -20,7 +20,33 @@
       {% block main %}{% endblock %}
     </main>
 
+    <footer>
+    <details><summary>Gemini Config</summary>
+      <label>Gemini Key<input name="gemini-key" type="password"></label>
+      <button id=set-key>Set Key</button>
+      <pre id=gemini-out></pre>
+    </details>
+    </footer>
     <script>
+      async function chat(message, model="gemini-flash-lite-latest") {
+        const res = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'x-goog-api-key': localStorage.geminiKey
+          },
+          body: `{contents:[{parts:[{text:${JSON.stringify(message)}}]}]}`
+        })
+
+        return (await res.json()).candidates[0].content.parts[0].text
+      }
+
+      document.querySelector("#set-key").addEventListener("click", async e => {
+        localStorage.geminiKey = document.querySelector("[name=gemini-key]").value
+        const res = await chat('Respond with the just the words: Gemini Ready')
+        document.querySelector("#gemini-out").textContent = res
+      })
+
       if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {
           navigator.serviceWorker.register('{{ root_dir }}service-worker.js')

@@ -53,6 +53,11 @@ def test_table_not_empty(main_page: Page):
     row_locator = main_page.locator("tbody tr")
     expect(row_locator).not_to_have_count(0)
 
+def test_chat(main_page: Page):
+    main_page.get_by_text("Gemini Config").click()
+    main_page.get_by_label("Gemini Key").fill(os.environ["GEMINI_KEY"])
+    main_page.get_by_text("Set Key").click()
+    expect(main_page.get_by_text("Gemini Ready")).to_be_visible()
 
 def test_song_titles(main_page: Page, hymn_data: list):
     # Grab hymn title source data
