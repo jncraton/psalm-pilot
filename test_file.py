@@ -80,3 +80,14 @@ def test_song_authors(main_page: Page, hymn_data: list):
             expect(hymn_author_cell).to_have_text(hymn_author)
         else:
             expect(hymn_author_cell).to_be_empty()
+
+
+def test_song_popularity(main_page: Page, hymn_data: list):
+    # Grab hymn popularity source data
+    hymn_popularity = [f"{hymn['popularity']}%" for hymn in hymn_data]
+
+    # Grab the hymn popularity column cells
+    hymn_popularity_cells = get_column_cells(main_page, 'Popularity')
+
+    # Verify the data matches
+    expect(hymn_popularity_cells).to_have_text(hymn_popularity)
