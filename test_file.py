@@ -52,7 +52,7 @@ def test_table_not_empty(main_page: Page):
     expect(row_locator).not_to_have_count(0)
 
 
-def test_browse_hymns(main_page: Page, hymn_data: list):
+def test_song_titles(main_page: Page, hymn_data: list):
     # Grab hymn title source data
     hymn_titles = [hymn['title'] for hymn in hymn_data]
 
