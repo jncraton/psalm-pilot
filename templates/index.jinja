@@ -62,9 +62,8 @@
       document.querySelector("#set-key").addEventListener("click", async e => {
         localStorage.geminiKey = document.querySelector("[name=gemini-key]").value
 
-        const msg = 'Respond with the just the words: Gemini Ready'
-
-        document.querySelector("#gemini-out").textContent = await chat(msg)
+        const res = await chat('Respond with the just the words: Gemini Ready')
+        document.querySelector("#gemini-out").textContent = res
       })
 
       if ('serviceWorker' in navigator) {
