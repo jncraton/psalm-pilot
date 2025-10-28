@@ -37,7 +37,56 @@
         </tbody>
       </table>
     </main>
+    <footer>
+    <details><summary>Gemini Config</summary>
+      <label>Gemini Key<input name="gemini-key"></label>
+      <button id=set-key>Set Key</button>
+      <label>Message<input name="gemini-msg"></label>
+      <button id=chat>Send Chat</button>
+      <pre id=gemini-out></pre>
+    </details>
+    </footer>
     <script>
+      async function chat(message) {
+        const url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-lite-latest:generateContent"
+        const res = await fetch(url, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'x-goog-api-key': document.querySelector("[name=gemini-key]").value
+          },
+          body: JSON.stringify({
+            contents: [
+              {
+                parts: [
+                  {
+                    text: message
+                  }
+                ]
+              }
+            ]
+          })
+        })
+
+        const json = await res.json()
+
+        return json.candidates[0].content.parts[0].text
+      }
+
+      document.querySelector("#set-key").addEventListener("click", e => {
+        localStorage.geminiKey = e.target.value
+        e.target.value = ""
+      })
+
+      document.querySelector("#chat").addEventListener("click", async e => {
+        const msg = document.querySelector("[name=gemini-msg]").value || "Hi!"
+        console.log(msg)
+        const res = await chat(msg)
+        console.log(res)
+
+        document.querySelector("#gemini-out").textContent = res
+      })
+
       if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {
           navigator.serviceWorker.register('service-worker.js')
