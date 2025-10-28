@@ -1,502 +1,602 @@
 [
   {
     "title": "All Hail the Power of Jesus' Name",
+    "authors": "Edward Perronet; John Rippon",
     "popularity": 100,
-    "authors": "Edward Perronet; John Rippon"
+    "publicationYear": "1780"
   },
   {
     "title": "Jesus, Lover of my soul",
+    "authors": "Charles Wesley",
     "popularity": 94,
-    "authors": "Charles Wesley"
+    "publicationYear": "1740"
   },
   {
     "title": "Rock of Ages, Cleft for Me",
+    "authors": "Augustus M. Toplady ",
     "popularity": 84,
-    "authors": "Augustus M. Toplady "
+    "publicationYear": "1776"
   },
   {
     "title": "Nearer, My God, to Thee",
+    "authors": "Sarah F. Adams",
     "popularity": 72,
-    "authors": "Sarah F. Adams"
+    "publicationYear": "1841"
   },
   {
     "title": "There Is a Fountain Filled with Blood",
+    "authors": "William Cowper",
     "popularity": 72,
-    "authors": "William Cowper"
+    "publicationYear": "1772"
   },
   {
     "title": "At the Cross",
+    "authors": "Isaac Watts; Ralph E. Hudson",
     "popularity": 67,
-    "authors": "Isaac Watts; Ralph E. Hudson"
+    "publicationYear": "1707"
   },
   {
     "title": "Blest Be the Tie That Binds",
+    "authors": "John Fawcett ",
     "popularity": 66,
-    "authors": "John Fawcett "
-  },
-  {
-    "title": "Come, Thou Fount of Every Blessing",
-    "popularity": 63,
-    "authors": "Robert Robinson"
+    "publicationYear": "1782"
   },
   {
     "title": "Just As I Am, Without One Plea",
+    "authors": "Charlotte Elliott",
     "popularity": 63,
-    "authors": "Charlotte Elliott"
+    "publicationYear": "1836"
+  },
+  {
+    "title": "Come, Thou Fount of Every Blessing",
+    "authors": "Robert Robinson",
+    "popularity": 63,
+    "publicationYear": "1758; 1760"
   },
   {
     "title": "How Firm A Foundation",
+    "authors": null,
     "popularity": 62,
-    "authors": null
+    "publicationYear": "1787"
   },
   {
     "title": "When I Survey the Wondrous Cross",
+    "authors": "Isaac Watts",
     "popularity": 57,
-    "authors": "Isaac Watts"
+    "publicationYear": "1707"
   },
   {
     "title": "Am I a Soldier of the Cross?",
+    "authors": "Isaac Watts",
     "popularity": 56,
-    "authors": "Isaac Watts"
+    "publicationYear": "1724"
   },
   {
     "title": "My Country, 'Tis of Thee",
+    "authors": "Samuel F. Smith",
     "popularity": 55,
-    "authors": "Samuel F. Smith"
+    "publicationYear": "1832"
   },
   {
     "title": "Joy to the World!",
+    "authors": "Isaac Watts",
     "popularity": 53,
-    "authors": "Isaac Watts"
+    "publicationYear": "1719"
   },
   {
     "title": "Love Divine, All Loves Excelling",
+    "authors": "Charles Wesley",
     "popularity": 53,
-    "authors": "Charles Wesley"
+    "publicationYear": "1747"
   },
   {
     "title": "Guide Me, O Thou Great Jehovah",
+    "authors": "William Williams",
     "popularity": 52,
-    "authors": "William Williams"
+    "publicationYear": "1745; 1771"
   },
   {
     "title": "Stand Up, Stand Up for Jesus",
+    "authors": "George Duffield",
     "popularity": 52,
-    "authors": "George Duffield"
+    "publicationYear": "1858"
   },
   {
     "title": "Onward Christian Soldiers",
+    "authors": "Sabine Baring-Gould",
     "popularity": 52,
-    "authors": "Sabine Baring-Gould"
+    "publicationYear": "1865"
   },
   {
     "title": "Come, We That Love the Lord",
+    "authors": "Isaac Watts; Robert Lowry",
     "popularity": 51,
-    "authors": "Isaac Watts; Robert Lowry"
+    "publicationYear": "1707"
   },
   {
     "title": "Come, Thou Almighty King",
+    "authors": "Anonymous",
     "popularity": 51,
-    "authors": "Anonymous"
+    "publicationYear": "1757"
   },
   {
     "title": "What a Friend We Have in Jesus",
+    "authors": "Joseph M. Scriven",
     "popularity": 50,
-    "authors": "Joseph M. Scriven"
+    "publicationYear": "1855"
   },
   {
     "title": "O For a Thousand Tongues to Sing",
+    "authors": "Charles Wesley",
     "popularity": 50,
-    "authors": "Charles Wesley"
+    "publicationYear": "1739"
   },
   {
     "title": "Abide with Me",
+    "authors": "Henry F. Lyte",
     "popularity": 48,
-    "authors": "Henry F. Lyte"
+    "publicationYear": "1847"
   },
   {
     "title": "Holy, Holy, Holy, Lord God Almighty",
+    "authors": "Reginald Heber",
     "popularity": 47,
-    "authors": "Reginald Heber"
+    "publicationYear": "1826"
   },
   {
     "title": "How Sweet the Name of Jesus Sounds",
+    "authors": "John Newton",
     "popularity": 47,
-    "authors": "John Newton"
+    "publicationYear": "1779"
   },
   {
     "title": "Amazing Grace",
+    "authors": "John Newton; John P. Rees",
     "popularity": 43,
-    "authors": "John Newton; John P. Rees"
+    "publicationYear": "1779"
   },
   {
     "title": "In the Cross of Christ I Glory",
+    "authors": "John Bowring",
     "popularity": 43,
-    "authors": "John Bowring"
+    "publicationYear": "1825"
   },
   {
     "title": "Sun of My Soul",
+    "authors": "John Keble",
     "popularity": 41,
-    "authors": "John Keble"
+    "publicationYear": "1820"
   },
   {
     "title": "I Am Bound for the Promised Land",
+    "authors": "Samuel Stennett",
     "popularity": 40,
-    "authors": "Samuel Stennett"
+    "publicationYear": "1787"
   },
   {
     "title": "A Charge to Keep I Have",
+    "authors": "Charles Wesley",
     "popularity": 39,
-    "authors": "Charles Wesley"
+    "publicationYear": "1762"
   },
   {
     "title": "I Love Your Kingdom, Lord",
+    "authors": "Timothy Dwight",
     "popularity": 38,
-    "authors": "Timothy Dwight"
+    "publicationYear": "1800"
   },
   {
     "title": "Hark! the Herald Angels Sing",
+    "authors": "Charles Wesley",
     "popularity": 38,
-    "authors": "Charles Wesley"
+    "publicationYear": "1739"
   },
   {
     "title": "Sweet Hour of Prayer",
+    "authors": "William W. Walford",
     "popularity": 38,
-    "authors": "William W. Walford"
+    "publicationYear": "1845"
   },
   {
-    "title": "Doxology",
+    "title": "Praise God from Who All Blessings Flow",
+    "authors": "Thomas Ken ; Isaac Watts",
     "popularity": 37,
-    "authors": "Thomas Ken"
+    "publicationYear": "1674"
   },
   {
     "title": "He Leadeth Me, O Blessed Thought",
+    "authors": "Joseph H. Gilmore",
     "popularity": 37,
-    "authors": "Joseph H. Gilmore"
+    "publicationYear": "1862"
   },
   {
     "title": "Revive Us Again",
+    "authors": "William P. Mackay",
     "popularity": 37,
-    "authors": "William P. Mackay"
+    "publicationYear": "1863, 1867"
   },
   {
     "title": "O God, Our Help in Ages Past",
+    "authors": "Isaac Watts",
     "popularity": 35,
-    "authors": "Isaac Watts"
+    "publicationYear": "1719"
   },
   {
     "title": "Must Jesus Bear the Cross Alone?",
+    "authors": "Thomas Shepherd",
     "popularity": 35,
-    "authors": "Thomas Shepherd"
+    "publicationYear": "1693"
   },
   {
     "title": "I Love to Tell the Story",
+    "authors": "Katherine Hankey",
     "popularity": 35,
-    "authors": "Katherine Hankey"
+    "publicationYear": "1866; 1869"
   },
   {
     "title": "Take My Life and Let It Be Consecrated",
+    "authors": "Francis B. Havergal",
     "popularity": 35,
-    "authors": "Francis B. Havergal"
+    "publicationYear": "1874"
   },
   {
     "title": "I Heard the Voice of Jesus Say",
+    "authors": "Horatius Bonar",
     "popularity": 35,
-    "authors": "Horatius Bonar"
+    "publicationYear": "1846"
   },
   {
     "title": "God Be with You",
+    "authors": "Jeremiah E. Rankin",
     "popularity": 34,
-    "authors": "Jeremiah E. Rankin"
-  },
-  {
-    "title": "Come, Holy Spirit, Heavenly Dove",
-    "popularity": 34,
-    "authors": "Isaac Watts"
+    "publicationYear": "1880"
   },
   {
     "title": "Jesus, Savior, Pilot Me",
+    "authors": "Edward Hopper",
     "popularity": 34,
-    "authors": "Edward Hopper"
+    "publicationYear": "1871"
+  },
+  {
+    "title": "Come, Holy Spirit, Heavenly Dove",
+    "authors": "Isaac Watts",
+    "popularity": 34,
+    "publicationYear": "1707"
   },
   {
     "title": "Christ, the Lord, Is Risen Today",
+    "authors": "Charles Wesley",
     "popularity": 34,
-    "authors": "Charles Wesley"
+    "publicationYear": "1739"
   },
   {
     "title": "Savior, Like a Shepherd, Lead Us",
+    "authors": "Dorothy A. Thrupp",
     "popularity": 33,
-    "authors": "Dorothy A. Thrupp"
+    "publicationYear": "1836"
   },
   {
     "title": "O Worship the King",
+    "authors": "Robert Grant",
     "popularity": 33,
-    "authors": "Robert Grant"
+    "publicationYear": "1833"
   },
   {
     "title": "My Jesus, I Love Thee",
-    "popularity": 31,
-    "authors": "William R. Featherston"
-  },
-  {
-    "title": "While Shepherds Watched Their Flocks By Night",
-    "popularity": 31,
-    "authors": "Nahum Tate"
+    "authors": "William R. Featherston",
+    "popularity": 32,
+    "publicationYear": "1862"
   },
   {
     "title": "Blessed Assurance",
+    "authors": "Fanny J. Crosby",
     "popularity": 31,
-    "authors": "Fanny J. Crosby"
+    "publicationYear": "1873"
+  },
+  {
+    "title": "While Shepherds Watched Their Flocks By Night",
+    "authors": "Nahum Tate",
+    "popularity": 31,
+    "publicationYear": "1700"
   },
   {
     "title": "The Solid Rock",
+    "authors": "Edward Mote",
     "popularity": 31,
-    "authors": "Edward Mote"
+    "publicationYear": "1834"
   },
   {
     "title": "Come, Ye Disconsolate",
+    "authors": "Thomas Moore; Thomas Hastings",
     "popularity": 30,
-    "authors": "Thomas Moore; Thomas Hastings"
+    "publicationYear": "1816; 1832"
   },
   {
-    "title": "Threefold Amen",
+    "title": "Sevenfold Amen",
+    "authors": null,
     "popularity": 29,
-    "authors": null
+    "publicationYear": null
   },
   {
     "title": "Gloria Patri",
+    "authors": null,
     "popularity": 29,
-    "authors": null
+    "publicationYear": null
   },
   {
     "title": "I Need Thee Every Hour",
+    "authors": "Annie S. Hawks; Robert Lowry",
     "popularity": 28,
-    "authors": "Annie S. Hawks; Robert Lowry"
+    "publicationYear": "1872"
   },
   {
     "title": "Now the Day Is Over",
+    "authors": "Sabine Baring-Gould",
     "popularity": 27,
-    "authors": "Sabine Baring-Gould"
+    "publicationYear": "1865"
   },
   {
     "title": "Pass Me Not, O Gentle Savior",
+    "authors": "Fanny J. Crosby",
     "popularity": 26,
-    "authors": "Fanny J. Crosby"
+    "publicationYear": "1868"
   },
   {
     "title": "Softly and Tenderly",
+    "authors": "Will L. Thompson",
     "popularity": 26,
-    "authors": "Will L. Thompson"
+    "publicationYear": "1880"
   },
   {
     "title": "There's a Wideness in God's Mercy",
+    "authors": "Frederick W. Faber",
     "popularity": 25,
-    "authors": "Frederick W. Faber"
+    "publicationYear": "1862"
   },
   {
     "title": "It Came Upon the Midnight Clear",
+    "authors": "Edmund H. Sears",
     "popularity": 25,
-    "authors": "Edmund H. Sears"
+    "publicationYear": "1849"
   },
   {
     "title": "The Church's One Foundation",
+    "authors": "Samuel J. Stone",
     "popularity": 25,
-    "authors": "Samuel J. Stone"
+    "publicationYear": "1866"
   },
   {
     "title": "Only Trust Him",
+    "authors": "John H. Stockton",
     "popularity": 25,
-    "authors": "John H. Stockton"
+    "publicationYear": "1874"
   },
   {
     "title": "O Little Town of Bethlehem",
+    "authors": "Phillips Brooks",
     "popularity": 24,
-    "authors": "Phillips Brooks"
+    "publicationYear": "1868"
   },
   {
     "title": "Even Me",
+    "authors": null,
     "popularity": 24,
-    "authors": null
+    "publicationYear": "1860"
   },
   {
     "title": "Faith of Our Fathers",
+    "authors": "Frederick W. Faber",
     "popularity": 24,
-    "authors": "Frederick W. Faber"
+    "publicationYear": "1849"
   },
   {
     "title": "More Love to Thee, O Christ",
+    "authors": "Elizabeth P. Prentiss",
     "popularity": 24,
-    "authors": "Elizabeth P. Prentiss"
+    "publicationYear": "1856"
   },
   {
     "title": "Jesus Paid It All",
+    "authors": "Elvina M. Hall",
     "popularity": 24,
-    "authors": "Elvina M. Hall"
+    "publicationYear": "1865"
   },
   {
     "title": "Down at the Cross",
+    "authors": "Elisha A. Hoffman",
     "popularity": 23,
-    "authors": "Elisha A. Hoffman"
+    "publicationYear": "1878"
   },
   {
     "title": "Where He Leads Me",
+    "authors": "E. W. Blandy",
     "popularity": 23,
-    "authors": "E. W. Blandy"
+    "publicationYear": "1890"
   },
   {
     "title": "Rescue the Perishing",
+    "authors": "Fanny J. Crosby",
     "popularity": 23,
-    "authors": "Fanny J. Crosby"
+    "publicationYear": "1869"
   },
   {
     "title": "Almost Persuaded",
+    "authors": "Philip P. Bliss",
     "popularity": 22,
-    "authors": "Philip P. Bliss"
+    "publicationYear": "1871"
   },
   {
     "title": "Angels from the Realms of Glory",
+    "authors": "James Montgomery",
     "popularity": 22,
-    "authors": "James Montgomery"
+    "publicationYear": "1816"
   },
   {
     "title": "Praise the Lord! Ye Heavens Adore Him",
+    "authors": "Edward Osler",
     "popularity": 22,
-    "authors": "Edward Osler"
+    "publicationYear": "1796"
   },
   {
     "title": "O Come, All Ye Faithful",
+    "authors": "John F. Wade; Frederick Oakeley",
     "popularity": 21,
-    "authors": "John F. Wade; Frederick Oakeley"
+    "publicationYear": "1841"
   },
   {
     "title": "Bringing in the Sheaves",
+    "authors": "Knowles Shaw",
     "popularity": 21,
-    "authors": "Knowles Shaw"
+    "publicationYear": "1874"
   },
   {
     "title": "Yield Not to Temptation",
+    "authors": "Horatio R. Palmer",
     "popularity": 21,
-    "authors": "Horatio R. Palmer"
-  },
-  {
-    "title": "Rejoice the Lord Is King",
-    "popularity": 21,
-    "authors": "Charles Wesley"
+    "publicationYear": "1868"
   },
   {
     "title": "Break Thou the Bread of Life",
+    "authors": "Mary A. Lathbury; Alexander Groves",
     "popularity": 21,
-    "authors": "Mary A. Lathbury; Alexander Groves"
+    "publicationYear": "1877"
+  },
+  {
+    "title": "Rejoice the Lord Is King",
+    "authors": "Charles Wesley",
+    "popularity": 21,
+    "publicationYear": "1744"
   },
   {
     "title": "I Feel Like Traveling On",
+    "authors": "Willliam Hunter",
     "popularity": 20,
-    "authors": "Willliam Hunter"
+    "publicationYear": null
   },
   {
     "title": "I Am Thine, O Lord",
+    "authors": "Fanny J. Crosby",
     "popularity": 20,
-    "authors": "Fanny J. Crosby"
+    "publicationYear": "1875"
   },
   {
     "title": "Near the Cross",
+    "authors": "Fanny J. Crosby",
     "popularity": 20,
-    "authors": "Fanny J. Crosby"
+    "publicationYear": "1869"
   },
   {
     "title": "Sweet By and By",
+    "authors": "Sanford F. Bennett",
     "popularity": 20,
-    "authors": "Sanford F. Bennett"
+    "publicationYear": "1868"
   },
   {
     "title": "Whiter Than Snow",
+    "authors": "James Nicholson",
     "popularity": 19,
-    "authors": "James Nicholson"
+    "publicationYear": "1872"
   },
   {
     "title": "Take the Name of Jesus with You",
+    "authors": "Lydia Baxter",
     "popularity": 19,
-    "authors": "Lydia Baxter"
+    "publicationYear": "1870"
   },
   {
     "title": "A Mighty Fortress Is Our God",
+    "authors": "Martin Luther; Frederick H. Hedge",
     "popularity": 19,
-    "authors": "Martin Luther; Frederick H. Hedge"
+    "publicationYear": "1529; 1852"
   },
   {
     "title": "Silent Night, Holy Night",
+    "authors": "Joseph Mohr; John F. Young",
     "popularity": 18,
-    "authors": "Joseph Mohr; John F. Young"
+    "publicationYear": "1818"
   },
   {
     "title": "Leaning on the Everlasting Arms",
+    "authors": "Elisha A. Hoffman",
     "popularity": 18,
-    "authors": "Elisha A. Hoffman"
+    "publicationYear": "1887"
   },
   {
     "title": "For the Beauty of the Earth",
+    "authors": "Folliott S. Pierpoint",
     "popularity": 18,
-    "authors": "Folliott S. Pierpoint"
+    "publicationYear": "1864"
   },
   {
     "title": "Jesus Loves Me, This I Know",
+    "authors": "Anna B. Warner",
     "popularity": 18,
-    "authors": "Anna B. Warner"
+    "publicationYear": "1859"
   },
   {
     "title": "May the Grace of Christ Our Savior",
+    "authors": "John Newton",
     "popularity": 17,
-    "authors": "John Newton"
+    "publicationYear": "1779"
   },
   {
     "title": "Wonderful Words of Life",
+    "authors": "Philip P. Bliss",
     "popularity": 17,
-    "authors": "Philip P. Bliss"
+    "publicationYear": "1874"
   },
   {
     "title": "The Lord's My Shepherd, I'll Not Want",
+    "authors": null,
     "popularity": 17,
-    "authors": null
+    "publicationYear": null
   },
   {
     "title": "Fairest Lord Jesus",
+    "authors": null,
     "popularity": 17,
-    "authors": null
+    "publicationYear": null
   },
   {
     "title": "O How I Love Jesus",
-    "popularity": 17,
-    "authors": "Frederick Whitfield"
+    "authors": "Frederick Whitfield",
+    "popularity": 16,
+    "publicationYear": null
   },
   {
     "title": "Holy Bible, Book Divine",
+    "authors": "John Burton",
     "popularity": 16,
-    "authors": "John Burton"
+    "publicationYear": "1803"
   },
   {
     "title": "Away in a Manger",
+    "authors": "John Thomas McFarland",
     "popularity": 16,
-    "authors": "John Thomas McFarland"
+    "publicationYear": "1885; 1892"
   },
   {
     "title": "I Gave my Life for Thee",
+    "authors": "Frances R. Havergal",
     "popularity": 15,
-    "authors": "Frances R. Havergal"
+    "publicationYear": "1859"
   },
   {
     "title": "Beneath the Cross of Jesus",
+    "authors": "Elizabeth C. Clephane",
     "popularity": 15,
-    "authors": "Elizabeth C. Clephane"
+    "publicationYear": "1868"
   },
   {
     "title": "I'll Live for Him",
+    "authors": "R. Hudson",
     "popularity": 15,
-    "authors": "R. Hudson"
+    "publicationYear": "1882"
   },
   {
     "title": "Jesus Saves",
+    "authors": "Priscilla J. Owens",
     "popularity": 15,
-    "authors": "Priscilla J. Owens"
+    "publicationYear": "1882"
   }
 ]

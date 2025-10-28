@@ -21,6 +21,7 @@
           <tr>
             <th>Title</th>
             <th>Author</th>
+            <th>Publication Year</th>
             <th>Popularity</th>
           </tr>
         </thead>
@@ -28,7 +29,8 @@
           {% for hymn in hymns %}
           <tr>
             <td>{{ hymn.title }}</td>
-            <td>{{ hymn.authors or ''}}</td>
+            <td>{{ hymn.authors or '' }}</td>
+            <td>{{ hymn.publicationYear or '' }}</td>
             <td>{{ hymn.popularity }}%</td>
           </tr>
           {% endfor %}
