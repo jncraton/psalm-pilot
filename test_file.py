@@ -83,3 +83,14 @@ def test_song_authors(main_page: Page, hymn_data: list):
 
     # Verify the data matches
     expect(hymn_author_cells).to_have_text(hymn_authors)
+
+
+def test_song_years(main_page: Page, hymn_data: list):
+    # Grab hymn publication year source data
+    hymn_years = [hymn['publicationYear'] or '' for hymn in hymn_data]
+
+    # Grab the hymn publication year column cells
+    hymn_year_cells = get_column_cells(main_page, 'Publication Year')
+
+    # Verify the data matches
+    expect(hymn_year_cells).to_have_text(hymn_years)
