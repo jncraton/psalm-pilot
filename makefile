@@ -22,12 +22,15 @@ lint-py-fix:
 	pipx run --spec ruff==0.13.3 ruff check . --fix
 
 install:
+	cd data && make install
 	pip install -r requirements.txt
 
 build:
+	cd data && make
 	python render.py
 
 clean:
+	cd data && make clean
 	rm -rf __pycache__ .pytest_cache .ruff_cache
   
  #run test_file tests
