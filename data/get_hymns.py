@@ -1,6 +1,7 @@
 import pandas as pd
 from urllib.parse import urlencode
 import numpy as np
+import requests
 
 # import csv from Hymnary
 # the url uses advanced search to filter for multiple things outlined in the params
@@ -33,8 +34,16 @@ hymns = hymns.merge(texts[['textAuthNumber', 'yearsWrote']], on='textAuthNumber'
 
 hymns['popularity'] = (100 * hymns['totalInstances'] / hymns['totalInstances'].max()).astype(int)
 
+def get_text(textAuthNumber):
+    print(f"Downloading text for {textAuthNumber}...")
+    res = requests.get(f"https://hymnary.org/api/fulltext/{textAuthNumber}")
+
+    return res.json()[0]["text"]
+
+hymns['text'] = hymns['textAuthNumber'].apply(get_text)
+
 hymns.replace({np.nan: None}, inplace=True)
-hymns = hymns[['displayTitle', 'authors', 'popularity', 'yearsWrote']]
+hymns = hymns[['displayTitle', 'authors', 'text', 'popularity', 'yearsWrote']]
 
 hymns = hymns.rename(columns={
     'displayTitle': 'title',
