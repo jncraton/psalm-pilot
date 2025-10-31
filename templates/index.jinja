@@ -14,7 +14,7 @@
     <tbody>
       {% for hymn in hymns %}
       <tr>
-        <td>{{ hymn.title }}</td>
+        <td><a href="hymns/{{ hymn.titleId }}.html">{{ hymn.title }}</a></td>
         <td>{{ hymn.authors or '' }}</td>
         <td>{{ hymn.publicationYear or '' }}</td>
         <td>{{ hymn.popularity }}%</td>
