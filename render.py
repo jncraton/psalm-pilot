@@ -20,13 +20,10 @@ with open('index.html', 'w') as hymns_page:
 hymn_template = env.get_template('hymn.jinja')
 
 # Write out the hymn page for each hymn
-i = 0
 for hymn in hymns:
     # Fill out the template for the hymn
     filled_hymn_template = hymn_template.render(hymn=hymn)
 
     # Write out the template with custom file name in hymns directory
-    with open(f"hymns/{i}.html", 'w') as hymn_page:
+    with open(f"hymns/{hymn['titleId']}.html", 'w') as hymn_page:
         hymn_page.write(filled_hymn_template)
-    
-    i += 1
