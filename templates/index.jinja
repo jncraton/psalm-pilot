@@ -1,48 +1,27 @@
-<!doctype html>
-<html lang="en-US">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Song pilot" />
-    <link rel="stylesheet" type="text/css" href="style.css" />
-    <link rel="icon" type="image/svg+xml" href="favicon.svg">
-    <link rel="manifest" href="manifest.webmanifest">
-    <title>Psalm Pilot</title>
-  </head>
-  <body>
-    <header>
-      <img src="favicon.svg" alt="Psalm Pilot Logo">
-      <h1>Psalm Pilot</h1>
-    </header>
-    <main>
-      <table>
-        <caption>Hymns</caption>
-        <thead>
-          <tr>
-            <th>Title</th>
-            <th>Author</th>
-            <th>Publication Year</th>
-            <th>Popularity</th>
-          </tr>
-        </thead>
-        <tbody>
-          {% for hymn in hymns %}
-          <tr>
-            <td>{{ hymn.title }}</td>
-            <td>{{ hymn.authors or '' }}</td>
-            <td>{{ hymn.publicationYear or '' }}</td>
-            <td>{{ hymn.popularity }}%</td>
-          </tr>
-          {% endfor %}
-        </tbody>
-      </table>
-    </main>
-    <script>
-      if ('serviceWorker' in navigator) {
-        window.addEventListener('load', () => {
-          navigator.serviceWorker.register('service-worker.js')
-          });
-      }
-    </script>
-  </body>
-</html>
+{% extends 'base.jinja' %}
+
+{% set root_dir = '' %}
+
+{% block main %}
+  <table>
+    <caption>Hymns</caption>
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Publication Year</th>
+        <th>Popularity</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for hymn in hymns %}
+      <tr>
+        <td>{{ hymn.title }}</td>
+        <td>{{ hymn.authors or '' }}</td>
+        <td>{{ hymn.publicationYear or '' }}</td>
+        <td>{{ hymn.popularity }}%</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}
