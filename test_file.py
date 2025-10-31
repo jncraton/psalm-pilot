@@ -72,3 +72,7 @@ def test_song_authors(main_page: Page, hymn_data: list):
 
     # Verify the data matches
     expect(hymn_author_cells).to_have_text(hymn_authors)
+
+def search_bar(main_page: Page, hymn_data: list):
+    #
+    hymn_authors = [hymn['authors'] or '' for hymn in hymn_data]
