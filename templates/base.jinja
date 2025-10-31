@@ -4,15 +4,15 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="Song pilot" />
-    <link rel="stylesheet" type="text/css" href="{{ root_dir }}style.css" />
-    <link rel="icon" type="image/svg+xml" href="{{ root_dir }}favicon.svg">
-    <link rel="manifest" href="{{ root_dir }}manifest.webmanifest">
+    <link rel="stylesheet" type="text/css" href="{{ root_dir or '' }}style.css" />
+    <link rel="icon" type="image/svg+xml" href="{{ root_dir or '' }}favicon.svg">
+    <link rel="manifest" href="{{ root_dir or '' }}manifest.webmanifest">
     <title>{{ page_title  or 'Psalm Pilot' }}</title>
   </head>
 
   <body>
     <header>
-      <img src="{{ root_dir }}favicon.svg" alt="Psalm Pilot Logo">
+      <img src="{{ root_dir or '' }}favicon.svg" alt="Psalm Pilot Logo">
       <h1>Psalm Pilot</h1>
     </header>
 
