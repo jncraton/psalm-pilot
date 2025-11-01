@@ -10,4 +10,4 @@ hymns.json
 !data/hymns.json
 
 # Ignore the rendered version of the web app
-index.html
+*.html

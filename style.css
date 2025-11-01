@@ -22,7 +22,8 @@ header img {
 }
 
 /*General table cleanup*/
-table {
+table,
+div {
   border-collapse: collapse;
   width: 100%;
   font-size: 14px;
