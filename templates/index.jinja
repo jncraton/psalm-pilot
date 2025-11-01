@@ -17,7 +17,7 @@
           <h1>Psalm Pilot</h1>
         </div>
         <form>
-          <input type="text" id="search" name="search" placeholder="Search hymns..." />
+          <input type="text" id="search" name="search" placeholder="Search hymns..." onkeyup="search_title()" />
           <img src="searchicon.svg"/>
         </form>
       </nav>
@@ -36,7 +36,7 @@
         <tbody>
           {% for hymn in hymns %}
           <tr>
-            <td>{{ hymn.title }}</td>
+            <td class="hymn-title">{{ hymn.title }}</td>
             <td>{{ hymn.authors or '' }}</td>
             <td>{{ hymn.publicationYear or '' }}</td>
             <td>{{ hymn.popularity }}%</td>
@@ -52,5 +52,6 @@
           });
       }
     </script>
+    <script src="main.js"></script>
   </body>
 </html>
