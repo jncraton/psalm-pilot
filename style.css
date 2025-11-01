@@ -9,17 +9,60 @@ body > * {
 }
 
 header {
-  display: flex;
   background-color: #a70000;
   color: white;
-  align-items: center;
 }
 
-header img {
+/*Nav and Search bar*/
+header nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #a70000;
+}
+
+.logo-and-title {
+  float: left;
+  display: flex;
+  color: white;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.logo-and-title img {
   max-width: 85px;
   max-height: 85px;
   padding-right: 1%;
 }
+
+nav form {
+  display: flex;
+  width: max-content;
+  align-items: center;
+  border-radius: 28px;
+  background-color: white;
+  flex-direction: row-reverse;
+  padding: 5px;
+  gap: 5px;
+}
+
+nav input[type=text] {
+  float: right;
+  height: 35px;
+  width: 300px;
+  border: none;
+  font-size: 16px;
+  text-align: left;
+  border-radius: 28px;
+  padding-left: 10px;
+}
+
+form img {
+  max-width: 20px;
+  max-height: 20px;
+  padding-left: 5px;
+}
+
 
 /*General table cleanup*/
 table {
