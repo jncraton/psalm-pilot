@@ -1,4 +1,4 @@
-const CACHE_NAME = 'psalm-pilot-cache-0fe7cde';
+const CACHE_NAME = 'psalm-pilot-cache-7c2f947';
 
 self.addEventListener('install', e => {
   e.waitUntil(
