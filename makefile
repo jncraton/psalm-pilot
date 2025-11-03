@@ -1,3 +1,4 @@
+all: build
 
 .PHONY: lint lint-fix lint-js lint-py lint-py-fix install build clean clean-cache clean-build test
 
