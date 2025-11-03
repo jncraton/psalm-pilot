@@ -55,16 +55,11 @@ nav input[type=search] {
   text-align: left;
   border-radius: 28px;
 
-  background-image: none;
+  background-image: url("searchicon.svg");
   background-repeat: no-repeat;
   background-position: center left 0.4rem;
   background-size: 1.3rem auto;
-  padding-left: 0.6rem;
-}
-
-nav input[type=search]:focus {
   padding-left: 2rem;
-  background-image: url("searchicon.svg");
 }
 
 /*General table cleanup*/
