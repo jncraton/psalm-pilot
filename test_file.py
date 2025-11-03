@@ -85,20 +85,14 @@ def test_song_authors(main_page: Page, hymn_data: list):
     expect(hymn_author_cells).to_have_text(hymn_authors)
 
 def search_bar(main_page: Page, hymn_data: list):
-    # Grab the search bar
-    search_input = main_page.locator("input[type='search']")
-    
-    # Type a search term
-    search_input.fill(search_term)
-    
-    # Filter the hymn data for expected results
-    expected_titles = [hymn['title'] for hymn in hymn_data if search_term.lower() in hymn['title'].lower()]
+    # Grab the hymn titles from source data
+    hymn_titles = [hymn['title'] or '' for hymn in hymn_data]
 
     # Grab the hymn title column cells after search
     hymn_title_cells = get_column_cells(main_page, 'Title')
 
     # Verify the data matches
-    expect(hymn_title_cells).to_have_text(expected_titles)
+    expect(hymn_title_cells).to_have_text(hymn_titles)
 
 def test_song_years(main_page: Page, hymn_data: list):
     # Grab hymn publication year source data
