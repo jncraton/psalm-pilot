@@ -65,3 +65,7 @@ caption {
   text-transform: uppercase;
   font-weight: bold;
 }
+
+p {
+  white-space: pre-line;
+}
