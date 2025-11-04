@@ -97,13 +97,17 @@ def test_song_years(main_page: Page, hymn_data: list):
 
 
 def test_song_lyrics(main_page:Page, hymn_data: list):
+    for hymn in hymn_data:
     # Grab the title source data
-    hymn_title_id = [hymn['titleId'] or '' for hymn in hymn_data]
+        hymn_title_id = hymn['titleId'] or '' 
 
     # Grab hymn lyrics source data
-    hymn_lyrics = [hymn['text'] or '' for hymn in hymn_data]
+        hymn_lyrics = hymn['text'] or '' 
 
+    # Go to next page 
+        #main_page.goto(f"https://jncraton.github.io/psalm-pilot/hymns/{hymn_title_id}.html")
+        main_page.goto(f"localhost:8000/hymns/{hymn_title_id}.html")
     # Confirm the hymn lyrics on the new page
-    expect( main_page.goto(f"https://jncraton.github.io/psalm-pilot/hymns/{hymn_title_id}.html").locator("p")).to_contain_text(hymn_lyrics)
+        expect( main_page.locator("p")).to_contain_text(hymn_lyrics)
 
 
