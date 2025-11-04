@@ -1,5 +1,5 @@
 
-.PHONY: lint lint-fix lint-js lint-py lint-py-fix install build clean test
+.PHONY: lint lint-fix lint-js lint-py lint-py-fix install build clean clean-cache clean-build test
 
 # Run both JS/TS + Python linters
 lint: lint-js lint-py
@@ -27,10 +27,15 @@ install:
 build:
 	python render.py
 
-clean:
+clean: clean-cache clean-build
+
+clean-cache:
 	rm -rf __pycache__ .pytest_cache .ruff_cache
-  
- #run test_file tests
+
+clean-build:
+	rm -rf index.html hymns/*
+
+# run test_file tests
 test:
 	pytest
 
