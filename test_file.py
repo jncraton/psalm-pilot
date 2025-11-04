@@ -106,7 +106,8 @@ def test_song_lyrics(main_page:Page, hymn_data: list):
 
     # Go to next page 
         #main_page.goto(f"https://jncraton.github.io/psalm-pilot/hymns/{hymn_title_id}.html")
-        main_page.goto(f"localhost:8000/hymns/{hymn_title_id}.html")
+        #main_page.goto(f"localhost:8000/hymns/{hymn_title_id}.html")
+        main_page.goto(f"https://deploy-preview-81--psalm-pilot.netlify.app/hymns/{hymn_title_id}.html")
     # Confirm the hymn lyrics on the new page
         expect( main_page.locator("p")).to_contain_text(hymn_lyrics)
 
