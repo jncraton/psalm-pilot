@@ -94,3 +94,16 @@ def test_song_years(main_page: Page, hymn_data: list):
 
     # Verify the data matches
     expect(hymn_year_cells).to_have_text(hymn_years)
+
+
+def test_song_lyrics(main_page:Page, hymn_data: list):
+    # Grab the title source data
+    hymn_title_id = [hymn['titleId'] or '' for hymn in hymn_data]
+
+    # Grab hymn lyrics source data
+    hymn_lyrics = [hymn['text'] or '' for hymn in hymn_data]
+
+    # Confirm the hymn lyrics on the new page
+    expect( main_page.goto(f"https://jncraton.github.io/psalm-pilot/hymns/{hymn_title_id}.html").locator("p")).to_contain_text(hymn_lyrics)
+
+
