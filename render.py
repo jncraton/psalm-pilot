@@ -18,18 +18,6 @@ def get_git_short_hash():
         print(f"Warning: Could not get git commit hash. Error: {e}")
         return 'dev'
 
-def version_service_worker():
-    env = Environment(loader=FileSystemLoader('templates'))
-    template = env.get_template('service-worker.jinja')
-
-    version = get_git_short_hash()
-    rendered = template.render(version=version)
-
-    with open('service-worker.js', 'w') as f:
-        f.write(rendered)
-
-    print(f"Built service-worker.js with version: {version}")
-
 # Set environment to templates folder
 env = Environment(loader=FileSystemLoader('templates'))
 
@@ -53,5 +41,12 @@ for hymn in hymns:
     with open(f"hymns/{hymn['titleId']}.html", 'w') as hymn_page:
         hymn_page.write(filled_hymn_template)
 
-# Run function to build 'service-worker.js'
-version_service_worker()
+sw_template = env.get_template('service-worker.jinja')
+    
+version = get_git_short_hash()
+rendered = sw_template.render(version=version)
+
+with open('service-worker.js', 'w') as f:
+    f.write(rendered)
+
+print(f"Built service-worker.js with version: {version}")
