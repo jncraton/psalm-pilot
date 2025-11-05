@@ -84,15 +84,24 @@ def test_song_authors(main_page: Page, hymn_data: list):
     # Verify the data matches
     expect(hymn_author_cells).to_have_text(hymn_authors)
 
-def search_bar(main_page: Page, hymn_data: list):
-    # Grab the hymn titles from source data
-    hymn_titles = [hymn['title'] or '' for hymn in hymn_data]
+def test_search_row(main_page: Page):
+    def search_function(q):
+        main_page.fill("#search", "")    
+        main_page.type("#search", q)                  
+        rows = main_page.locator("tbody tr:visible")
+        countRow = rows.count()
+        print("Found rows:", countRow)
+        return countRow
 
-    # Grab the hymn title column cells after search
-    hymn_title_cells = get_column_cells(main_page, 'Title')
+    # Title
+    assert search_function("Blest Be the Tie That Binds") > 0
+    # Year
+    assert search_function("1782") > 0
+    # Author
+    assert search_function("John Fawcett") > 0
 
-    # Verify the data matches
-    expect(hymn_title_cells).to_have_text(hymn_titles)
+    # Random input to the search bar should show us 0
+    assert search_function("afaehhj32dafak") == 0
 
 def test_song_years(main_page: Page, hymn_data: list):
     # Grab hymn publication year source data
