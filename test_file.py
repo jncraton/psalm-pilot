@@ -2,6 +2,8 @@ import os
 import json
 import pytest
 from playwright.sync_api import Page, Locator, expect
+from pathlib import Path
+
 
 @pytest.fixture
 def main_page(page: Page) -> Page:
@@ -99,16 +101,15 @@ def test_song_years(main_page: Page, hymn_data: list):
 def test_song_lyrics(main_page:Page, hymn_data: list):
     for hymn in hymn_data:
     # Grab the title source data
-        hymn_title_id = hymn['titleId'] or '' 
+        hymn_title_id = hymn['titleId']
 
     # Grab hymn lyrics source data
-        hymn_lyrics = hymn['text'] or '' 
+        hymn_lyrics = hymn['text']
 
     # Go to next page 
-        #main_page.goto(f"https://jncraton.github.io/psalm-pilot/hymns/{hymn_title_id}.html")
-        #main_page.goto(f"localhost:8000/hymns/{hymn_title_id}.html")
-        main_page.goto(f"https://deploy-preview-81--psalm-pilot.netlify.app/hymns/{hymn_title_id}.html")
+        main_page.goto(Path(f"hymns/{hymn_title_id}.html").resolve().as_uri())
+        
     # Confirm the hymn lyrics on the new page
-        expect( main_page.locator("p")).to_contain_text(hymn_lyrics)
+        expect(main_page.locator("p")).to_contain_text(hymn_lyrics)
 
 
