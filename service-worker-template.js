@@ -12,7 +12,7 @@ self.addEventListener('install', e => {
           new URL('/hymns', base).toString(),
         ])
       })
-      .then(() => self.skipWaiting())
+      .then(() => self.skipWaiting()),
   )
 })
 
@@ -27,16 +27,16 @@ self.addEventListener('activate', e => {
               console.log('Deleting old cache:', cache)
               return caches.delete(cache)
             }
-          })
+          }),
         )
       })
-      .then(() => self.clients.claim())
+      .then(() => self.clients.claim()),
   )
 })
 
 self.addEventListener('fetch', e => {
   console.log(e.request.url)
   e.respondWith(
-    caches.match(e.request).then(response => response || fetch(e.request))
+    caches.match(e.request).then(response => response || fetch(e.request)),
   )
 })

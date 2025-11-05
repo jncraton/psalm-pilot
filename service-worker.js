@@ -1,4 +1,4 @@
-const CACHE_NAME = 'psalm-pilot-cache-7c2f947'
+const CACHE_NAME = 'psalm-pilot-cache-c0df88f'
 
 self.addEventListener('install', e => {
   e.waitUntil(
@@ -9,6 +9,7 @@ self.addEventListener('install', e => {
         return cache.addAll([
           new URL('index.html', base).toString(),
           new URL('style.css', base).toString(),
+          new URL('/hymns', base).toString(),
         ])
       })
       .then(() => self.skipWaiting()),
