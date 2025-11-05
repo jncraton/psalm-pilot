@@ -84,24 +84,23 @@ def test_song_authors(main_page: Page, hymn_data: list):
     # Verify the data matches
     expect(hymn_author_cells).to_have_text(hymn_authors)
 
-def test_search_row(main_page: Page):
-    def search_function(q):
-        main_page.fill("#search", "")    
-        main_page.type("#search", q)                  
-        rows = main_page.locator("tbody tr:visible")
-        countRow = rows.count()
-        print("Found rows:", countRow)
-        return countRow
-
+def test_search_row(main_page: Page, hymn_data: list):
     # Title
-    assert search_function("Blest Be the Tie That Binds") > 0
+    main_page.locator("#search").type("Blest Be the Tie That Binds")
+    expect(main_page.locator("tbody").get_by_text("Blest Be the Tie That Binds").first).to_be_visible()
+    main_page.locator("#search").clear()
     # Year
-    assert search_function("1782") > 0
+    main_page.locator("#search").type("1707")
+    expect(main_page.locator("tbody").get_by_text("1707").first).to_be_visible()
+    main_page.locator("#search").clear()
     # Author
-    assert search_function("John Fawcett") > 0
-
-    # Random input to the search bar should show us 0
-    assert search_function("afaehhj32dafak") == 0
+    main_page.locator("#search").type("Charlotte Elliott")
+    expect(main_page.locator("tbody").get_by_text("Charlotte Elliott").first).to_be_visible()
+    main_page.locator("#search").clear()
+    # Random input should show 0 results
+    main_page.locator("#search").type("asfafaef")
+    expect(main_page.locator("tbody").get_by_text("asfafaef").first).not_to_be_visible()
+    main_page.locator("#search").clear()
 
 def test_song_years(main_page: Page, hymn_data: list):
     # Grab hymn publication year source data
