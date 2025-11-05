@@ -5,5 +5,13 @@
 {% block main %}
   <div>
     <h2>{{ hymn.title }}</h2>
+    <dl>
+      <dt>Author</dt>
+      <dd>{{ hymn.authors }}</dd>
+      <dt>Publication Year</dt>
+      <dd>{{ hymn.publicationYear }}</dd>
+      <dt>Popularity</dt>
+      <dd>{{ hymn.popularity }}%</dd>
+    </dl> 
   </div>
 {% endblock %}
