@@ -6,10 +6,6 @@ import subprocess
 with open('data/hymns.json', 'r') as file:
     hymns = json.load(file)
 
-# Service worker versioning logic
-SW_TEMPLATE_PATH = 'service-worker-template.js'
-SW_OUTPUT_PATH = 'service-worker.js'
-
 def get_git_short_hash():
     try:
         # Use subprocess to run the git command
@@ -22,26 +18,17 @@ def get_git_short_hash():
         print(f"Warning: Could not get git commit hash. Error: {e}")
         return 'dev'
 
-def version_service_worker(version_string):
-    try:
-        with open(SW_TEMPLATE_PATH, 'r', encoding='utf-8') as f:
-            template_content = f.read()
+def version_service_worker():
+    env = Environment(loader=FileSystemLoader('templates'))
+    template = env.get_template('service-worker.jinja')
 
-        # Replace the placeholder with the actual version string
-        versioned_content = template_content.replace('%%HASH%%', version_string)
+    version = get_git_short_hash()
+    rendered = template.render(version=version)
 
-        with open(SW_OUTPUT_PATH, 'w', encoding='utf-8') as f:
-            f.write(versioned_content)
+    with open('service-worker.js', 'w') as f:
+        f.write(rendered)
 
-        print(f"Created {SW_OUTPUT_PATH} with cache version: psalm-pilot-cache-{version_string}")
-    except FileNotFoundError:
-        print(f"Error: {SW_TEMPLATE_PATH} not found. Service worker was not versioned.")
-
-# Get the git hash
-version_hash = get_git_short_hash()
-    
-# Version the service worker using the git hash
-version_service_worker(version_hash)
+    print(f"Built service-worker.js with version: {version}")
 
 # Set environment to templates folder
 env = Environment(loader=FileSystemLoader('templates'))
@@ -65,3 +52,6 @@ for hymn in hymns:
     # Write out the template with custom file name in hymns directory
     with open(f"hymns/{hymn['titleId']}.html", 'w') as hymn_page:
         hymn_page.write(filled_hymn_template)
+
+# Run function to build 'service-worker.js'
+version_service_worker()
