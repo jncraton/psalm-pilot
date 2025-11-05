@@ -37,15 +37,11 @@ def version_service_worker(version_string):
     except FileNotFoundError:
         print(f"Error: {SW_TEMPLATE_PATH} not found. Service worker was not versioned.")
 
-# Main rendering process
-if __name__ == "__main__":
-    print("Starting build process...")
-
-    # Get the git hash
-    version_hash = get_git_short_hash()
+# Get the git hash
+version_hash = get_git_short_hash()
     
-    # Version the service worker using the git hash
-    version_service_worker(version_hash)
+# Version the service worker using the git hash
+version_service_worker(version_hash)
 
 # Set environment to templates folder
 env = Environment(loader=FileSystemLoader('templates'))
