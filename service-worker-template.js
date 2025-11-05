@@ -9,7 +9,6 @@ self.addEventListener('install', e => {
         return cache.addAll([
           new URL('index.html', base).toString(),
           new URL('style.css', base).toString(),
-          new URL('/hymns', base).toString(),
         ])
       })
       .then(() => self.skipWaiting()),
