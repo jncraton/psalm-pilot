@@ -13,6 +13,7 @@ header {
   background-color: #a70000;
   color: white;
   align-items: center;
+  margin-bottom: 1rem;
 }
 
 header img {
@@ -21,14 +22,15 @@ header img {
   padding-right: 1%;
 }
 
+main > * {
+  width: 100%
+}
+
 /*General table cleanup*/
-table,
-div {
+table {
   border-collapse: collapse;
-  width: 100%;
   font-size: 14px;
-  line-height: 1.5;
-  margin-top: 1rem;
+  line-height: 1.5
 }
 
 caption {
