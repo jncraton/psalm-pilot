@@ -26,7 +26,7 @@ index_template = env.get_template('index.jinja')
 filled_index_template = index_template.render(hymns=hymns)
 
 # Write out the template as `index.html`
-with open('index.html', 'w') as hymns_page:
+with open('index.html', 'w', encoding='utf8') as hymns_page:
     hymns_page.write(filled_index_template)
 
 # Load the hymn page template
@@ -38,7 +38,7 @@ for hymn in hymns:
     filled_hymn_template = hymn_template.render(hymn=hymn)
 
     # Write out the template with custom file name in hymns directory
-    with open(f"hymns/{hymn['titleId']}.html", 'w') as hymn_page:
+    with open(f"hymns/{hymn['titleId']}.html", 'w', encoding='utf8') as hymn_page:
         hymn_page.write(filled_hymn_template)
 
 sw_template = env.get_template('service-worker.jinja')
@@ -46,7 +46,7 @@ sw_template = env.get_template('service-worker.jinja')
 version = get_git_short_hash()
 rendered = sw_template.render(version=version)
 
-with open('service-worker.js', 'w') as f:
+with open('service-worker.js', 'w', encoding='utf8') as f:
     f.write(rendered)
 
 print(f"Built service-worker.js with version: {version}")
