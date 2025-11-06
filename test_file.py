@@ -89,19 +89,19 @@ def test_song_authors(main_page: Page, hymn_data: list):
 def test_search_row(main_page: Page, hymn_data: list):
     # Title
     main_page.locator("#search").type("Blest Be the Tie That Binds")
-    expect(main_page.locator("tbody").get_by_text("Blest Be the Tie That Binds").first).to_be_visible()
+    expect(main_page.locator("tbody:visible").get_by_text("Blest Be the Tie That Binds").first).to_be_visible()
     main_page.locator("#search").clear()
     # Year
     main_page.locator("#search").type("1707")
-    expect(main_page.locator("tbody").get_by_text("1707").first).to_be_visible()
+    expect(main_page.locator("tbody:visible").get_by_text("1707").first).to_be_visible()
     main_page.locator("#search").clear()
     # Author
     main_page.locator("#search").type("Charlotte Elliott")
-    expect(main_page.locator("tbody").get_by_text("Charlotte Elliott").first).to_be_visible()
+    expect(main_page.locator("tbody:visible").get_by_text("Charlotte Elliott").first).to_be_visible()
     main_page.locator("#search").clear()
     # Random input should show 0 results
     main_page.locator("#search").type("asfafaef")
-    expect(main_page.locator("tbody").get_by_text("asfafaef").first).not_to_be_visible()
+    expect(main_page.locator("tbody:visible").get_by_text("asfafaef").first).not_to_be_visible()
     main_page.locator("#search").clear()
 
 def test_song_years(main_page: Page, hymn_data: list):
