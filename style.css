@@ -63,7 +63,8 @@ nav input[type=search] {
 }
 
 /*General table cleanup*/
-table {
+table,
+div {
   border-collapse: collapse;
   width: 100%;
   font-size: 14px;
@@ -104,4 +105,10 @@ caption {
   vertical-align: bottom;
   text-transform: uppercase;
   font-weight: bold;
+}
+
+p {
+  white-space: pre-line;
+  line-height: 10px;
+  margin-top: 20px;
 }
