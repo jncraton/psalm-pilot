@@ -46,7 +46,7 @@ nav .search-bar-div {
   gap: 5px;
 }
 
-nav input[type=search] {
+nav input[type='search'] {
   float: right;
   height: 35px;
   width: 400px;
@@ -55,7 +55,7 @@ nav input[type=search] {
   text-align: left;
   border-radius: 28px;
 
-  background-image: url("searchicon.svg");
+  background-image: url('searchicon.svg');
   background-repeat: no-repeat;
   background-position: center left 0.4rem;
   background-size: 1.3rem auto;
