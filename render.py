@@ -1,6 +1,7 @@
 import json
 from jinja2 import Environment, FileSystemLoader
 import subprocess
+from pathlib import Path
 
 # Read in JSON hymn data
 with open('data/hymns.json', 'r') as file:
@@ -40,6 +41,13 @@ for hymn in hymns:
     # Write out the template with custom file name in hymns directory
     with open(f"hymns/{hymn['titleId']}.html", 'w', encoding='utf8') as hymn_page:
         hymn_page.write(filled_hymn_template)
+
+# Create hymns list json file
+hymns = sorted(
+    str(p.as_posix())
+    for p in Path("hymns").rglob("*")
+    if p.is_file())
+Path("hymns_list.json").write_text(json.dumps(hymns, indent=2), encoding="utf-8")
 
 sw_template = env.get_template('service-worker.jinja')
     
