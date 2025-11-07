@@ -2,23 +2,24 @@ const CACHE_NAME = 'psalm-pilot-cache-{{ version }}'
 
 self.addEventListener('install', e => {
   e.waitUntil(
-    caches
-      .open(CACHE_NAME)
-      .then(cache => {
-        const base = self.registration.scope
+    caches.open(CACHE_NAME).then(async cache => {
+      const base = self.registration.scope
+      const res = await fetch(new URL('hymns_list.json', base))
+      const hymns = await res.json()
+      const files = [
+        'index.html',
+        'styles.css',
+        ...hymns,
+      ].map(f => new URL(f, base).toString())
 
-        return fetch(new URL('hymns_list.json', base))
-          .then(res => res.json())
-          .then(hymns => {
-            const files = [
-              new URL('index.html', base).toString(),
-              new URL('style.css', base).toString(),
-              ...hymns.map(f => new URL(f, base).toString()),
-            ]
-            return cache.addAll(files)
-          })
-      })
-      .then(() => self.skipWaiting()),
+      for (const url of files) {
+        try {
+          await cache.add(url)
+        } catch (_) {}
+      }
+
+      self.skipWaiting()
+    })
   )
 })
 
