@@ -82,10 +82,11 @@ def get_text(textAuthNumber):
 hymns['text'] = hymns['textAuthNumber'].apply(get_text)
 
 hymns.replace({np.nan: None}, inplace=True)
-hymns = hymns[['textAuthNumber', 'displayTitle', 'authors', 'text', 'popularity', 'yearsWrote']]
+hymns = hymns[['textAuthNumber', 'displayTitle', 'authors', 'text', 'popularity', 'yearsWrote','scriptureReferences']]
 
 hymns = hymns.rename(columns={
-    'displayTitle': 'titleId',
+    'textAuthNumber': 'titleId',
+    'displayTitle': 'title',
     'yearsWrote': 'publicationYear',
     'scriptureReferences': 'scriptureRefs',
 })
