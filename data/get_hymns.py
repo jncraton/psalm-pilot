@@ -73,7 +73,7 @@ hymns.replace({np.nan: None}, inplace=True)
 hymns = hymns[['displayTitle', 'authors', 'popularity', 'yearsWrote', 'scriptureReferences']]
 
 hymns = hymns.rename(columns={
-    'displayTitle': 'title',
+    'displayTitle': 'titleId',
     'yearsWrote': 'publicationYear',
     'scriptureReferences': 'scriptureRefs',
 })
