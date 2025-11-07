@@ -68,8 +68,30 @@ caption {
   font-weight: bold;
 }
 
+/*Hymn page styling*/
 p {
   white-space: pre-line;
   line-height: 10px;
   margin-top: 20px;
+}
+
+dl {
+  margin-block: 16px;
+}
+
+dl div {
+  margin-block: 4px;
+}
+
+dt,
+dd {
+  display: inline;
+}
+
+dt {
+  font-weight: bold;
+}
+
+dt::after {
+  content: ':';
 }
