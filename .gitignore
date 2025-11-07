@@ -11,3 +11,6 @@ hymns.json
 
 # Ignore the rendered version of the web app
 *.html
+
+# Ignore the current version of the service worker
+service-worker.js

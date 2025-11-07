@@ -1,9 +1,22 @@
 import json
 from jinja2 import Environment, FileSystemLoader
+import subprocess
 
 # Read in JSON hymn data
 with open('data/hymns.json', 'r') as file:
     hymns = json.load(file)
+
+def get_git_short_hash():
+    try:
+        # Use subprocess to run the git command
+        git_hash = subprocess.check_output(
+            ['git', 'rev-parse', '--short', 'HEAD'],
+            stderr=subprocess.STDOUT
+        ).strip().decode('utf-8')
+        return git_hash
+    except (subprocess.CalledProcessError, FileNotFoundError) as e:
+        print(f"Warning: Could not get git commit hash. Error: {e}")
+        return 'dev'
 
 # Set environment to templates folder
 env = Environment(loader=FileSystemLoader('templates'))
@@ -27,3 +40,13 @@ for hymn in hymns:
     # Write out the template with custom file name in hymns directory
     with open(f"hymns/{hymn['titleId']}.html", 'w', encoding='utf8') as hymn_page:
         hymn_page.write(filled_hymn_template)
+
+sw_template = env.get_template('service-worker.jinja')
+    
+version = get_git_short_hash()
+rendered = sw_template.render(version=version)
+
+with open('service-worker.js', 'w', encoding='utf8') as f:
+    f.write(rendered)
+
+print(f"Built service-worker.js with version: {version}")
