@@ -23,14 +23,14 @@ header img {
 }
 
 main > * {
-  width: 100%
+  width: 100%;
+  font-size: 14px;
 }
 
 /*General table cleanup*/
 table {
   border-collapse: collapse;
-  font-size: 14px;
-  line-height: 1.5
+  line-height: 1.5;
 }
 
 caption {
