@@ -34,4 +34,6 @@ jobs:
         run: make build
 
       - name: Run Test
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: pytest
