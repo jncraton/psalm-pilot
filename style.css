@@ -79,10 +79,6 @@ dl {
   margin-block: 16px;
 }
 
-dl div {
-  margin-block: 4px;
-}
-
 dt,
 dd {
   display: inline;
@@ -92,6 +88,12 @@ dt {
   font-weight: bold;
 }
 
+dt::before {
+  content: '';
+  display: block;
+  margin-block: 4px;
+}
+
 dt::after {
-  content: ':';
+  content: ': ';
 }
