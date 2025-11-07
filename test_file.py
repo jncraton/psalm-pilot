@@ -53,6 +53,11 @@ def test_table_not_empty(main_page: Page):
     row_locator = main_page.locator("tbody tr")
     expect(row_locator).not_to_have_count(0)
 
+def test_chat(main_page: Page):
+    main_page.on('dialog', lambda d: d.accept(os.environ["GEMINI_API_KEY"]))
+
+    response = main_page.evaluate("chat('What is the capital of France?')")
+    assert "Paris" in response
 
 def test_song_titles(main_page: Page, hymn_data: list):
     # Grab hymn title source data
