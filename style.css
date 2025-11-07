@@ -32,7 +32,7 @@ header nav {
 .logo-and-title img {
   max-width: 85px;
   max-height: 85px;
-  padding-right: 1%;
+  padding-right: 6px;
 }
 
 nav .search-bar-div {
