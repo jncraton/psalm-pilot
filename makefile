@@ -26,6 +26,7 @@ install:
 	pip install -r requirements.txt
 
 build:
+	python hymn_cache.py
 	python render.py
 
 clean: clean-cache clean-build
