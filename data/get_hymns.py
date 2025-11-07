@@ -3,6 +3,7 @@ from urllib.request import urlopen
 from html.parser import HTMLParser
 import pandas as pd
 import numpy as np
+import requests
 
 # import csv from Hymnary
 # the url uses advanced search to filter for multiple things outlined in the params
@@ -72,7 +73,19 @@ hymns['scriptureReferences'] = hymns['textAuthNumber'].apply(scrape_scripture_re
 hymns.replace({np.nan: None}, inplace=True)
 hymns = hymns[['displayTitle', 'authors', 'popularity', 'yearsWrote', 'scriptureReferences']]
 
+def get_text(textAuthNumber):
+    print(f"Downloading text for {textAuthNumber}...")
+    res = requests.get(f"https://hymnary.org/api/fulltext/{textAuthNumber}")
+
+    return res.json()[0]["text"]
+
+hymns['text'] = hymns['textAuthNumber'].apply(get_text)
+
+hymns.replace({np.nan: None}, inplace=True)
+hymns = hymns[['textAuthNumber', 'displayTitle', 'authors', 'text', 'popularity', 'yearsWrote']]
+
 hymns = hymns.rename(columns={
+    'textAuthNumber': 'titleId',
     'displayTitle': 'title',
     'yearsWrote': 'publicationYear',
     'scriptureReferences': 'scriptureRefs',
