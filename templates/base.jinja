@@ -15,12 +15,14 @@
     <header>
       <nav>
         <div class="logo-and-title">
-          <img src="favicon.svg" alt="Psalm Pilot Logo">
+          <img src="{{ root_dir or '' }}favicon.svg" alt="Psalm Pilot Logo">
           <h1>Psalm Pilot</h1>
         </div>
+        {% block header %}
         <div class="search-bar-div">
           <input type="search" id="search" name="search" placeholder="Search hymns..." onkeyup="search_title()" />
         </div>
+        {% endblock header %} 
       </nav>
     </header>
 
