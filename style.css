@@ -62,8 +62,7 @@ th,
 caption {
   padding-block: 1px;
   vertical-align: bottom;
-  text-transform: uppercase;
-  font-weight: bold;
+  text-transform: uppercase
 }
 
 p {
