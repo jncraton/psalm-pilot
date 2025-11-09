@@ -8,23 +8,19 @@
     <link rel="icon" type="image/svg+xml" href="{{ root_dir or '' }}favicon.svg">
     <link rel="manifest" href="{{ root_dir or '' }}manifest.webmanifest">
     <title>{{ page_title  or 'Psalm Pilot' }}</title>
-    <script src="{{ root_dir or '' }}main.js"></script>
+    {% block script %}{% endblock script %} 
   </head>
 
   <body>
     <header>
-      <nav>
-        <div class="logo-and-title">
-          <img src="{{ root_dir or '' }}favicon.svg" alt="Psalm Pilot Logo">
-          <h1>Psalm Pilot</h1>
-        </div>
-        {% block header %}
-        <div class="search-bar-div">
-          <input type="search" id="search" name="search" placeholder="Search hymns..." onkeyup="search_title()" />
-        </div>
-        {% endblock header %} 
-      </nav>
-    </header>
+        <nav>
+          <div class="logo-and-title">
+            <img src="{{ root_dir or '' }}favicon.svg" alt="Psalm Pilot Logo">
+            <h1>Psalm Pilot</h1>
+          </div>
+          {% block header %}{% endblock header %} 
+        </nav>
+        </header>
 
     <main>
       {% block main %}{% endblock %}
