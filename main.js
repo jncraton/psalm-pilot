@@ -20,9 +20,9 @@ function search_title() {
     }
     for (let i = 0; i < visibleRows.length; i++) {
       if (i % 2 === 0) {
-        visibleRows[i].style.backgroundColor = '#f1f1f1'
-      } else {
         visibleRows[i].style.backgroundColor = 'transparent'
+      } else {
+        visibleRows[i].style.backgroundColor = '#f1f1f1'
       }
     }
   }
