@@ -87,21 +87,45 @@ def test_song_authors(main_page: Page, hymn_data: list):
     expect(hymn_author_cells).to_have_text(hymn_authors)
 
 def test_search_row(main_page: Page, hymn_data: list):
+
     # Title
-    main_page.locator("#search").type("Blest Be the Tie That Binds")
-    expect(main_page.locator("tbody:visible").get_by_text("Blest Be the Tie That Binds").first).to_be_visible()
+    hymn_titles = [hymn['title'] for hymn in hymn_data]
+    first_title = hymn_titles[0]
+
+    main_page.locator("#search").type(first_title)
+    expect(main_page.locator("td:visible").get_by_text(first_title).first).to_be_visible()
     main_page.locator("#search").clear()
+
+
     # Year
-    main_page.locator("#search").type("1707")
-    expect(main_page.locator("tbody:visible").get_by_text("1707").first).to_be_visible()
+    hymn_years = [hymn['publicationYear'] or '' for hymn in hymn_data]
+    first_year = hymn_years[0]
+
+    main_page.locator("#search").type(first_year)
+    expect(main_page.locator("td:visible").get_by_text(first_year).first).to_be_visible()
     main_page.locator("#search").clear()
+
+
     # Author
-    main_page.locator("#search").type("Charlotte Elliott")
-    expect(main_page.locator("tbody:visible").get_by_text("Charlotte Elliott").first).to_be_visible()
+    hymn_authors = [hymn['authors'] or '' for hymn in hymn_data]
+    first_author = hymn_authors[0]
+
+    main_page.locator("#search").type(first_author)
+    expect(main_page.locator("td:visible").get_by_text(first_author).first).to_be_visible()
     main_page.locator("#search").clear()
+
+    # Popularity
+    hymn_popularity = [f"{hymn['popularity']}%" for hymn in hymn_data]
+    first_popularity = hymn_popularity[0]
+
+    main_page.locator("#search").type(first_popularity)
+    expect(main_page.locator("td:visible").get_by_text(first_popularity).first).to_be_visible()
+    main_page.locator("#search").clear()
+
+    
     # Random input should show 0 results
-    main_page.locator("#search").type("asfafaef")
-    expect(main_page.locator("tbody:visible").get_by_text("asfafaef").first).not_to_be_visible()
+    main_page.locator("#search").type("asfafaefdawda")
+    expect(main_page.locator("td:visible").get_by_text("asfafaef").first).not_to_be_visible()
     main_page.locator("#search").clear()
 
 def test_song_years(main_page: Page, hymn_data: list):
