@@ -3,7 +3,6 @@ function search_title() {
   input = input.toLowerCase()
   let title = document.querySelectorAll('tbody tr')
 
-
   for (i = 0; i < title.length; i++) {
     const whole_row = title[i].closest('tr')
 
@@ -13,19 +12,18 @@ function search_title() {
       whole_row.style.display = 'none'
     }
 
-
-    const visibleRows = [];
+    const visibleRows = []
     for (let i = 0; i < title.length; i++) {
       if (title[i].style.display !== 'none') {
-      visibleRows.push(title[i]);
+        visibleRows.push(title[i])
       }
     }
     for (let i = 0; i < visibleRows.length; i++) {
       if (i % 2 === 0) {
-        visibleRows[i].style.backgroundColor = '#f1f1f1';
+        visibleRows[i].style.backgroundColor = '#f1f1f1'
       } else {
-        visibleRows[i].style.backgroundColor = 'transparent';
+        visibleRows[i].style.backgroundColor = 'transparent'
       }
     }
   }
-};
+}
