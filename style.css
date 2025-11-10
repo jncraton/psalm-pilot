@@ -28,7 +28,6 @@ table {
 
 tr > * {
   padding: 12px 8px;
-  border-bottom: 1px solid color-mix(in hsl, var(--color), white 80%);
   text-align: left;
 }
 
