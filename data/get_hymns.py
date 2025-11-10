@@ -4,6 +4,7 @@ from html.parser import HTMLParser
 import pandas as pd
 import numpy as np
 import requests
+import multiprocessing
 
 # import csv from Hymnary
 # the url uses advanced search to filter for multiple things outlined in the params
@@ -77,9 +78,14 @@ def get_text(textAuthNumber):
     print(f"Downloading text for {textAuthNumber}...")
     res = requests.get(f"https://hymnary.org/api/fulltext/{textAuthNumber}")
 
-    return res.json()[0]["text"]
+    text = res.json()[0]["text"]
+    text = text.replace("\r\n", "\n")
+    text = text.replace("\n\n", "\n")
 
-hymns['text'] = hymns['textAuthNumber'].apply(get_text)
+    return text.strip()
+
+with multiprocessing.Pool(8) as pool:
+    hymns['text'] = pool.map(get_text, hymns['textAuthNumber'])
 
 hymns.replace({np.nan: None}, inplace=True)
 hymns = hymns[['textAuthNumber', 'displayTitle', 'authors', 'text', 'popularity', 'yearsWrote','scriptureReferences']]
