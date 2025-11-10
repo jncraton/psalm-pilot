@@ -1,74 +1,40 @@
 :root,
 body {
   margin: 0;
-  padding: 0;
   font-family: system-ui, sans-serif;
   line-height: 1.5;
+  --color: #a70000;
 }
 
 body > * {
-  padding: 1% 3%;
+  padding: 0.5em 3%;
+}
+
+:any-link {
+  color: var(--color);
 }
 
 header {
   display: flex;
-  background-color: #a70000;
+  background-color: var(--color);
   color: white;
-  align-items: center;
+  gap: 1%;
 }
 
-header img {
-  max-width: 85px;
-  max-height: 85px;
-  padding-right: 1%;
-}
-
-/*General table cleanup*/
-table,
-div {
+table {
   border-collapse: collapse;
   width: 100%;
-  font-size: 14px;
 }
 
-caption {
-  font-size: 125%;
-}
-
-/*Header row*/
-thead {
-  border-bottom: 2px solid #333;
-}
-
-/* Rows */
-tbody tr:nth-child(even) {
-  background-color: #f1f1f1; /*Stripes*/
-}
-tbody tr:hover {
-  background-color: #eef; /*Highlight row on hover*/
-}
-/*Cellstyle*/
-/* Alignment and style */
-td,
-th,
-caption {
+tr > * {
   padding: 12px 8px;
-  border: none;
-  vertical-align: top;
+  border-bottom: 1px solid color-mix(in hsl, var(--color), white 80%);
   text-align: left;
-}
-
-th,
-caption {
-  padding-block: 1px;
-  vertical-align: bottom;
-  text-transform: uppercase;
-  font-weight: bold;
 }
 
 blockquote {
   white-space: pre-line;
   margin-left: 0;
   padding-left: 2em;
-  border-left: 3px solid #a70000;
+  border-left: 3px solid var(--color);
 }
