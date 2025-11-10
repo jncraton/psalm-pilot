@@ -92,9 +92,12 @@ def test_search_row(main_page: Page, hymn_data: list):
     # Taking first element in hymn_titles
     hymn = hymn_data[0]
     first_title = hymn["title"]
+    
+    other_titles = [hymn["title"] for hymn in hymn_data[1:]]
     # Compare the result that we put in the search bar hymn_titles[0] and table's visible elements
     main_page.locator("#search").type(first_title)
     expect(main_page.locator("td:visible").get_by_text(first_title).first).to_be_visible()
+    expect(main_page.locator("td").get_by_text(other_titles).first).not_to_be_visible()
     main_page.locator("#search").clear()
 
 
@@ -102,9 +105,12 @@ def test_search_row(main_page: Page, hymn_data: list):
     # Taking first element in hymn_years
     hymn = hymn_data[0]
     first_year = hymn['publicationYear']
+
+    other_publicationYear = [hymn["publicationYear"] for hymn in hymn_data[1:]]
     # Compare the result that we put in the search bar hymn_years[0] and table's visible elements
     main_page.locator("#search").type(first_year)
     expect(main_page.locator("td:visible").get_by_text(first_year).first).to_be_visible()
+    expect(main_page.locator("td").get_by_text(other_publicationYear).first).not_to_be_visible()
     main_page.locator("#search").clear()
 
 
@@ -112,18 +118,24 @@ def test_search_row(main_page: Page, hymn_data: list):
     # Taking first element in hymn_authors
     hymn = hymn_data[0]
     first_author = hymn["authors"]
+
+    other_authors = [hymn["authors"] for hymn in hymn_data[1:]]
     # Compare the result that we put in the search bar hymn_authors[0] and table's visible elements
     main_page.locator("#search").type(first_author)
     expect(main_page.locator("td:visible").get_by_text(first_author).first).to_be_visible()
+    expect(main_page.locator("td").get_by_text(other_authors).first).not_to_be_visible()
     main_page.locator("#search").clear()
 
     # Popularity
     # Taking first element in hymn_popularity
     hymn = hymn_data[0]
     first_popularity = f"{hymn['popularity']}%"
+
+    other_popularities = [f"{h['popularity']}%" for h in hymn_data[1:]]
     # Compare the result that we put in the search bar hymn_popularity[0] and table's visible elements
     main_page.locator("#search").type(first_popularity)
     expect(main_page.locator("td:visible").get_by_text(first_popularity).first).to_be_visible()
+    expect(main_page.locator("td").get_by_text(other_popularities).first).not_to_be_visible()
     main_page.locator("#search").clear()
 
     
