@@ -68,4 +68,7 @@ caption {
 
 blockquote {
   white-space: pre-line;
+  margin-left: 0;
+  padding-left: 2em;
+  border-left: 3px solid #a70000;
 }
