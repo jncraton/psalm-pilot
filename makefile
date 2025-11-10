@@ -34,7 +34,7 @@ clean-cache:
 	rm -rf __pycache__ .pytest_cache .ruff_cache
 
 clean-build:
-	rm -rf index.html hymns/*
+	rm -rf index.html hymns/* hymns_list.json
 
 # run test_file tests
 test:
