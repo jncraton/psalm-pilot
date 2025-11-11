@@ -1,25 +1,5 @@
 import os
-import json
-import pytest
 from playwright.sync_api import Page, Locator, expect
-from pathlib import Path
-
-
-@pytest.fixture
-def main_page(page: Page) -> Page:
-    """Goes to the main page of app and returns Page object in that state."""
-    page.goto(f"file://{os.path.abspath('index.html')}")
-
-    return page
-
-
-@pytest.fixture
-def hymn_data() -> list:
-    """Grabs the hymns source data for verification comparison."""
-    with open('data/hymns.json', 'r') as file:
-        data = json.load(file)
-    
-    return data
 
 
 def get_column_index(page: Page, column_name: str) -> int:
@@ -135,20 +115,3 @@ def test_song_years(main_page: Page, hymn_data: list):
 
     # Verify the data matches
     expect(hymn_year_cells).to_have_text(hymn_years)
-
-
-def test_song_lyrics(main_page:Page, hymn_data: list):
-    for hymn in hymn_data:
-        # Grab the title source data
-        hymn_title_id = hymn['titleId']
-
-        # Grab hymn lyrics source data
-        hymn_lyrics = hymn['text']
-
-        # Go to next page 
-        main_page.goto(Path(f"hymns/{hymn_title_id}.html").resolve().as_uri())
-        
-        # Confirm the hymn lyrics on the new page
-        expect(main_page.locator("blockquote")).to_contain_text(hymn_lyrics)
-
-
