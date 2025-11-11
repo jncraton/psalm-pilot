@@ -2,7 +2,7 @@
 body {
   margin: 0;
   font-family: system-ui, sans-serif;
-  line-height: 1.5;
+  line-height: 1.6;
   --color: #a70000;
   --border: color-mix(in oklch, var(--color) 20%, hsl(0 0 98%));
   --highlight: color-mix(in oklch, var(--color) 2%, hsl(0 0 98%));
@@ -41,11 +41,12 @@ header nav {
 
 header nav h1 {
   flex-grow: 1;
+  white-space: nowrap;
 }
 
 nav input[type='search'] {
   height: 35px;
-  width: 400px;
+  width: min(400px, 25%);
   border: 0;
   border-radius: 28px;
 
@@ -71,7 +72,7 @@ thead tr {
 }
 
 tr > * {
-  padding: 12px 8px;
+  padding: 10px 8px;
   text-align: left;
 }
 
@@ -81,10 +82,6 @@ blockquote {
   margin-left: 0;
   padding-left: 2em;
   border-left: 3px solid var(--color);
-}
-
-dl {
-  margin-block: 16px;
 }
 
 dt,
@@ -100,7 +97,6 @@ dt {
 dt::before {
   content: '';
   display: block;
-  margin-block: 4px;
 }
 
 dt::after {
