@@ -90,40 +90,40 @@ def test_search_row(main_page: Page, hymn_data: list):
     # Grab the first element and its components to search with
     hymn = hymn_data[0]
 
-    first_title = hymn["title"]
+    first_title = hymn['title']
     first_year = hymn['publicationYear']
-    first_author = hymn["authors"]
+    first_author = hymn['authors']
     first_popularity = f"{hymn['popularity']}%"
 
     # Verify title search works
-    main_page.locator("#search").type(first_title)
-    expect(main_page.locator("td").get_by_text(first_title).first).to_be_visible()
-    expect(main_page.locator("td").get_by_text(hymn_data[1]['title'])).not_to_be_visible()
-    main_page.locator("#search").clear()
+    main_page.locator('#search').type(first_title)
+    expect(main_page.locator('td').get_by_text(first_title).first).to_be_visible()
+    expect(main_page.locator('td').get_by_text(hymn_data[1]['title'])).not_to_be_visible()
+    main_page.locator('#search').clear()
 
     # Verify year search works
-    main_page.locator("#search").type(first_year)
-    expect(main_page.locator("td").get_by_text(first_year).first).to_be_visible()
-    main_page.locator("#search").clear()
+    main_page.locator('#search').type(first_year)
+    expect(main_page.locator('td').get_by_text(first_year).first).to_be_visible()
+    main_page.locator('#search').clear()
 
     # Verify author search works
-    main_page.locator("#search").type(first_author)
-    expect(main_page.locator("td").get_by_text(first_author).first).to_be_visible()
-    main_page.locator("#search").clear()
+    main_page.locator('#search').type(first_author)
+    expect(main_page.locator('td').get_by_text(first_author).first).to_be_visible()
+    main_page.locator('#search').clear()
 
     # Verify popularity search works
-    main_page.locator("#search").type(first_popularity)
-    expect(main_page.locator("td").get_by_text(first_popularity).first).to_be_visible()
-    main_page.locator("#search").clear()
+    main_page.locator('#search').type(first_popularity)
+    expect(main_page.locator('td').get_by_text(first_popularity).first).to_be_visible()
+    main_page.locator('#search').clear()
 
     # Verify random letters show no results
-    main_page.locator("#search").type("asfafaefdawda")
-    cells = main_page.locator("td")
+    main_page.locator('#search').type('asfafaefdawda')
+    cells = main_page.locator('td')
     for i in range(cells.count()):
         expect(cells.nth(i)).not_to_be_visible()
 
     # Verify no letters shows all results
-    main_page.locator("#search").clear()
+    main_page.locator('#search').clear()
     for i in range(cells.count()):
         expect(cells.nth(i)).to_be_visible()
 
