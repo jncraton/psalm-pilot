@@ -15,8 +15,10 @@
     <header>
         <nav>
           <div class="logo-and-title">
-            <img src="{{ root_dir or '' }}favicon.svg" alt="Psalm Pilot Logo">
-            <h1>Psalm Pilot</h1>
+            <a href="{{ root_dir or '' }}index.html">
+              <img src="{{ root_dir or '' }}favicon.svg" alt="Psalm Pilot Logo">
+              <h1>Psalm Pilot</h1>
+            </a>
           </div>
           {% block header %}{% endblock header %} 
         </nav>

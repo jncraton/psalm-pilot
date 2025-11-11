@@ -23,7 +23,7 @@ header nav {
   background-color: #a70000;
 }
 
-.logo-and-title {
+.logo-and-title a{
   float: left;
   display: flex;
   color: white;
@@ -31,10 +31,15 @@ header nav {
   white-space: nowrap;
 }
 
-.logo-and-title img {
+.logo-and-title a img {
   max-width: 85px;
   max-height: 85px;
   padding-right: 6px;
+}
+
+.logo-and-title a{
+  text-decoration: none;
+  color: white;
 }
 
 nav .search-bar-div {
