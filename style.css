@@ -12,6 +12,10 @@ body > * {
   padding: 0.5em 3%;
 }
 
+main {
+  overflow-x: auto;
+}
+
 :any-link {
   color: var(--color);
 }
