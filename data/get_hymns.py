@@ -69,6 +69,10 @@ def scrape_scripture_references(text_auth_number):
         print(f"Scrape failed for {text_auth_number}")
         return None
 
+hymns['scriptureReferences'] = hymns['textAuthNumber'].apply(scrape_scripture_references)
+hymns.replace({np.nan: None}, inplace=True)
+hymns = hymns[['textAuthNumber','displayTitle', 'authors', 'popularity', 'yearsWrote', 'scriptureReferences']]
+
 def get_text(textAuthNumber):
     print(f"Downloading text for {textAuthNumber}...")
     res = requests.get(f"https://hymnary.org/api/fulltext/{textAuthNumber}")
@@ -79,7 +83,6 @@ def get_text(textAuthNumber):
 
     return text.strip()
 
-hymns['scriptureReferences'] = hymns['textAuthNumber'].apply(scrape_scripture_references)
 hymns['text'] = hymns['textAuthNumber'].apply(get_text)
 
 hymns.replace({np.nan: None}, inplace=True)
