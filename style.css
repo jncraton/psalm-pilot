@@ -107,9 +107,34 @@ caption {
   font-weight: bold;
 }
 
+/*Hymn page styling*/
 blockquote {
   white-space: pre-line;
   margin-left: 0;
   padding-left: 2em;
   border-left: 3px solid #a70000;
+}
+
+dl {
+  margin-block: 16px;
+}
+
+dt,
+dd {
+  display: inline;
+  margin-left: 0;
+}
+
+dt {
+  font-weight: bold;
+}
+
+dt::before {
+  content: '';
+  display: block;
+  margin-block: 4px;
+}
+
+dt::after {
+  content: ': ';
 }

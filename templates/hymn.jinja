@@ -5,6 +5,15 @@
 {% block main %}
   <div>
     <h2>{{ hymn.title }}</h2>
-    <blockquote>{{ hymn.text }}</blockquote>
+    <dl>
+      <dt>Author</dt>
+      <dd>{{ hymn.authors }}</dd>
+      <dt>Publication Year</dt>
+      <dd>{{ hymn.publicationYear }}</dd>
+      <dt>Popularity</dt>
+      <dd>{{ hymn.popularity }}%</dd>
+      <dt>Lyrics</dt>
+      <dd><blockquote>{{ hymn.text }}</blockquote></dd>
+    </dl> 
   </div>
 {% endblock %}
