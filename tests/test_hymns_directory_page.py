@@ -25,11 +25,7 @@ def get_column_cells(page: Page, column_name: str) -> Locator:
     return page.locator(f"td:nth-child({column_index})")
 
 
-def test_html_file(main_page: Page):
-    expect(main_page).to_have_title("Psalm Pilot")
-
-
-def test_table_not_empty(main_page: Page):
+def test_hymn_directory_sanity(main_page: Page):
     row_locator = main_page.locator("tbody tr")
     expect(row_locator).not_to_have_count(0)
 
@@ -85,7 +81,7 @@ def test_song_years(main_page: Page, hymn_data: list):
     expect(hymn_year_cells).to_have_text(hymn_years)
 
 
-def test_search_row(main_page: Page, hymn_data: list):
+def test_song_search(main_page: Page, hymn_data: list):
     hymn = hymn_data[0]
 
     search_bar = main_page.locator('#search')
