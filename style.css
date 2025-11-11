@@ -23,7 +23,7 @@ header nav {
   background-color: #a70000;
 }
 
-.logo-and-title a{
+.logo-and-title a {
   float: left;
   display: flex;
   color: white;
@@ -37,7 +37,7 @@ header nav {
   padding-right: 6px;
 }
 
-.logo-and-title a{
+.logo-and-title a {
   text-decoration: none;
   color: white;
 }
