@@ -91,6 +91,40 @@ def test_song_authors(main_page: Page, hymn_data: list):
     # Verify the data matches
     expect(hymn_author_cells).to_have_text(hymn_authors)
 
+def test_search_row(main_page: Page, hymn_data: list):
+    hymn = hymn_data[0]
+
+    search_bar = main_page.locator('#search')
+    cells = main_page.locator('td')
+    
+    def get_non_matching_hymn(query: str) -> Locator:
+        """Finds a hymn instance that should not show up with given query"""
+
+        for hymn in hymn_data[1:]:
+            if not any(query in str(field) or query == str(field) for field in hymn.values()):
+                return cells.get_by_text(hymn['title'])
+        
+        raise Exception(f"No non-matching hymn was found for query: {query}")
+
+    # Query, verify, and clear for each field
+    for key in ['title', 'publicationYear', 'authors', 'popularity']:
+        query = str(hymn[key])
+
+        search_bar.type(query)
+        expect(cells.get_by_text(hymn['title'])).to_be_visible()
+        expect(get_non_matching_hymn(query)).not_to_be_visible()
+        search_bar.clear()
+
+    # Verify random letters show no results
+    search_bar.type('asfafaefdawda')
+    for i in range(cells.count()):
+        expect(cells.nth(i)).not_to_be_visible()
+
+    # Verify no letters shows all results
+    search_bar.clear()
+    for i in range(cells.count()):
+        expect(cells.nth(i)).to_be_visible()
+
 
 def test_song_years(main_page: Page, hymn_data: list):
     # Grab hymn publication year source data
