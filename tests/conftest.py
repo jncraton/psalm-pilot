@@ -11,7 +11,7 @@ def main_page(page: Page) -> Page:
     return page
 
 
-@pytest.fixture
+@pytest.fixture(scope='session')
 def hymn_data() -> list:
     """Grabs the hymns source data for verification comparison."""
     with open('data/hymns.json', 'r') as file:
