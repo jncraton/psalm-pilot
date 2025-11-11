@@ -3,7 +3,6 @@ from urllib.request import urlopen
 from html.parser import HTMLParser
 import pandas as pd
 import numpy as np
-import requests
 
 # import csv from Hymnary
 # the url uses advanced search to filter for multiple things outlined in the params
@@ -39,16 +38,23 @@ class ScriptureHTMLParser(HTMLParser):
         super().__init__()
         self.in_ref = False
         self.references = []
+        self.in_authority_columns = False
+        self.lyrics = ""
 
     #Inside scripture div
     def handle_starttag(self, tag, attrs):
         if tag == "div" and ("class", "scripture_reference") in attrs:
             self.in_ref = True
+        if tag == "div" and ("class", "authority_columns") in attrs and not self.lyrics:
+            self.in_authority_columns = True
+        if tag == "p" and self.in_authority_columns:
+            self.lyrics += "\n\n"
 
     #Outside scripture div
     def handle_endtag(self, tag):
-        if tag == "div" and self.in_ref:
+        if tag == "div":
             self.in_ref = False
+            self.in_authority_columns = False
 
     #Append references to scripture
     def handle_data(self, data):
@@ -57,21 +63,24 @@ class ScriptureHTMLParser(HTMLParser):
             if ref:
                 self.references.append(ref)
 
-def scrape_scripture_references(text_auth_number):
+        if self.in_authority_columns:
+            self.lyrics += data.replace("\r", "").replace("\t", "")
+
+def scrape(text_auth_number):
     url = f"https://hymnary.org/text/{text_auth_number}#text-scripture"
     try:
         with urlopen(url) as response:
             html = response.read().decode("utf-8")
         parser = ScriptureHTMLParser()
         parser.feed(html)
-        return parser.references if parser.references else None
+        return pd.Series({
+                    'text': parser.lyrics.strip() or None,
+                    'scriptureReferences': parser.references or None,
+                })
     except Exception:
-        print(f"Scrape failed for {text_auth_number}")
-        return None
+        raise Exception(f"Scrape failed for {text_auth_number}")
 
-hymns['scriptureReferences'] = hymns['textAuthNumber'].apply(scrape_scripture_references)
-hymns.replace({np.nan: None}, inplace=True)
-hymns = hymns[['textAuthNumber','displayTitle', 'authors', 'popularity', 'yearsWrote', 'scriptureReferences']]
+hymns[['text', 'scriptureReferences']] = hymns['textAuthNumber'].apply(scrape)
 
 def combine_refs(refs):
     # Removes multiple instances of Books for Chapters
@@ -98,19 +107,8 @@ def combine_refs(refs):
 # Apply combination
 hymns['scriptureReferences'] = hymns['scriptureReferences'].apply(combine_refs)
 
-def get_text(textAuthNumber):
-    res = requests.get(f"https://hymnary.org/api/fulltext/{textAuthNumber}")
-
-    text = res.json()[0]["text"]
-    text = text.replace("\r\n", "\n")
-    text = text.replace("\n\n", "\n")
-
-    return text.strip()
-
-hymns['text'] = hymns['textAuthNumber'].apply(get_text)
-
-hymns.replace({np.nan: None}, inplace=True)
 hymns = hymns[['textAuthNumber', 'displayTitle', 'authors', 'text', 'popularity', 'yearsWrote','scriptureReferences']]
+hymns.replace({np.nan: None}, inplace=True)
 
 hymns = hymns.rename(columns={
     'textAuthNumber': 'titleId',
