@@ -94,6 +94,7 @@ def test_search_row(main_page: Page, hymn_data: list):
     first_title = hymn["title"]
     first_year = hymn['publicationYear']
     first_author = hymn["authors"]
+    first_popularity = f"{hymn['popularity']}%"
 
     # Compare the result that we put in the search bar hymn_titles[0] and table's visible elements
     main_page.locator("#search").type(first_title)
@@ -115,7 +116,6 @@ def test_search_row(main_page: Page, hymn_data: list):
 
 
     #Compare the result that we put in the search bar hymn_popularity[0] and table's visible elements
-    first_popularity = f"{hymn['popularity']}%"
     main_page.locator("#search").type(first_popularity)
     expect(main_page.locator("td").get_by_text(first_popularity).first).to_be_visible()
     main_page.locator("#search").clear()
