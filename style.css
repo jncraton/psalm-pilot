@@ -1,7 +1,9 @@
-* {
+:root,
+body {
   margin: 0;
   padding: 0;
   font-family: system-ui, sans-serif;
+  line-height: 1.5;
 }
 
 body > * {
@@ -25,12 +27,6 @@ header img {
 main > * {
   width: 100%;
   font-size: 14px;
-}
-
-/*General table cleanup*/
-table {
-  border-collapse: collapse;
-  line-height: 1.5;
 }
 
 caption {
@@ -69,10 +65,11 @@ caption {
 }
 
 /*Hymn page styling*/
-p {
+blockquote {
   white-space: pre-line;
-  line-height: 10px;
-  margin-top: 10px;
+  margin-left: 0;
+  padding-left: 2em;
+  border-left: 3px solid #a70000;
 }
 
 dl {
@@ -82,6 +79,7 @@ dl {
 dt,
 dd {
   display: inline;
+  margin-left: 0;
 }
 
 dt {

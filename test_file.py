@@ -115,6 +115,6 @@ def test_song_lyrics(main_page:Page, hymn_data: list):
         main_page.goto(Path(f"hymns/{hymn_title_id}.html").resolve().as_uri())
         
         # Confirm the hymn lyrics on the new page
-        expect(main_page.locator("p")).to_contain_text(hymn_lyrics)
+        expect(main_page.locator("blockquote")).to_contain_text(hymn_lyrics)
 
 
