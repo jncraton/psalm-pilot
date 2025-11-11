@@ -77,7 +77,11 @@ def get_text(textAuthNumber):
     print(f"Downloading text for {textAuthNumber}...")
     res = requests.get(f"https://hymnary.org/api/fulltext/{textAuthNumber}")
 
-    return res.json()[0]["text"]
+    text = res.json()[0]["text"]
+    text = text.replace("\r\n", "\n")
+    text = text.replace("\n\n", "\n")
+
+    return text.strip()
 
 hymns['text'] = hymns['textAuthNumber'].apply(get_text)
 
