@@ -4,8 +4,8 @@ body {
   font-family: system-ui, sans-serif;
   line-height: 1.5;
   --color: #a70000;
-  --border: color-mix(in oklch, var(--color), #fbfbfb 80%);
-  --highlight: color-mix(in oklch, var(--color), #fbfbfb 98%);
+  --border: color-mix(in oklch, var(--color) 20%, hsl(0 0 98%));
+  --highlight: color-mix(in oklch, var(--color) 2%, hsl(0 0 98%));
 }
 
 body > * {
