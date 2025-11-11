@@ -88,40 +88,38 @@ def test_song_authors(main_page: Page, hymn_data: list):
 
 def test_search_row(main_page: Page, hymn_data: list):
 
-    # Title
-    # Taking first element in hymn_titles
+    # Grab the first element and its components to search with
     hymn = hymn_data[0]
     first_title = hymn["title"]
     first_year = hymn['publicationYear']
     first_author = hymn["authors"]
     first_popularity = f"{hymn['popularity']}%"
 
-    # Compare the result that we put in the search bar hymn_titles[0] and table's visible elements
+    # Verify title search works
     main_page.locator("#search").type(first_title)
     expect(main_page.locator("td").get_by_text(first_title).first).to_be_visible()
     expect(main_page.locator("td").get_by_text(hymn_data[1]['title'])).not_to_be_visible()
     main_page.locator("#search").clear()
 
 
-    # Compare the result that we put in the search bar hymn_years[0] and table's visible elements
+    # Verify year search works
     main_page.locator("#search").type(first_year)
     expect(main_page.locator("td").get_by_text(first_year).first).to_be_visible()
     main_page.locator("#search").clear()
 
 
-    # Compare the result that we put in the search bar hymn_authors[0] and table's visible elements
+    # Verify author search works
     main_page.locator("#search").type(first_author)
     expect(main_page.locator("td").get_by_text(first_author).first).to_be_visible()
     main_page.locator("#search").clear()
 
 
-    #Compare the result that we put in the search bar hymn_popularity[0] and table's visible elements
+    # Verify popularity search works
     main_page.locator("#search").type(first_popularity)
     expect(main_page.locator("td").get_by_text(first_popularity).first).to_be_visible()
     main_page.locator("#search").clear()
 
-    # Random input should show 0 results
-    # Compare the result that we put in the search bar with table
+    # Verify random letters show no results
     main_page.locator("#search").type("asfafaefdawda")
     expect(main_page.locator("td:visible").get_by_text("asfafaef").first).not_to_be_visible()
     main_page.locator("#search").clear()
