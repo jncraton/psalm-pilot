@@ -118,8 +118,14 @@ def test_search_row(main_page: Page, hymn_data: list):
 
     # Verify random letters show no results
     main_page.locator("#search").type("asfafaefdawda")
-    expect(main_page.locator("td:visible").get_by_text("asfafaef").first).not_to_be_visible()
+    cells = main_page.locator("td")
+    for i in range(cells.count()):
+        expect(cells.nth(i)).not_to_be_visible()
+
+    # Verify no letters shows all results
     main_page.locator("#search").clear()
+    for i in range(cells.count()):
+        expect(cells.nth(i)).to_be_visible()
 
 
 def test_song_years(main_page: Page, hymn_data: list):
