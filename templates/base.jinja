@@ -8,13 +8,17 @@
     <link rel="icon" type="image/svg+xml" href="{{ root_dir or '' }}favicon.svg">
     <link rel="manifest" href="{{ root_dir or '' }}manifest.webmanifest">
     <title>{{ page_title  or 'Psalm Pilot' }}</title>
+    {% block script %}{% endblock script %} 
   </head>
 
   <body>
     <header>
-      <img src="{{ root_dir or '' }}favicon.svg" alt="Psalm Pilot Logo" width="85" height="85">
-      <h1>Psalm Pilot</h1>
-    </header>
+        <nav>
+          <img src="{{ root_dir or '' }}favicon.svg" alt="Psalm Pilot Logo" width="85" height="85">
+          <h1>Psalm Pilot</h1>
+          {% block header %}{% endblock header %} 
+        </nav>
+        </header>
 
     <main>
       {% block main %}{% endblock %}

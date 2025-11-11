@@ -21,10 +21,8 @@ main {
 }
 
 header {
-  display: flex;
   background-color: var(--color);
   color: white;
-  gap: 1%;
 }
 
 table {
@@ -32,6 +30,31 @@ table {
   width: 100%;
   border-radius: 8px;
   border: 1px solid var(--border);
+}
+
+/*Nav and Search bar*/
+header nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 1%;
+}
+
+header nav h1 {
+  flex-grow: 1;
+}
+
+nav input[type='search'] {
+  height: 35px;
+  width: 400px;
+  border: 0;
+  border-radius: 28px;
+
+  background-image: url('searchicon.svg');
+  background-repeat: no-repeat;
+  background-position: center left 0.4rem;
+  background-size: 1.3em auto;
+  padding-left: 2em;
+  align-self: end;
 }
 
 caption {

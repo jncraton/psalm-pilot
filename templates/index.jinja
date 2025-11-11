@@ -1,4 +1,8 @@
 {% extends 'base.jinja' %}
+{% block script %}<script src="{{ root_dir or '' }}main.js"></script>{% endblock script %} 
+{% block header %}
+<input type="search" id="search" name="search" placeholder="Search hymns..." onkeyup="search_title()" />
+{% endblock header %} 
 
 {% block main %}
   <table>
