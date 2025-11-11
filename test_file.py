@@ -87,17 +87,8 @@ def test_song_authors(main_page: Page, hymn_data: list):
     expect(hymn_author_cells).to_have_text(hymn_authors)
 
 def test_search_row(main_page: Page, hymn_data: list):
-    # Setup search cases with first hymn instance
     hymn = hymn_data[0]
 
-    field_queries = {
-        'title': hymn['title'],
-        'publicationYear': hymn['publicationYear'],
-        'authors': hymn['authors'],
-        'popularity': f"{hymn['popularity']}%"
-    }
-
-    # Setup reused locators
     search_bar = main_page.locator('#search')
     cells = main_page.locator('td')
     
@@ -111,9 +102,11 @@ def test_search_row(main_page: Page, hymn_data: list):
         raise Exception(f"No non-matching hymn was found for query: {query}")
 
     # Query, verify, and clear for each field
-    for query in field_queries.values():
+    for key in ['title', 'publicationYear', 'authors', 'popularity']:
+        query = str(hymn[key])
+
         search_bar.type(query)
-        expect(cells.get_by_text(field_queries['title'])).to_be_visible()
+        expect(cells.get_by_text(hymn['title'])).to_be_visible()
         expect(get_non_matching_hymn(query)).not_to_be_visible()
         search_bar.clear()
 
