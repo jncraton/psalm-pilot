@@ -73,8 +73,27 @@ hymns['scriptureReferences'] = hymns['textAuthNumber'].apply(scrape_scripture_re
 hymns.replace({np.nan: None}, inplace=True)
 hymns = hymns[['textAuthNumber','displayTitle', 'authors', 'popularity', 'yearsWrote', 'scriptureReferences']]
 
+def combine_refs(refs):
+    # This removes duplicate names for references
+    if not refs:
+        return refs
+    
+    combined = {}
+    for ref in refs:
+        parts = ref.split(" ", 1)
+        if len(parts) == 2:
+            book, chap = parts
+            combined.setdefault(book, []).append(chap)
+        else:
+            combined.setdefault("", []).append(ref)
+
+    # Join references and strip any leftover spaces
+    return [f"{book} {'; '.join(ref_list)}".strip() for book, ref_list in combined.items()]
+
+# Apply combination
+hymns['scriptureReferences'] = hymns['scriptureReferences'].apply(combine_refs)
+
 def get_text(textAuthNumber):
-    print(f"Downloading text for {textAuthNumber}...")
     res = requests.get(f"https://hymnary.org/api/fulltext/{textAuthNumber}")
 
     text = res.json()[0]["text"]
