@@ -9,6 +9,7 @@ self.addEventListener('install', e => {
       const files = [
         'index.html',
         'styles.css',
+        'favicon.svg',
         ...hymns,
       ].map(f => new URL(f, base).toString())
 
