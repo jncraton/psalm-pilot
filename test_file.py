@@ -106,14 +106,14 @@ def test_search_row(main_page: Page, hymn_data: list):
 
         for hymn in hymn_data[1:]:
             if not any(query in str(field) or query == str(field) for field in hymn.values()):
-                return cells.get_by_text(hymn['title']).first
+                return cells.get_by_text(hymn['title'])
         
         raise Exception(f"No non-matching hymn was found for query: {query}")
 
     # Query, verify, and clear for each field
     for query in field_queries.values():
         search_bar.type(query)
-        expect(cells.get_by_text(query).first).to_be_visible()
+        expect(cells.get_by_text(field_queries['title'])).to_be_visible()
         expect(get_non_matching_hymn(query)).not_to_be_visible()
         search_bar.clear()
 
