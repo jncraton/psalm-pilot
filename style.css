@@ -11,16 +11,57 @@ body > * {
 }
 
 header {
-  display: flex;
   background-color: #a70000;
   color: white;
-  align-items: center;
 }
 
-header img {
+/*Nav and Search bar*/
+header nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #a70000;
+}
+
+.logo-and-title {
+  float: left;
+  display: flex;
+  color: white;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.logo-and-title img {
   max-width: 85px;
   max-height: 85px;
-  padding-right: 1%;
+  padding-right: 6px;
+}
+
+nav .search-bar-div {
+  display: flex;
+  width: max-content;
+  align-items: center;
+  border-radius: 28px;
+  background-color: white;
+  flex-direction: row-reverse;
+  padding: 5px;
+  gap: 5px;
+}
+
+nav input[type='search'] {
+  float: right;
+  height: 35px;
+  width: 400px;
+  border: none;
+  font-size: 16px;
+  text-align: left;
+  border-radius: 28px;
+
+  background-image: url('searchicon.svg');
+  background-repeat: no-repeat;
+  background-position: center left 0.4rem;
+  background-size: 1.3rem auto;
+  padding-left: 2rem;
 }
 
 /*General table cleanup*/
