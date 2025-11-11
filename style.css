@@ -4,6 +4,8 @@ body {
   font-family: system-ui, sans-serif;
   line-height: 1.5;
   --color: #a70000;
+  --border: color-mix(in oklch, var(--color), #fbfbfb 80%);
+  --highlight: color-mix(in oklch, var(--color), #fbfbfb 98%);
 }
 
 body > * {
@@ -22,8 +24,19 @@ header {
 }
 
 table {
-  border-collapse: collapse;
+  border-spacing: 0;
   width: 100%;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+}
+
+tbody td {
+  border-top: 1px solid var(--border);
+}
+
+tbody tr:hover,
+thead tr {
+  background-color: var(--highlight);
 }
 
 tr > * {
