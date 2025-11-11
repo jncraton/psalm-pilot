@@ -31,7 +31,7 @@ build:
 clean: clean-cache clean-build
 
 clean-cache:
-	rm -rf __pycache__ .pytest_cache .ruff_cache
+	rm -rf */__pycache__ */.pytest_cache */.ruff_cache
 
 clean-build:
 	rm -rf index.html hymns/* hymns_list.json
