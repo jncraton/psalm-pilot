@@ -4,7 +4,7 @@ from playwright.sync_api import Page
 from pathlib import Path
 
 @pytest.fixture
-def main_page(page: Page) -> Page:
+def directory_page(page: Page) -> Page:
     """Goes to the main page of app and returns Page object in that state."""
     page.goto(Path('index.html').resolve().as_uri())
 
