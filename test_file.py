@@ -53,6 +53,11 @@ def test_table_not_empty(main_page: Page):
     row_locator = main_page.locator("tbody tr")
     expect(row_locator).not_to_have_count(0)
 
+def test_chat(main_page: Page):
+    main_page.on('dialog', lambda d: d.accept(os.environ["GEMINI_API_KEY"]))
+
+    response = main_page.evaluate("chat('What is the capital of France?')")
+    assert "Paris" in response
 
 def test_song_titles(main_page: Page, hymn_data: list):
     # Grab hymn title source data
@@ -144,6 +149,6 @@ def test_song_lyrics(main_page:Page, hymn_data: list):
         main_page.goto(Path(f"hymns/{hymn_title_id}.html").resolve().as_uri())
         
         # Confirm the hymn lyrics on the new page
-        expect(main_page.locator("p")).to_contain_text(hymn_lyrics)
+        expect(main_page.locator("blockquote")).to_contain_text(hymn_lyrics)
 
 

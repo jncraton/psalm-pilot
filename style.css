@@ -1,7 +1,9 @@
-* {
+:root,
+body {
   margin: 0;
   padding: 0;
   font-family: system-ui, sans-serif;
+  line-height: 1.5;
 }
 
 body > * {
@@ -68,8 +70,6 @@ div {
   border-collapse: collapse;
   width: 100%;
   font-size: 14px;
-  line-height: 1.5;
-  margin-top: 1rem;
 }
 
 caption {
@@ -107,8 +107,9 @@ caption {
   font-weight: bold;
 }
 
-p {
+blockquote {
   white-space: pre-line;
-  line-height: 10px;
-  margin-top: 20px;
+  margin-left: 0;
+  padding-left: 2em;
+  border-left: 3px solid #a70000;
 }

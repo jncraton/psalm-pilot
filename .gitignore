@@ -7,7 +7,11 @@ __pycache__/
 
 # Ignore the hymns data unless it is in the right directory
 hymns.json
+hymns_list.json
 !data/hymns.json
 
 # Ignore the rendered version of the web app
 *.html
+
+# Ignore the current version of the service worker
+service-worker.js
