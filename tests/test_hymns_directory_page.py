@@ -33,11 +33,13 @@ def test_table_not_empty(main_page: Page):
     row_locator = main_page.locator("tbody tr")
     expect(row_locator).not_to_have_count(0)
 
+
 def test_chat(main_page: Page):
     main_page.on('dialog', lambda d: d.accept(os.environ["GEMINI_API_KEY"]))
 
     response = main_page.evaluate("chat('What is the capital of France?')")
     assert "Paris" in response
+
 
 def test_song_titles(main_page: Page, hymn_data: list):
     # Grab hymn title source data
@@ -70,6 +72,18 @@ def test_song_authors(main_page: Page, hymn_data: list):
 
     # Verify the data matches
     expect(hymn_author_cells).to_have_text(hymn_authors)
+
+
+def test_song_years(main_page: Page, hymn_data: list):
+    # Grab hymn publication year source data
+    hymn_years = [hymn['publicationYear'] or '' for hymn in hymn_data]
+
+    # Grab the hymn publication year column cells
+    hymn_year_cells = get_column_cells(main_page, 'Publication Year')
+
+    # Verify the data matches
+    expect(hymn_year_cells).to_have_text(hymn_years)
+
 
 def test_search_row(main_page: Page, hymn_data: list):
     hymn = hymn_data[0]
@@ -104,14 +118,3 @@ def test_search_row(main_page: Page, hymn_data: list):
     search_bar.clear()
     for i in range(cells.count()):
         expect(cells.nth(i)).to_be_visible()
-
-
-def test_song_years(main_page: Page, hymn_data: list):
-    # Grab hymn publication year source data
-    hymn_years = [hymn['publicationYear'] or '' for hymn in hymn_data]
-
-    # Grab the hymn publication year column cells
-    hymn_year_cells = get_column_cells(main_page, 'Publication Year')
-
-    # Verify the data matches
-    expect(hymn_year_cells).to_have_text(hymn_years)
