@@ -87,9 +87,9 @@ def test_song_authors(main_page: Page, hymn_data: list):
     expect(hymn_author_cells).to_have_text(hymn_authors)
 
 def test_search_row(main_page: Page, hymn_data: list):
-
     # Grab the first element and its components to search with
     hymn = hymn_data[0]
+
     first_title = hymn["title"]
     first_year = hymn['publicationYear']
     first_author = hymn["authors"]
@@ -101,18 +101,15 @@ def test_search_row(main_page: Page, hymn_data: list):
     expect(main_page.locator("td").get_by_text(hymn_data[1]['title'])).not_to_be_visible()
     main_page.locator("#search").clear()
 
-
     # Verify year search works
     main_page.locator("#search").type(first_year)
     expect(main_page.locator("td").get_by_text(first_year).first).to_be_visible()
     main_page.locator("#search").clear()
 
-
     # Verify author search works
     main_page.locator("#search").type(first_author)
     expect(main_page.locator("td").get_by_text(first_author).first).to_be_visible()
     main_page.locator("#search").clear()
-
 
     # Verify popularity search works
     main_page.locator("#search").type(first_popularity)
@@ -123,7 +120,6 @@ def test_search_row(main_page: Page, hymn_data: list):
     main_page.locator("#search").type("asfafaefdawda")
     expect(main_page.locator("td:visible").get_by_text("asfafaef").first).not_to_be_visible()
     main_page.locator("#search").clear()
-
 
 
 def test_song_years(main_page: Page, hymn_data: list):
