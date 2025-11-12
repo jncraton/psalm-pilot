@@ -28,6 +28,9 @@ install:
 build:
 	python render.py
 
+serve:
+	python -m http.server
+
 clean: clean-cache clean-build
 
 clean-cache:
