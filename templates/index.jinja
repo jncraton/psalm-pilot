@@ -1,20 +1,18 @@
 {% extends 'base.jinja' %}
 {% block script %}<script src="{{ root_dir or '' }}main.js"></script>{% endblock script %} 
 {% block header %}
-  <div class="search-bar-div">
-    <input type="search" id="search" name="search" placeholder="Search hymns..." onkeyup="search_title()" />
-  </div>
+<input type="search" id="search" name="search" placeholder="Search hymns..." onkeyup="search_title()" />
 {% endblock header %} 
 
 {% block main %}
   <table>
-    <caption>Hymns</caption>
+    <caption><h2>Hymn Directory</h2></caption>
     <thead>
       <tr>
-        <th>Title</th>
+        <th class="left-th">Title</th>
         <th>Author</th>
         <th>Publication Year</th>
-        <th>Popularity</th>
+        <th class="right-th">Popularity</th>
       </tr>
     </thead>
     <tbody>
