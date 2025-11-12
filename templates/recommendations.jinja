@@ -1,0 +1,14 @@
+{% extends 'base.jinja' %}
+
+{% set root_dir, page_title = '../', 'Recommendations' %}
+
+{% block script %}<script src="{{ root_dir or '' }}main.js"></script>{% endblock script %} 
+{% block header %}
+  <div class="search-bar-div">
+    <input type="search" id="search" name="search" placeholder="Search hymns..." onkeyup="search_title()" />
+  </div>
+{% endblock header %} 
+
+{% block main %}
+<h1>This is the Recommendations Page</h1>
+{% endblock main%}

@@ -58,3 +58,10 @@ with open('service-worker.js', 'w', encoding='utf8') as f:
     f.write(rendered)
 
 print(f"Built service-worker.js with version: {version}")
+
+#load the recommendations page template
+recommendations_template = env.get_template('recommendations.jinja')
+filled_recommendations_template = recommendations_template.render()
+
+with open('recommendations.html', 'w', encoding='utf8') as rec_page:
+    rec_page.write(filled_recommendations_template)
