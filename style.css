@@ -33,11 +33,6 @@ table {
 }
 
 /*Nav and Search bar*/
-header img {
-  border: 4px solid white;
-  border-radius: 5px;
-}
-
 header nav {
   display: flex;
   justify-content: space-between;
