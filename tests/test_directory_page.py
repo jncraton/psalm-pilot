@@ -1,25 +1,5 @@
 import os
-import json
-import pytest
 from playwright.sync_api import Page, Locator, expect
-from pathlib import Path
-
-
-@pytest.fixture
-def main_page(page: Page) -> Page:
-    """Goes to the main page of app and returns Page object in that state."""
-    page.goto(f"file://{os.path.abspath('index.html')}")
-
-    return page
-
-
-@pytest.fixture
-def hymn_data() -> list:
-    """Grabs the hymns source data for verification comparison."""
-    with open('data/hymns.json', 'r') as file:
-        data = json.load(file)
-    
-    return data
 
 
 def get_column_index(page: Page, column_name: str) -> int:
@@ -45,57 +25,67 @@ def get_column_cells(page: Page, column_name: str) -> Locator:
     return page.locator(f"td:nth-child({column_index})")
 
 
-def test_html_file(main_page: Page):
-    expect(main_page).to_have_title("Psalm Pilot")
-
-
-def test_table_not_empty(main_page: Page):
-    row_locator = main_page.locator("tbody tr")
+def test_directory_sanity(directory_page: Page):
+    row_locator = directory_page.locator("tbody tr")
     expect(row_locator).not_to_have_count(0)
 
-def test_chat(main_page: Page):
-    main_page.on('dialog', lambda d: d.accept(os.environ["GEMINI_API_KEY"]))
 
-    response = main_page.evaluate("chat('What is the capital of France?')")
+def test_chat(directory_page: Page):
+    directory_page.on('dialog', lambda d: d.accept(os.environ["GEMINI_API_KEY"]))
+
+    response = directory_page.evaluate("chat('What is the capital of France?')")
     assert "Paris" in response
 
-def test_song_titles(main_page: Page, hymn_data: list):
+
+def test_song_titles(directory_page: Page, hymn_data: list):
     # Grab hymn title source data
     hymn_titles = [hymn['title'] for hymn in hymn_data]
 
     # Grab the hymn title column cells
-    hymn_title_cells = get_column_cells(main_page, 'Title')
+    hymn_title_cells = get_column_cells(directory_page, 'Title')
 
     # Verify the data matches
     expect(hymn_title_cells).to_have_text(hymn_titles)
 
 
-def test_song_popularity(main_page: Page, hymn_data: list):
+def test_song_popularity(directory_page: Page, hymn_data: list):
     # Grab hymn popularity source data
     hymn_popularity = [f"{hymn['popularity']}%" for hymn in hymn_data]
 
     # Grab the hymn popularity column cells
-    hymn_popularity_cells = get_column_cells(main_page, 'Popularity')
+    hymn_popularity_cells = get_column_cells(directory_page, 'Popularity')
 
     # Verify the data matches
     expect(hymn_popularity_cells).to_have_text(hymn_popularity)
 
 
-def test_song_authors(main_page: Page, hymn_data: list):
+def test_song_authors(directory_page: Page, hymn_data: list):
     # Grab hymn authors source data, converting None to empty string
     hymn_authors = [hymn['authors'] or '' for hymn in hymn_data]
 
     # Grab the hymn authors column cells
-    hymn_author_cells = get_column_cells(main_page, 'Author')
+    hymn_author_cells = get_column_cells(directory_page, 'Author')
 
     # Verify the data matches
     expect(hymn_author_cells).to_have_text(hymn_authors)
 
-def test_search_row(main_page: Page, hymn_data: list):
+
+def test_song_years(directory_page: Page, hymn_data: list):
+    # Grab hymn publication year source data
+    hymn_years = [hymn['publicationYear'] or '' for hymn in hymn_data]
+
+    # Grab the hymn publication year column cells
+    hymn_year_cells = get_column_cells(directory_page, 'Publication Year')
+
+    # Verify the data matches
+    expect(hymn_year_cells).to_have_text(hymn_years)
+
+
+def test_song_search(directory_page: Page, hymn_data: list):
     hymn = hymn_data[0]
 
-    search_bar = main_page.locator('#search')
-    cells = main_page.locator('td')
+    search_bar = directory_page.locator('#search')
+    cells = directory_page.locator('td')
     
     def get_non_matching_hymn(query: str) -> Locator:
         """Finds a hymn instance that should not show up with given query"""
@@ -124,31 +114,3 @@ def test_search_row(main_page: Page, hymn_data: list):
     search_bar.clear()
     for i in range(cells.count()):
         expect(cells.nth(i)).to_be_visible()
-
-
-def test_song_years(main_page: Page, hymn_data: list):
-    # Grab hymn publication year source data
-    hymn_years = [hymn['publicationYear'] or '' for hymn in hymn_data]
-
-    # Grab the hymn publication year column cells
-    hymn_year_cells = get_column_cells(main_page, 'Publication Year')
-
-    # Verify the data matches
-    expect(hymn_year_cells).to_have_text(hymn_years)
-
-
-def test_song_lyrics(main_page:Page, hymn_data: list):
-    for hymn in hymn_data:
-        # Grab the title source data
-        hymn_title_id = hymn['titleId']
-
-        # Grab hymn lyrics source data
-        hymn_lyrics = hymn['text']
-
-        # Go to next page 
-        main_page.goto(Path(f"hymns/{hymn_title_id}.html").resolve().as_uri())
-        
-        # Confirm the hymn lyrics on the new page
-        expect(main_page.locator("blockquote")).to_contain_text(hymn_lyrics)
-
-
