@@ -115,9 +115,9 @@ dt::after {
   content: ': ';
 }
 
-.recommendations-page {
+.recommendations-page a {
   font-size: 12px;
-  color: black;
+  color: white;
   margin-top: 1px;
   margin-bottom: 1px;
   text-decoration: none;
