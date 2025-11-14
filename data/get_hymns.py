@@ -68,7 +68,7 @@ class ScriptureHTMLParser(HTMLParser):
 
         if self.in_text:
             dataNoNewlines = re.sub("[\r\n]", "", data)
-            dataNormalized = re.sub("\t", " ", dataNoNewlines)
+            dataNormalized = re.sub("\t", " ", dataNoNewlines).strip()
             self.lyrics = re.sub("\n\n\n+", "\n\n", self.lyrics + dataNormalized)
 
 def scrape(text_auth_number):
