@@ -9,6 +9,32 @@
   </div>
 {% endblock header %} 
 
+{% block title %}
+<h1>Recommendations</h1>
+{% endblock title%}
+
 {% block main %}
-<h1>This is the Recommendations Page</h1>
-{% endblock main%}
+
+  
+  <table>
+    <caption>Recommendations</caption>
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Publication Year</th>
+        <th>Popularity</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for hymn in hymns %}
+      <tr>
+        <td><a href="hymns/{{ hymn.titleId }}.html">{{ hymn.title }}</a></td>
+        <td>{{ hymn.authors or '' }}</td>
+        <td>{{ hymn.publicationYear or '' }}</td>
+        <td>{{ hymn.popularity }}%</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}
