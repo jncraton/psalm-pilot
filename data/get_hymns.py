@@ -3,6 +3,7 @@ from urllib.request import urlopen
 from html.parser import HTMLParser
 import pandas as pd
 import numpy as np
+import re
 
 # import csv from Hymnary
 # the url uses advanced search to filter for multiple things outlined in the params
@@ -66,7 +67,9 @@ class ScriptureHTMLParser(HTMLParser):
                 self.references.append(ref)
 
         if self.in_text:
-            self.lyrics += data.replace("\r", "").replace("\n", "").replace("\t", " ")
+            dataNoNewlines = re.sub("[\r\n]", "", data)
+            dataNormalized = re.sub("\t", " ", dataNoNewlines)
+            self.lyrics = re.sub("\n\n\n+", "\n\n", self.lyrics + dataNormalized)
 
 def scrape(text_auth_number):
     url = f"https://hymnary.org/text/{text_auth_number}#text-scripture"
