@@ -80,10 +80,6 @@ thead tr {
   background-color: var(--highlight);
 }
 
-thead tr {
-  border-radius: 8px;
-}
-
 tr > * {
   padding: 10px 8px;
   text-align: left;
