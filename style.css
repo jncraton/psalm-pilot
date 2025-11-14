@@ -89,10 +89,12 @@ tr > * {
 
 .right-th {
   border-top-right-radius: 7.5px;
+  -moz-border-radius-topright: 7.5px;
 }
 
 .left-th {
   border-top-left-radius: 7.5px;
+  -moz-border-radius-topleft: 7.5px;
 }
 
 /*Hymn page styling*/
