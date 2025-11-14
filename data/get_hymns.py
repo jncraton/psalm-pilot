@@ -49,6 +49,8 @@ class ScriptureHTMLParser(HTMLParser):
             self.in_text = True
         if tag == "p" and self.in_text:
             self.lyrics += "\n\n"
+        if tag == "br" and self.in_text:
+            self.lyrics += "\n"
 
     #Outside scripture div
     def handle_endtag(self, tag):
@@ -64,7 +66,7 @@ class ScriptureHTMLParser(HTMLParser):
                 self.references.append(ref)
 
         if self.in_text:
-            self.lyrics += data.replace("\r", "").replace("\t", "")
+            self.lyrics += data.replace("\r", "").replace("\n", "").replace("\t", " ")
 
 def scrape(text_auth_number):
     url = f"https://hymnary.org/text/{text_auth_number}#text-scripture"
