@@ -45,7 +45,7 @@ class ScriptureHTMLParser(HTMLParser):
     def handle_starttag(self, tag, attrs):
         if tag == "div" and ("class", "scripture_reference") in attrs:
             self.in_ref = True
-        if tag == "div" and ("class", "authority_columns") in attrs and not self.lyrics:
+        if tag == "div" and ("class", "text") in attrs and not self.lyrics:
             self.in_authority_columns = True
         if tag == "p" and self.in_authority_columns:
             self.lyrics += "\n\n"
