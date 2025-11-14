@@ -30,8 +30,6 @@ table {
   width: 100%;
   border-radius: 8px;
   border: 1px solid var(--border);
-  border-top-right-radius: 7.5px;
-  border-top-left-radius: 7.5px;
 }
 
 /*Nav and Search bar*/
