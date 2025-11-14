@@ -6,7 +6,7 @@ from pathlib import Path
 @pytest.fixture
 def directory_page(page: Page) -> Page:
     """Goes to the main page of app and returns Page object in that state."""
-    page.goto(Path('index.html').resolve().as_uri())
+    page.goto(Path('www/index.html').resolve().as_uri())
 
     return page
 
