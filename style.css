@@ -40,10 +40,16 @@ header nav {
   gap: 1%;
 }
 
+header nav a {
+  display: flex;
+  gap: 5%;
+}
+
 header nav h1 {
   flex-grow: 1;
   white-space: nowrap;
   margin: auto;
+  color: white;
 }
 
 nav input[type='search'] {
@@ -71,6 +77,10 @@ tbody td {
 tbody tr:hover,
 thead tr {
   background-color: var(--highlight);
+}
+
+thead tr {
+  border-radius: 8px;
 }
 
 tr > * {
