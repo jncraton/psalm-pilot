@@ -73,8 +73,32 @@ hymns['scriptureReferences'] = hymns['textAuthNumber'].apply(scrape_scripture_re
 hymns.replace({np.nan: None}, inplace=True)
 hymns = hymns[['textAuthNumber','displayTitle', 'authors', 'popularity', 'yearsWrote', 'scriptureReferences']]
 
+def combine_refs(refs):
+    # Removes multiple instances of Books for Chapters
+    if not refs:
+        return refs
+
+    combined = {}
+    for ref in refs:
+        # Find the last space before the chapter:verse part
+        # Therefore "1 Corinthians 2:39" will be separated into "1 Conrinthians""2:39"
+        last_space = ref.rfind(" ")
+        if last_space != -1:
+            book = ref[:last_space]
+            chap = ref[last_space + 1:]
+            combined.setdefault(book, []).append(chap)
+        else:
+            # No spaces found (very rare)
+            combined.setdefault("", []).append(ref)
+
+     # Join references and strip any trailing spaces
+    return [f"{book} {'; '.join(ref_list)}".strip() for book, ref_list in combined.items()]
+
+
+# Apply combination
+hymns['scriptureReferences'] = hymns['scriptureReferences'].apply(combine_refs)
+
 def get_text(textAuthNumber):
-    print(f"Downloading text for {textAuthNumber}...")
     res = requests.get(f"https://hymnary.org/api/fulltext/{textAuthNumber}")
 
     text = res.json()[0]["text"]
