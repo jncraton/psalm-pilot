@@ -87,14 +87,19 @@ tr > * {
   text-align: left;
 }
 
-.right-th {
-  border-top-right-radius: 7.5px;
-  -moz-border-radius-topright: 7.5px;
+thead tr {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
 }
 
-.left-th {
+.right-th tr{
+  border-top-right-radius: 7.5px;
+
+}
+
+.left-th tr > th{
   border-top-left-radius: 7.5px;
-  -moz-border-radius-topleft: 7.5px;
+
 }
 
 /*Hymn page styling*/
