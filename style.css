@@ -3,13 +3,14 @@ body {
   margin: 0;
   font-family: system-ui, sans-serif;
   line-height: 1.6;
+  --width: 960px;
   --color: #a70000;
   --border: color-mix(in oklch, var(--color) 20%, hsl(0 0 98%));
   --highlight: color-mix(in oklch, var(--color) 2%, hsl(0 0 98%));
 }
 
 body > * {
-  padding: 0.5em 3%;
+  padding: 0.5em max(0.5em, calc((100vw - var(--width)) / 2));
 }
 
 main {
@@ -39,10 +40,16 @@ header nav {
   gap: 1%;
 }
 
+header nav a {
+  display: flex;
+  gap: 5%;
+}
+
 header nav h1 {
   flex-grow: 1;
   white-space: nowrap;
   margin: auto;
+  color: white;
 }
 
 nav input[type='search'] {
@@ -70,6 +77,10 @@ tbody td {
 tbody tr:hover,
 thead tr {
   background-color: var(--highlight);
+}
+
+thead tr {
+  border-radius: 8px;
 }
 
 tr > * {

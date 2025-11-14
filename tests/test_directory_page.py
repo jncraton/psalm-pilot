@@ -75,7 +75,7 @@ def test_song_years(directory_page: Page, hymn_data: list):
     hymn_years = [hymn['publicationYear'] or '' for hymn in hymn_data]
 
     # Grab the hymn publication year column cells
-    hymn_year_cells = get_column_cells(directory_page, 'Publication Year')
+    hymn_year_cells = get_column_cells(directory_page, 'Year')
 
     # Verify the data matches
     expect(hymn_year_cells).to_have_text(hymn_years)
