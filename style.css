@@ -89,12 +89,12 @@ tr > * {
   text-align: left;
 }
 
-.right-th tr{
+.right-th {
   border-top-right-radius: 7.5px;
 
 }
 
-.left-th tr{
+.left-th {
   border-top-left-radius: 7.5px;
 
 }
