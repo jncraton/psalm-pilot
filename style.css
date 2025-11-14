@@ -86,13 +86,6 @@ tr > * {
   padding: 10px 8px;
   text-align: left;
 }
-.right-th {
-  border-top-right-radius: 7.5px;
-}
-
-.left-th {
-  border-top-left-radius: 7.5px;
-}
 
 /*Hymn page styling*/
 blockquote {
