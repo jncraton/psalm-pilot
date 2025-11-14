@@ -4,9 +4,7 @@
 
 {% block script %}<script src="{{ root_dir or '' }}main.js"></script>{% endblock script %} 
 {% block header %}
-  <div class="search-bar-div">
-    <input type="search" id="search" name="search" placeholder="Search hymns..." onkeyup="search_title()" />
-  </div>
+<input type="search" id="search" name="search" placeholder="Search hymns..." onkeyup="search_title()" />
 {% endblock header %} 
 
 {% block title %}
