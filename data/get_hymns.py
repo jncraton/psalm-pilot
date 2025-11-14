@@ -38,7 +38,7 @@ class ScriptureHTMLParser(HTMLParser):
         super().__init__()
         self.in_ref = False
         self.references = []
-        self.in_authority_columns = False
+        self.in_text = False
         self.lyrics = ""
 
     #Inside scripture div
@@ -46,15 +46,15 @@ class ScriptureHTMLParser(HTMLParser):
         if tag == "div" and ("class", "scripture_reference") in attrs:
             self.in_ref = True
         if tag == "div" and ("class", "text") in attrs and not self.lyrics:
-            self.in_authority_columns = True
-        if tag == "p" and self.in_authority_columns:
+            self.in_text = True
+        if tag == "p" and self.in_text:
             self.lyrics += "\n\n"
 
     #Outside scripture div
     def handle_endtag(self, tag):
         if tag == "div":
             self.in_ref = False
-            self.in_authority_columns = False
+            self.in_text = False
 
     #Append references to scripture
     def handle_data(self, data):
@@ -63,7 +63,7 @@ class ScriptureHTMLParser(HTMLParser):
             if ref:
                 self.references.append(ref)
 
-        if self.in_authority_columns:
+        if self.in_text:
             self.lyrics += data.replace("\r", "").replace("\t", "")
 
 def scrape(text_auth_number):
