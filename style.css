@@ -87,11 +87,6 @@ tr > * {
   text-align: left;
 }
 
-thead tr {
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
-}
-
 .right-th tr{
   border-top-right-radius: 7.5px;
 
