@@ -13,14 +13,19 @@
 
   <body>
     <header>
-      <nav>
-        <a href="{{ root_dir or '' }}">
-          <img src="{{ root_dir or '' }}favicon.svg" alt="Psalm Pilot Logo" width="64" height="64">
-          <h1>Psalm Pilot</h1>
-        </a>
-        {% block header %}{% endblock header %} 
-      </nav>
-    </header>
+        <nav>
+          <div class="logo-and-title">
+            <img src="{{ root_dir or '' }}favicon.svg" alt="Psalm Pilot Logo">
+            <h1>Psalm Pilot</h1>
+          </div>
+          <div class="recommendations-page">
+            <a href="/recommendations.html">
+            <h4>Recommendations Page</h4>
+            </a>
+          </div>
+          {% block header %}{% endblock header %} 
+        </nav>
+        </header>
 
     <main>
       {% block main %}{% endblock %}
