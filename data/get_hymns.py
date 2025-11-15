@@ -45,15 +45,12 @@ ccli_hymns["ccliPopularity"] = (100 * ccli_hymns["ccliPopularity"] / ccli_hymns[
 params = {
     "qu": {
         "textLanguages": "english",
-        "denominations": "church of god",
         "media": "text",
-        "textClassification": "textispublicdomain",
-        "tuneClassification": "tuneispublicdomain",
         "in": "texts",
     },
     "sort": "totalInstances",
     "export": "csv",
-    "limit": 100
+    "limit": 200
 }
 
 params["qu"] = " ".join([f"{k}:{v}" for k, v in params["qu"].items()])
