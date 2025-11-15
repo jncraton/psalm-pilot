@@ -25,22 +25,52 @@ params["qu"] = " ".join([f"{k}:{v}" for k, v in params["qu"].items()])
 url = f"{base_url}?{urlencode(params)}"
 
 instances = pd.read_csv(url)
-instances["popularity"] = 101 - instances["number"]
+instances["ccliPopularity"] = 101 - instances["number"]
 
-hymns = (
+ccli_hymns = ( 
     instances.groupby("textAuthNumber")
     .agg(
         {
-            "popularity": "sum",
+            "ccliPopularity": "sum",
             "displayTitle": "first",
             "authors": "first",
         }
     )
-    .sort_values(by=["popularity"], ascending=False)
+    .sort_values(by=["ccliPopularity"], ascending=False)
     .reset_index()
 )
 
-hymns["popularity"] = (100 * hymns["popularity"] / hymns["popularity"].max()).astype(int)
+ccli_hymns["ccliPopularity"] = (100 * ccli_hymns["ccliPopularity"] / ccli_hymns["ccliPopularity"].max()).astype(int)
+
+params = {
+    "qu": {
+        "textLanguages": "english",
+        "denominations": "church of god",
+        "media": "text",
+        "textClassification": "textispublicdomain",
+        "tuneClassification": "tuneispublicdomain",
+        "in": "texts",
+    },
+    "sort": "totalInstances",
+    "export": "csv",
+    "limit": 100
+}
+
+params["qu"] = " ".join([f"{k}:{v}" for k, v in params["qu"].items()])
+url = f"{base_url}?{urlencode(params)}"
+
+hymns = pd.read_csv(url)
+hymns['hymnalPopularity'] = (100 * hymns['totalInstances'] / hymns['totalInstances'].max()).astype(int)
+
+hymns = pd.concat([hymns, ccli_hymns])
+
+hymns['popularity'] = hymns[['ccliPopularity', 'hymnalPopularity']].max(axis=1)
+
+hymns = hymns.groupby('textAuthNumber').agg({
+    'popularity': 'max',
+    "displayTitle": "first",
+    "authors": "first",
+}).sort_values(by=["popularity"], ascending=False).reset_index()
 
 texts = pd.read_csv(texts_url)
 hymns = hymns.merge(texts[['textAuthNumber', 'yearsWrote']], on='textAuthNumber', how='left')
