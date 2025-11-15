@@ -13,25 +13,37 @@ texts_url = "https://hymnary.org/files/hymnary/other/texts.csv"
 params = {
     "qu": {
         "textLanguages": "english",
-        "denominations": "church of god",
-        "media": "text",
-        "textClassification": "textispublicdomain",
-        "tuneClassification": "tuneispublicdomain",
-        "in": "texts",
+        "hymnalNumber": "CCLI",
+        "in": "instances",
     },
-    "sort": "totalInstances",
+    "sort": "displayTitle",
     "export": "csv",
-    "limit": 100
+    "limit": 10000
 }
 
 params["qu"] = " ".join([f"{k}:{v}" for k, v in params["qu"].items()])
 url = f"{base_url}?{urlencode(params)}"
 
-hymns = pd.read_csv(url)
+instances = pd.read_csv(url)
+instances["popularity"] = 101 - instances["number"]
+
+hymns = (
+    instances.groupby("textAuthNumber")
+    .agg(
+        {
+            "popularity": "sum",
+            "displayTitle": "first",
+            "authors": "first",
+        }
+    )
+    .sort_values(by=["popularity"], ascending=False)
+    .reset_index()
+)
+
+hymns["popularity"] = (100 * hymns["popularity"] / hymns["popularity"].max()).astype(int)
+
 texts = pd.read_csv(texts_url)
 hymns = hymns.merge(texts[['textAuthNumber', 'yearsWrote']], on='textAuthNumber', how='left')
-
-hymns['popularity'] = (100 * hymns['totalInstances'] / hymns['totalInstances'].max()).astype(int)
 
 class ScriptureHTMLParser(HTMLParser):
     #Set up parser
