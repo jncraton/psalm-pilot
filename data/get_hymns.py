@@ -64,7 +64,7 @@ hymns['hymnalPopularity'] = (100 * hymns['totalInstances'] / hymns['totalInstanc
 
 hymns = pd.concat([hymns, ccli_hymns])
 
-hymns['popularity'] = hymns[['ccliPopularity', 'hymnalPopularity']].max(axis=1)
+hymns['popularity'] = hymns[['ccliPopularity', 'hymnalPopularity']].max(axis=1).astype(int)
 
 hymns = hymns.groupby('textAuthNumber').agg({
     'popularity': 'max',
