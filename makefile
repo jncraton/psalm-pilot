@@ -1,6 +1,6 @@
 all: build
 
-.PHONY: lint lint-fix lint-js lint-py lint-py-fix install build clean clean-cache clean-build test
+.PHONY: lint lint-fix lint-js lint-py lint-py-fix install build serve clean clean-cache clean-build test
 
 # Run both JS/TS + Python linters
 lint: lint-js lint-py
@@ -29,7 +29,7 @@ build:
 	python render.py
 
 serve:
-	python -m http.server
+	cd ./www && python -m http.server
 
 clean: clean-cache clean-build
 
