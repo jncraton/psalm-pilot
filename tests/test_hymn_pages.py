@@ -11,11 +11,12 @@ def test_song_lyrics(page: Page, hymn_data: list):
         # Grab hymn lyrics source data
         hymn_lyrics = hymn['text']
 
-        # Go to next page 
-        page.goto(Path(f"www/hymns/{hymn_title_id}.html").resolve().as_uri())
-        
-        # Confirm the hymn lyrics on the new page
-        expect(page.locator("blockquote")).to_contain_text(hymn_lyrics)
+        if hymn_lyrics:
+            # Go to next page 
+            page.goto(Path(f"www/hymns/{hymn_title_id}.html").resolve().as_uri())
+            
+            # Confirm the hymn lyrics on the new page
+            expect(page.locator("blockquote")).to_contain_text(hymn_lyrics)
 
 def test_hymn_link(page: Page, hymn_data: list):
     for hymn in hymn_data[:2] + hymn_data[-2:]:

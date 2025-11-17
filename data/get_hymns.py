@@ -4,6 +4,9 @@ from html.parser import HTMLParser
 import pandas as pd
 import numpy as np
 import re
+from tqdm import tqdm
+
+tqdm.pandas()
 
 # import csv from Hymnary
 # the url uses advanced search to filter for multiple things outlined in the params
@@ -13,25 +16,64 @@ texts_url = "https://hymnary.org/files/hymnary/other/texts.csv"
 params = {
     "qu": {
         "textLanguages": "english",
-        "denominations": "church of god",
+        "hymnalNumber": "CCLI",
+        "in": "instances",
+    },
+    "sort": "displayTitle",
+    "export": "csv",
+    "limit": 10000
+}
+
+params["qu"] = " ".join([f"{k}:{v}" for k, v in params["qu"].items()])
+url = f"{base_url}?{urlencode(params)}"
+
+instances = pd.read_csv(url)
+instances["ccliPopularity"] = 101 - instances["number"]
+
+ccli_hymns = ( 
+    instances.groupby("textAuthNumber")
+    .agg(
+        {
+            "ccliPopularity": "sum",
+            "displayTitle": "first",
+            "authors": "first",
+        }
+    )
+    .sort_values(by=["ccliPopularity"], ascending=False)
+    .reset_index()
+)
+
+ccli_hymns["ccliPopularity"] = (100 * ccli_hymns["ccliPopularity"] / ccli_hymns["ccliPopularity"].max()).astype(int)
+
+params = {
+    "qu": {
+        "textLanguages": "english",
         "media": "text",
-        "textClassification": "textispublicdomain",
-        "tuneClassification": "tuneispublicdomain",
         "in": "texts",
     },
     "sort": "totalInstances",
     "export": "csv",
-    "limit": 100
+    "limit": 300
 }
 
 params["qu"] = " ".join([f"{k}:{v}" for k, v in params["qu"].items()])
 url = f"{base_url}?{urlencode(params)}"
 
 hymns = pd.read_csv(url)
-texts = pd.read_csv(texts_url)
-hymns = hymns.merge(texts[['textAuthNumber', 'yearsWrote']], on='textAuthNumber', how='left')
+hymns['hymnalPopularity'] = (100 * hymns['totalInstances'] / hymns['totalInstances'].max()).astype(int)
 
-hymns['popularity'] = (100 * hymns['totalInstances'] / hymns['totalInstances'].max()).astype(int)
+hymns = pd.concat([hymns, ccli_hymns])
+
+hymns['popularity'] = hymns[['ccliPopularity', 'hymnalPopularity']].max(axis=1).astype(int)
+
+hymns = hymns.groupby('textAuthNumber').agg({
+    'popularity': 'max',
+    "displayTitle": "first",
+    "authors": "first",
+}).sort_values(by=["popularity"], ascending=False).reset_index()
+
+texts = pd.read_csv(texts_url)
+hymns = hymns.merge(texts[['textAuthNumber', 'yearsWrote', 'firstLine', 'refrainFirstLine']], on='textAuthNumber', how='left')
 
 class ScriptureHTMLParser(HTMLParser):
     #Set up parser
@@ -85,7 +127,7 @@ def scrape(text_auth_number):
     except Exception:
         raise Exception(f"Scrape failed for {text_auth_number}")
 
-hymns[['text', 'scriptureReferences']] = hymns['textAuthNumber'].apply(scrape)
+hymns[['text', 'scriptureReferences']] = hymns['textAuthNumber'].progress_apply(scrape)
 
 def combine_refs(refs):
     # Removes multiple instances of Books for Chapters
@@ -112,7 +154,7 @@ def combine_refs(refs):
 # Apply combination
 hymns['scriptureReferences'] = hymns['scriptureReferences'].apply(combine_refs)
 
-hymns = hymns[['textAuthNumber', 'displayTitle', 'authors', 'text', 'popularity', 'yearsWrote','scriptureReferences']]
+hymns = hymns[['textAuthNumber', 'displayTitle', 'authors', 'text', 'firstLine', 'refrainFirstLine', 'popularity', 'yearsWrote','scriptureReferences']]
 hymns.replace({np.nan: None}, inplace=True)
 
 hymns = hymns.rename(columns={
