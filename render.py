@@ -1,10 +1,14 @@
 import json
+import os
 from jinja2 import Environment, FileSystemLoader
 import subprocess
 from pathlib import Path
 
+# Set current directory of script to www folder for writing
+os.chdir("www/")
+
 # Read in JSON hymn data
-with open('data/hymns.json', 'r') as file:
+with open('../data/hymns.json', 'r') as file:
     hymns = json.load(file)
 
 def get_git_short_hash():
@@ -20,14 +24,14 @@ def get_git_short_hash():
         return 'dev'
 
 # Set environment to templates folder
-env = Environment(loader=FileSystemLoader('templates'))
+env = Environment(loader=FileSystemLoader('../templates'))
 
 # Load the index template and fill with data
 index_template = env.get_template('index.jinja')
 filled_index_template = index_template.render(hymns=hymns)
 
 # Write out the template as `index.html`
-with open('www/index.html', 'w', encoding='utf8') as hymns_page:
+with open('index.html', 'w', encoding='utf8') as hymns_page:
     hymns_page.write(filled_index_template)
 
 # Load the hymn page template
@@ -39,22 +43,22 @@ for hymn in hymns:
     filled_hymn_template = hymn_template.render(hymn=hymn)
 
     # Write out the template with custom file name in hymns directory
-    with open(f"www/hymns/{hymn['titleId']}.html", 'w', encoding='utf8') as hymn_page:
+    with open(f"hymns/{hymn['titleId']}.html", 'w', encoding='utf8') as hymn_page:
         hymn_page.write(filled_hymn_template)
 
 # Create hymns list json file
 hymns = sorted(
-    str(p.relative_to(Path("www")).as_posix())
-    for p in Path("www/hymns").rglob("*")
+    str(p.as_posix())
+    for p in Path("hymns").rglob("*")
     if p.is_file())
-Path("www/hymns_list.json").write_text(json.dumps(hymns, indent=2), encoding="utf-8")
+Path("hymns_list.json").write_text(json.dumps(hymns, indent=2), encoding="utf-8")
 
 sw_template = env.get_template('service-worker.jinja')
     
 version = get_git_short_hash()
 rendered = sw_template.render(version=version)
 
-with open('www/service-worker.js', 'w', encoding='utf8') as f:
+with open('service-worker.js', 'w', encoding='utf8') as f:
     f.write(rendered)
 
 print(f"Built service-worker.js with version: {version}")
