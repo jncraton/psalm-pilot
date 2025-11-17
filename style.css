@@ -42,6 +42,8 @@ header nav {
 header nav a {
   display: flex;
   gap: 5%;
+  color: white;
+  text-decoration: none;
 }
 
 header nav h1 {
@@ -67,6 +69,10 @@ nav input[type='search'] {
 
 caption {
   text-align: left;
+}
+
+main a {
+  color: red;
 }
 
 tbody td {
@@ -112,10 +118,4 @@ dt::before {
 
 dt::after {
   content: ': ';
-}
-
-.recommendations-page {
-  color:white;
-  text-decoration: none;
-  font-size: 20px;
 }
