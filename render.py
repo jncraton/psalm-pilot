@@ -44,8 +44,8 @@ for hymn in hymns:
 
 # Create hymns list json file
 hymns = sorted(
-    str(p.as_posix())
-    for p in Path("hymns").rglob("*")
+    str(p.relative_to(Path("www")).as_posix())
+    for p in Path("www/hymns").rglob("*")
     if p.is_file())
 Path("www/hymns_list.json").write_text(json.dumps(hymns, indent=2), encoding="utf-8")
 
