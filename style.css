@@ -17,9 +17,7 @@ main {
   overflow-x: auto;
 }
 
-:any-link {
-  color: var(--color);
-}
+
 
 header {
   background-color: var(--color);
@@ -37,6 +35,7 @@ table {
 header nav {
   display: flex;
   justify-content: space-between;
+  align-items: flex-end;
   gap: 1%;
 }
 
@@ -115,8 +114,8 @@ dt::after {
   content: ': ';
 }
 
-.recommendations-page a {
-  color: white;
+.recommendations-page {
+  color:white;
   text-decoration: none;
   font-size: 20px;
 }
