@@ -3,6 +3,15 @@ from pathlib import Path
 import re
 
 
+def test_directory_data_on_hymn_page(page: Page, hymn_data: list):
+    for hymn in hymn_data[:2] + hymn_data[-2:]:
+        page.goto(Path(f"hymns/{hymn['titleId']}.html").resolve().as_uri())
+
+        for key in ['publicationYear', 'authors', 'popularity']:
+            # Verify directory data matches
+            expect(page.locator('dl')).to_contain_text(str(hymn[key]))
+
+
 def test_song_lyrics(page: Page, hymn_data: list):
     for hymn in hymn_data:
         # Grab the title source data
@@ -16,6 +25,7 @@ def test_song_lyrics(page: Page, hymn_data: list):
         
         # Confirm the hymn lyrics on the new page
         expect(page.locator("blockquote")).to_contain_text(hymn_lyrics)
+
 
 def test_hymn_link(page: Page, hymn_data: list):
     for hymn in hymn_data[:2] + hymn_data[-2:]:
