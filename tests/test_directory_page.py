@@ -123,7 +123,7 @@ def test_navigate_to_hymn_via_title_link(directory_page: Page, hymn_data: list):
         hymn_title_id = hymn['titleId']
 
         # Click the link to go to the hymn page
-        directory_page.get_by_role("link", name=hymn_title).click()
+        directory_page.get_by_role("link", name=hymn_title, exact=True).click()
 
         # Confirm the URL is correct
         expect(directory_page).to_have_url(
