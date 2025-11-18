@@ -118,7 +118,7 @@ hymns.replace({np.nan: None}, inplace=True)
 hymns = hymns.rename(columns={
     'textAuthNumber': 'titleId',
     'displayTitle': 'title',
-    'yearsWrote': 'publicationYear',
+    'yearsWrote': 'year',
     'scriptureReferences': 'scriptureRefs',
 })
 
