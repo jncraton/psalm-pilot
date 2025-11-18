@@ -32,16 +32,22 @@ table {
 /*Nav and Search bar*/
 header nav {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: start;
   align-items: flex-end;
   gap: 1%;
 }
 
-header nav a {
+header nav a{
   display: flex;
   gap: 5%;
   color: white;
   text-decoration: none;
+  font-size: 20px;
+}
+
+header nav a:last-of-type {
+  flex-grow: 1;
 }
 
 header nav h1 {
@@ -89,6 +95,10 @@ thead tr {
 tr > * {
   padding: 10px 8px;
   text-align: left;
+}
+
+.logo-and-title {
+  margin-right: 3em;
 }
 
 /*Hymn page styling*/
