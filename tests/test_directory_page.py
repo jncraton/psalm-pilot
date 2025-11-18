@@ -72,7 +72,7 @@ def test_song_authors(directory_page: Page, hymn_data: list):
 
 def test_song_years(directory_page: Page, hymn_data: list):
     # Grab hymn publication year source data
-    hymn_years = [hymn['publicationYear'] or '' for hymn in hymn_data]
+    hymn_years = [hymn['year'] or '' for hymn in hymn_data]
 
     # Grab the hymn publication year column cells
     hymn_year_cells = get_column_cells(directory_page, 'Year')
@@ -97,7 +97,7 @@ def test_song_search(directory_page: Page, hymn_data: list):
         raise Exception(f"No non-matching hymn was found for query: {query}")
 
     # Query, verify, and clear for each field
-    for key in ['title', 'publicationYear', 'authors', 'popularity']:
+    for key in ['title', 'year', 'authors', 'popularity']:
         query = str(hymn[key])
 
         search_bar.type(query)
