@@ -17,8 +17,6 @@ main {
   overflow-x: auto;
 }
 
-
-
 header {
   background-color: var(--color);
   color: white;
