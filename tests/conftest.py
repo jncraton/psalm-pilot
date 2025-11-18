@@ -12,7 +12,7 @@ def directory_page(page: Page) -> Page:
 
 
 @pytest.fixture(scope='session')
-def hymn_data() -> list:
+def hymn_data() -> list[dict[str, any]]:
     """Grabs the hymns source data for verification comparison."""
     with open('data/hymns.json', 'r') as file:
         data = json.load(file)

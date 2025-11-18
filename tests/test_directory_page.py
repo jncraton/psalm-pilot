@@ -37,7 +37,7 @@ def test_chat(directory_page: Page):
     assert "Paris" in response
 
 
-def test_song_titles(directory_page: Page, hymn_data: list):
+def test_song_titles(directory_page: Page, hymn_data: list[dict[str, any]]):
     # Grab hymn title source data
     hymn_titles = [hymn['title'] for hymn in hymn_data]
 
@@ -48,7 +48,7 @@ def test_song_titles(directory_page: Page, hymn_data: list):
     expect(hymn_title_cells).to_have_text(hymn_titles)
 
 
-def test_song_popularity(directory_page: Page, hymn_data: list):
+def test_song_popularity(directory_page: Page, hymn_data: list[dict[str, any]]):
     # Grab hymn popularity source data
     hymn_popularity = [f"{hymn['popularity']}%" for hymn in hymn_data]
 
@@ -59,7 +59,7 @@ def test_song_popularity(directory_page: Page, hymn_data: list):
     expect(hymn_popularity_cells).to_have_text(hymn_popularity)
 
 
-def test_song_authors(directory_page: Page, hymn_data: list):
+def test_song_authors(directory_page: Page, hymn_data: list[dict[str, any]]):
     # Grab hymn authors source data, converting None to empty string
     hymn_authors = [hymn['authors'] or '' for hymn in hymn_data]
 
@@ -70,7 +70,7 @@ def test_song_authors(directory_page: Page, hymn_data: list):
     expect(hymn_author_cells).to_have_text(hymn_authors)
 
 
-def test_song_years(directory_page: Page, hymn_data: list):
+def test_song_years(directory_page: Page, hymn_data: list[dict[str, any]]):
     # Grab hymn publication year source data
     hymn_years = [hymn['year'] or '' for hymn in hymn_data]
 
@@ -81,7 +81,7 @@ def test_song_years(directory_page: Page, hymn_data: list):
     expect(hymn_year_cells).to_have_text(hymn_years)
 
 
-def test_song_search(directory_page: Page, hymn_data: list):
+def test_song_search(directory_page: Page, hymn_data: list[dict[str, any]]):
     hymn = hymn_data[0]
 
     search_bar = directory_page.locator('#search')
