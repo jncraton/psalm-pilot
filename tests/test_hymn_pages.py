@@ -1,6 +1,20 @@
 from playwright.sync_api import Page, expect
 from pathlib import Path
+import pytest
 import re
+
+
+# @pytest.mark.parametrize("check", [
+#     check_directory_fields,
+#     check_title,
+#     check_lyrics_present,
+# ])
+# def check_hymn_pages(page: Page, hymn_data: list, check: Callable[Page, dict]):
+#     """Loops through the first two and last two hymn pages to verify things on the page"""
+#     for hymn in hymn_data[:2] + hymn_data[-2:]:
+#         page.goto(Path(f"hymns/{hymn['titleId']}.html").resolve().as_uri())
+
+#         check(page, hymn)
 
 
 def test_directory_data_on_hymn_page(page: Page, hymn_data: list):
