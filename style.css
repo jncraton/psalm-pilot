@@ -3,13 +3,14 @@ body {
   margin: 0;
   font-family: system-ui, sans-serif;
   line-height: 1.6;
+  --width: 960px;
   --color: #a70000;
   --border: color-mix(in oklch, var(--color) 20%, hsl(0 0 98%));
   --highlight: color-mix(in oklch, var(--color) 2%, hsl(0 0 98%));
 }
 
 body > * {
-  padding: 0.5em 3%;
+  padding: 0.5em max(0.5em, calc((100vw - var(--width)) / 2));
 }
 
 main {
