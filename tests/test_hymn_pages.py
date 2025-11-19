@@ -31,6 +31,6 @@ def check_hymn_link(page: Page, hymn: dict):
 def test_hymn_pages(page: Page, hymn_data: list, check: Callable[Page, dict]):
     """Loops through the first two and last two hymn pages to verify things on the page"""
     for hymn in hymn_data[:2] + hymn_data[-2:]:
-        page.goto(Path(f"hymns/{hymn['titleId']}.html").resolve().as_uri())
+        page.goto(Path(f"www/hymns/{hymn['titleId']}.html").resolve().as_uri())
 
         check(page, hymn)
