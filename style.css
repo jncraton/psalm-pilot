@@ -43,7 +43,7 @@ header nav a {
   gap: 5%;
   color: white;
   text-decoration: none;
-  margin-right: 8em;
+  margin-right: 10em;
 }
 
 header nav a:last-of-type {
