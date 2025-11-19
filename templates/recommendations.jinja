@@ -13,6 +13,28 @@
 
 {% block main %}
 
+  <div class="filters">
+
+    <!-- 1 -->
+    <label for="top-chart">
+      Top Chart:
+      <select id="top-chart">
+        <option value="">All</option>
+        <option value="week">This Week</option>
+        <option value="month">This Month</option>
+        <option value="year">This Year</option>
+      </select>
+    </label>
+
+    <!-- 1 -->
+    <div class="holiday-filters">
+      <span>Holidays:</span>
+      <label><input type="checkbox" value="christmas"> Christmas</label>
+      <label><input type="checkbox" value="easter"> Easter</label>
+    </div>
+    
+  </div>
+
   <table>
     <caption><h2>Recommendations</h2></caption>
     <caption><h3>Hymn Directory</h3></caption>
@@ -20,8 +42,18 @@
       <tr>
         <th>Title</th>
         <th>Author</th>
-        <th>Publication Year</th>
-        <th>Popularity</th>
+        <th>Year</th>
+
+        <th>
+          <a href="#">
+            Popularity
+            <span class="icon-span">
+              <i class="up-icon">&#x25B2;</i>
+              <i class="down-icon">&#9660;</i>
+            </span>
+          </a>
+        </th> 
+
       </tr>
     </thead>
     <tbody>
