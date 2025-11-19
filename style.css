@@ -31,6 +31,7 @@ table {
   width: 100%;
   border-radius: 8px;
   border: 1px solid var(--border);
+  overflow: hidden;
 }
 
 /*Nav and Search bar*/
@@ -86,6 +87,10 @@ thead tr {
 tr > * {
   padding: 10px 8px;
   text-align: left;
+}
+
+thead th {
+  background-clip: padding-box;
 }
 
 .right-th {
