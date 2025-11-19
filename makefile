@@ -34,7 +34,7 @@ serve:
 clean: clean-cache clean-build
 
 clean-cache:
-	rm -rf */__pycache__ */.pytest_cache */.ruff_cache
+	rm -rf __pycache__ .pytest_cache .ruff_cache */__pycache__ */.pytest_cache */.ruff_cache
 
 clean-build:
 	rm -rf www/index.html www/hymns/* www/service-worker.js www/hymns_list.json
