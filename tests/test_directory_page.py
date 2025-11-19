@@ -128,6 +128,7 @@ def test_navigate_to_hymn_via_title_link(directory_page: Page, hymn_data: list):
         # Confirm the URL is correct
         expect(directory_page).to_have_url(
             re.compile(f".*/hymns/{hymn_title_id}.html"))
+        expect(directory_page.locator("h2")).to_have_text(hymn_title)
 
         # Go back to the directory page
         directory_page.go_back()
