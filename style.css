@@ -44,6 +44,7 @@ header nav a {
   color: white;
   text-decoration: none;
   font-size: 20px;
+  margin-right: 5em;
 }
 
 header nav a:last-of-type {
@@ -94,10 +95,6 @@ thead tr {
 tr > * {
   padding: 10px 8px;
   text-align: left;
-}
-
-.logo-and-title {
-  margin-right: 5em;
 }
 
 /*Hymn page styling*/
