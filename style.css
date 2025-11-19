@@ -34,7 +34,7 @@ header nav {
   display: flex;
   flex-wrap: wrap;
   justify-content: start;
-  align-items: flex-end;
+  align-items: center;
   gap: 1%;
 }
 
@@ -43,8 +43,7 @@ header nav a {
   gap: 5%;
   color: white;
   text-decoration: none;
-  font-size: 20px;
-  margin-right: 5em;
+  margin-right: 8em;
 }
 
 header nav a:last-of-type {
@@ -68,7 +67,6 @@ nav input[type='search'] {
   background-position: center left 0.4rem;
   background-size: 1.3em auto;
   padding-left: 2em;
-  align-self: end;
 }
 
 caption {
