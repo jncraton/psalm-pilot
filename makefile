@@ -1,6 +1,6 @@
 all: build
 
-.PHONY: lint lint-fix lint-js lint-py lint-py-fix install build clean clean-cache clean-build test
+.PHONY: lint lint-fix lint-js lint-py lint-py-fix install build serve clean clean-cache clean-build test
 
 # Run both JS/TS + Python linters
 lint: lint-js lint-py
@@ -29,7 +29,7 @@ build:
 	python render.py
 
 serve:
-	python -m http.server
+	cd ./www && python -m http.server
 
 clean: clean-cache clean-build
 
@@ -37,7 +37,7 @@ clean-cache:
 	rm -rf __pycache__ .pytest_cache .ruff_cache */__pycache__ */.pytest_cache */.ruff_cache
 
 clean-build:
-	rm -rf index.html hymns/* hymns_list.json
+	rm -rf www/index.html www/hymns/* www/service-worker.js www/hymns_list.json
 
 # run test_file tests
 test:
