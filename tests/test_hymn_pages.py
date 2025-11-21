@@ -21,7 +21,7 @@ def test_navigate_to_hymn_pages(directory_page: Page, hymn_data: list[dict[str, 
 def check_directory_fields(page: Page, hymn: dict):
     for key in ['year', 'authors', 'popularity']:
         # Verify directory data matches
-        expect(page.locator('dl')).to_contain_text(str(hymn[key]))
+        expect(page.get_by_text(key.capitalize()).locator("+ dd")).to_contain_text(str(hymn[key]))
 
 
 def check_lyrics(page: Page, hymn: dict):
