@@ -230,40 +230,6 @@
     ]
   },
   {
-    "titleId": "just_as_i_am_without_one_plea",
-    "title": "Just As I Am, Without One Plea",
-    "authors": "Charlotte Elliott",
-    "text": "1. Just as I am, without one plea,\nBut that thy blood was shed for me,\nAnd that thou bidst me come to thee,\nO Lamb of God, I come; I come!\n\n2. Just as I am, and waiting not\nTo rid my soul of one dark blot,\nTo thee, whose blood can cleanse each spot,\nO Lamb of God, I come; I come!\n\n3. Just as I am, tho' tossed about\nWith many a conflict, many a doubt,\nFightings and fears, within, without,\nO Lamb of God, I come; I come!\n\n4. Just as I am, poor, wretched, blind;\nSight, riches, healing of the mind,\nYea, all I need in thee to find,\nO Lamb of God, I come; I come!\n\n5. Just as I am, thou wilt receive,\nWilt welcome, pardon, cleanse, relieve;\nBecause thy promise I believe,\nO Lamb of God, I come; I come!\n\n6. Just as I am; thy love unknown\nHas broken every barrier down;\nNow to be thine, yea, thine alone,\nO Lamb of God, I come; I come!",
-    "popularity": 63,
-    "publicationYear": "1836",
-    "scriptureRefs": [
-      "2 Kings 5:10-14",
-      "2 Chronicles 30:18",
-      "Psalm 25:6-7; 51; 123:3",
-      "Isaiah 1:18; 55:1; 55:7; 64:1-9",
-      "Lamentations 3:22-23",
-      "Hosea 2:23",
-      "Matthew 11:5; 11:23; 11:25-30; 14:29; 16:16; 18:10-14; 20:30; 26:28",
-      "Mark 1:40; 2:17; 9:24; 14:24",
-      "Luke 5:31-32; 7:1-10; 13:1-9; 15:1-32; 18:9-14; 19:1-10",
-      "John 1:29-36; 1:46; 4:5-42; 6:35-51; 6:68; 7:37-39; 9:1-41; 14:6; 21:24-31",
-      "Acts 9:1-22",
-      "Romans 3:20-22; 5:1-19; 7:15-25; 8:16; 10:5-10",
-      "1 Corinthians 1:9",
-      "2 Corinthians 6:1-13; 7:5-9",
-      "Galatians 2:16; 2:20",
-      "Ephesians 1:7; 1:9; 2; 3:14-21",
-      "Philippians 4:19",
-      "Colossians 1:13-14",
-      "1 Timothy 1:15; 4:12",
-      "Titus 3:5",
-      "Hebrews 4:12-16; 9:11-14; 9:22; 12:18-29",
-      "1 Peter 1:17-21; 2:24",
-      "1 John 1:7-9; 4:9-12",
-      "Revelation 1:5; 3:17-18; 3:20; 7:9-17; 12:11; 22"
-    ]
-  },
-  {
     "titleId": "come_thou_fount_of_every_blessing",
     "title": "Come, Thou Fount of Every Blessing",
     "authors": "Robert Robinson",
@@ -295,6 +261,40 @@
       "James 1:17-18",
       "1 Peter 1:18-19; 2:9-10",
       "Revelation 5:9; 7:14; 7:17; 21:6; 22:1; 22:3-4; 22:20"
+    ]
+  },
+  {
+    "titleId": "just_as_i_am_without_one_plea",
+    "title": "Just As I Am, Without One Plea",
+    "authors": "Charlotte Elliott",
+    "text": "1. Just as I am, without one plea,\nBut that thy blood was shed for me,\nAnd that thou bidst me come to thee,\nO Lamb of God, I come; I come!\n\n2. Just as I am, and waiting not\nTo rid my soul of one dark blot,\nTo thee, whose blood can cleanse each spot,\nO Lamb of God, I come; I come!\n\n3. Just as I am, tho' tossed about\nWith many a conflict, many a doubt,\nFightings and fears, within, without,\nO Lamb of God, I come; I come!\n\n4. Just as I am, poor, wretched, blind;\nSight, riches, healing of the mind,\nYea, all I need in thee to find,\nO Lamb of God, I come; I come!\n\n5. Just as I am, thou wilt receive,\nWilt welcome, pardon, cleanse, relieve;\nBecause thy promise I believe,\nO Lamb of God, I come; I come!\n\n6. Just as I am; thy love unknown\nHas broken every barrier down;\nNow to be thine, yea, thine alone,\nO Lamb of God, I come; I come!",
+    "popularity": 63,
+    "publicationYear": "1836",
+    "scriptureRefs": [
+      "2 Kings 5:10-14",
+      "2 Chronicles 30:18",
+      "Psalm 25:6-7; 51; 123:3",
+      "Isaiah 1:18; 55:1; 55:7; 64:1-9",
+      "Lamentations 3:22-23",
+      "Hosea 2:23",
+      "Matthew 11:5; 11:23; 11:25-30; 14:29; 16:16; 18:10-14; 20:30; 26:28",
+      "Mark 1:40; 2:17; 9:24; 14:24",
+      "Luke 5:31-32; 7:1-10; 13:1-9; 15:1-32; 18:9-14; 19:1-10",
+      "John 1:29-36; 1:46; 4:5-42; 6:35-51; 6:68; 7:37-39; 9:1-41; 14:6; 21:24-31",
+      "Acts 9:1-22",
+      "Romans 3:20-22; 5:1-19; 7:15-25; 8:16; 10:5-10",
+      "1 Corinthians 1:9",
+      "2 Corinthians 6:1-13; 7:5-9",
+      "Galatians 2:16; 2:20",
+      "Ephesians 1:7; 1:9; 2; 3:14-21",
+      "Philippians 4:19",
+      "Colossians 1:13-14",
+      "1 Timothy 1:15; 4:12",
+      "Titus 3:5",
+      "Hebrews 4:12-16; 9:11-14; 9:22; 12:18-29",
+      "1 Peter 1:17-21; 2:24",
+      "1 John 1:7-9; 4:9-12",
+      "Revelation 1:5; 3:17-18; 3:20; 7:9-17; 12:11; 22"
     ]
   },
   {
@@ -559,7 +559,7 @@
     "title": "Onward Christian Soldiers",
     "authors": "Sabine Baring-Gould",
     "text": "1 Onward, Christian soldiers!\nMarching as to war,\nwith the cross of Jesus\ngoing on before.\nChrist, the royal Master,\nleads against the foe;\nforward into battle,\nsee His banner go!\n\nRefrain:\nOnward, Christian soldiers!\nMarching as to war,\nwith the cross of Jesus\ngoing on before.\n\n2 At the sign of triumph\nSatan's host doth flee;\non, then, Christian soldiers,\non to victory!\nHell's foundations quiver\nat the shout of praise;\nChristians, lift your voices,\nloud your anthems raise! [Refrain]\n\n3 Like a mighty army\nmoves the church of God.\nChristians, we are treading\nwhere the saints have trod.\nWe are not divided;\nall one body we;\none in hope and doctrine,\none in charity. [Refrain]\n\n4 Crowns and thrones may perish,\nkingdoms rise and wane;\nbut the Church of Jesus\nconstant will remain.\nGates of hell can never\n'gainst that church prevail;\nwe have Christ's own promise,\nwhich can never fail. [Refrain]\n\n5 Onward, then, ye people!\nJoin our happy throng;\nblend with ours your voices\nin the triumph song.\nGlory, laud, and honor,\nunto Christ, the King;\nthis through countless ages\nmen and angels sing. [Refrain]",
-    "popularity": 52,
+    "popularity": 51,
     "publicationYear": "1865",
     "scriptureRefs": [
       "Exodus 14:15; 15:1-21",
@@ -610,7 +610,7 @@
     "title": "Come, Thou Almighty King",
     "authors": "Anonymous",
     "text": "1 Come, Thou Almighty King,\nhelp us Thy name to sing;\nhelp us to praise:\nFather, all glorious,\no'er all victorious,\ncome, and reign over us,\nAncient of Days.\n\n2 Come, Thou Incarnate Word,\ngird on Thy mighty sword,\nour pray'r attend:\ncome, and Thy people bless,\nand give Thy Word success:\nSpirit of holiness,\non us descend.\n\n3 Come, Holy Comforter,\nThy sacred witness bear\nin this glad hour:\nThou who almighty art,\nnow rule in every heart,\nand ne'er from us depart,\nSpirit of pow'r.\n\n4 To Thee, great One in Three,\neternal praises be\nhence, evermore.\nHis sov'reign majesty\nmay we in glory see,\nand to eternity\nlove and adore!",
-    "popularity": 51,
+    "popularity": 50,
     "publicationYear": "1757",
     "scriptureRefs": [
       "Exodus 15:18",
@@ -1230,7 +1230,7 @@
     "title": "I Heard the Voice of Jesus Say",
     "authors": "Horatius Bonar",
     "text": "1. I heard the voice of Jesus say,\n\u201cCome unto Me and rest;\nLay down, O weary one, lay down\nThy head upon My breast.\u201d\nI came to Jesus as I was,\nWeary, and worn, and sad;\nI found in him a resting-place,\nAnd he has made me glad.\n\n2. I heard the voice of Jesus say,\n\u201cBehold, I freely give\nThe living water; thirsty one,\nStoop down, and drink, and live.\u201d\nI came to Jesus, and I drank\nOf that life-giving stream;\nMy thirst was quench'd, my soul revived,\nAnd now I live in him.\n\n3. I heard the voice of Jesus say,\n\u201cI am this dark world\u2019s Light;\nLook unto me, your morn shall rise,\nAnd all your day be bright.\u201d\nI looked to Jesus, and I found\nIn him my Star, my Sun;\nAnd in that Light of life I\u2019ll walk,\nTill trav'ling days are done.",
-    "popularity": 35,
+    "popularity": 34,
     "publicationYear": "1846",
     "scriptureRefs": [
       "Psalm 1:1-3; 4:7; 31:16-17; 56; 119:105",
@@ -1336,7 +1336,7 @@
     "title": "Christ, the Lord, Is Risen Today",
     "authors": "Charles Wesley",
     "text": "1 Christ the Lord is ris'n today, Alleluia!\nSons of men and angels say: Alleluia!\nRaise your joys and triumphs high. Alleluia!\nSing, ye heav'ns, and earth, reply: Alleluia!\n\n2 Love's redeeming work is done. Alleluia!\nFought the fight, the battle won. Alleluia!\nDeath in vain forbids Him rise. Alleluia!\nChrist has opened paradise. Alleluia!\n\n3 Lives again, our glorious King. Alleluia!\nWhere, O death, is now thy sting? Alleluia!\nDying once, He all doth save. Alleluia!\nWhere thy victory, O grave? Alleluia!\n\n4 Soar we now where Christ has led. Alleluia!\nFoll'wing our exalted Head. Alleluia!\nMade like Him, like Him we rise. Alleluia!\nOurs the cross, the grave, the skies. Alleluia!\n\n5 Hail, the Lord of earth and heav'n! Alleluia!\nPraise to Thee by both be giv'n; Alleluia!\nThee we greet triumphant now; Alleluia!\nHail, the Resurrection Thou! Alleluia!",
-    "popularity": 34,
+    "popularity": 33,
     "publicationYear": "1739",
     "scriptureRefs": [
       "Psalm 8:1; 22:29; 22:31; 24:7-10; 118:24; 136:1-9; 136:23-26; 150",
@@ -1572,7 +1572,7 @@
     "title": "Twofold Amen",
     "authors": null,
     "text": "Amen. Amen. Amen, amen, amen.",
-    "popularity": 29,
+    "popularity": 30,
     "publicationYear": null,
     "scriptureRefs": [
       "Psalm 33:18-22; 72:19; 89:52; 106:47-48; 122",
@@ -1855,27 +1855,6 @@
     ]
   },
   {
-    "titleId": "lord_i_hear_of_showers_of_blessing",
-    "title": "Even Me",
-    "authors": null,
-    "text": "Lord, I hear of show'rs of blessings\nThou art scatt'ring full and free.\nShow'rs the thirsty souls refreshing;\nLet some drops now fall on me.\nEven me, Lord, even me.\nEven me, yes, even me.\nLet some drops now fall on me.\nLet some drops now fall on me.",
-    "popularity": 24,
-    "publicationYear": "1860",
-    "scriptureRefs": [
-      "Genesis 27:34; 27:38",
-      "Psalm 27:9; 63:1; 141:8",
-      "Proverbs 3:5",
-      "Isaiah 35:7; 40:31; 44:3",
-      "Jeremiah 14:9",
-      "Ezekiel 34:26-27",
-      "Zechariah 10:1",
-      "Matthew 9:13; 15:21-28",
-      "John 15:26",
-      "Acts 3:19",
-      "Romans 12:2"
-    ]
-  },
-  {
     "titleId": "faith_of_our_fathers_living_still",
     "title": "Faith of Our Fathers",
     "authors": "Frederick W. Faber",
@@ -1900,6 +1879,27 @@
       "Jude",
       "Revelation 1:3; 2:10",
       "Sirach 3:12-14"
+    ]
+  },
+  {
+    "titleId": "lord_i_hear_of_showers_of_blessing",
+    "title": "Even Me",
+    "authors": null,
+    "text": "Lord, I hear of show'rs of blessings\nThou art scatt'ring full and free.\nShow'rs the thirsty souls refreshing;\nLet some drops now fall on me.\nEven me, Lord, even me.\nEven me, yes, even me.\nLet some drops now fall on me.\nLet some drops now fall on me.",
+    "popularity": 24,
+    "publicationYear": "1860",
+    "scriptureRefs": [
+      "Genesis 27:34; 27:38",
+      "Psalm 27:9; 63:1; 141:8",
+      "Proverbs 3:5",
+      "Isaiah 35:7; 40:31; 44:3",
+      "Jeremiah 14:9",
+      "Ezekiel 34:26-27",
+      "Zechariah 10:1",
+      "Matthew 9:13; 15:21-28",
+      "John 15:26",
+      "Acts 3:19",
+      "Romans 12:2"
     ]
   },
   {
@@ -2033,7 +2033,7 @@
     "title": "Praise the Lord! Ye Heavens Adore Him",
     "authors": "Edward Osler",
     "text": "1 Praise the Lord! ye heav'ns, adore Him;\npraise Him, angels in the height;\nsun and moon, rejoice before Him,\npraise Him, all ye stars of light.\nPraise the Lord! for He hath spoken;\nworlds His mighty voice obeyed;\nlaws which never shall be broken\nfor their guidance He hath made.\n\n2 Praise the Lord! for He is glorious;\nnever shall His promise fail;\nGod hath made His saints victorious;\nsin and death shall not prevail.\nPraise the God of our salvation!\nHosts on high, His pow'r proclaim;\nheav'n and earth and all creation,\nlaud and magnify His name.\n\n3 Worship, honor, glory, blessing,\nLord, we offer unto Thee;\nyoung and old, Thy praise expressing,\nin glad homage bend the knee.\nAll the saints in heav'n adore Thee;\nwe would bow before Thy throne;\nas Thine angels serve before Thee,\nso on earth Thy will be done.",
-    "popularity": 22,
+    "popularity": 21,
     "publicationYear": "1796",
     "scriptureRefs": [
       "Genesis 1:1-31",
@@ -2362,25 +2362,6 @@
     ]
   },
   {
-    "titleId": "what_a_fellowship_what_a_joy_divine",
-    "title": "Leaning on the Everlasting Arms",
-    "authors": "Elisha A. Hoffman",
-    "text": "1 What a fellowship, what a joy divine,\nleaning on the everlasting arms;\nwhat a blessedness, what a peace is mine,\nleaning on the everlasting arms.\n\nRefrain:\nLeaning, leaning,\nsafe and secure from all alarms;\nleaning, leaning,\nleaning on the everlasting arms.\n\n2 O how sweet to walk in this pilgrim way,\nleaning on the everlasting arms;\nO how bright the path grows from day to day,\nleaning on the everlasting arms. [Refrain]\n\n3 What have I to dread, what have I to fear,\nleaning on the everlasting arms?\nI have blessed peace with my Lord so near,\nleaning on the everlasting arms. [Refrain]",
-    "popularity": 18,
-    "publicationYear": "1887",
-    "scriptureRefs": [
-      "Deuteronomy 33:12; 33:27",
-      "Psalm 4:8; 16:11; 27; 71:5-8; 91; 118:6",
-      "Proverbs 3:5-4:18",
-      "Matthew 7:14",
-      "John 13:23",
-      "Acts 2:37-42",
-      "1 Corinthians 1:9",
-      "Hebrews 13:6",
-      "1 John 1:6-7"
-    ]
-  },
-  {
     "titleId": "silent_night_holy_night_all_is_calm_all",
     "title": "Silent Night, Holy Night",
     "authors": "Joseph Mohr; John F. Young",
@@ -2399,6 +2380,25 @@
       "Colossians 1:13",
       "Titus 2:11-14",
       "Hebrews 7:26"
+    ]
+  },
+  {
+    "titleId": "what_a_fellowship_what_a_joy_divine",
+    "title": "Leaning on the Everlasting Arms",
+    "authors": "Elisha A. Hoffman",
+    "text": "1 What a fellowship, what a joy divine,\nleaning on the everlasting arms;\nwhat a blessedness, what a peace is mine,\nleaning on the everlasting arms.\n\nRefrain:\nLeaning, leaning,\nsafe and secure from all alarms;\nleaning, leaning,\nleaning on the everlasting arms.\n\n2 O how sweet to walk in this pilgrim way,\nleaning on the everlasting arms;\nO how bright the path grows from day to day,\nleaning on the everlasting arms. [Refrain]\n\n3 What have I to dread, what have I to fear,\nleaning on the everlasting arms?\nI have blessed peace with my Lord so near,\nleaning on the everlasting arms. [Refrain]",
+    "popularity": 18,
+    "publicationYear": "1887",
+    "scriptureRefs": [
+      "Deuteronomy 33:12; 33:27",
+      "Psalm 4:8; 16:11; 27; 71:5-8; 91; 118:6",
+      "Proverbs 3:5-4:18",
+      "Matthew 7:14",
+      "John 13:23",
+      "Acts 2:37-42",
+      "1 Corinthians 1:9",
+      "Hebrews 13:6",
+      "1 John 1:6-7"
     ]
   },
   {
@@ -2562,7 +2562,7 @@
     "title": "O How I Love Jesus",
     "authors": "Frederick Whitfield",
     "text": "1 There is a name I love to hear,\nI love to sing its worth;\nit sounds like music in my ear,\nthe sweetest name on earth.\n\nRefrain:\nO how I love Jesus,\nO how I love Jesus,\nO how I love Jesus,\nbecause He first loved me!\n\n2 It tells me of a Savior\u2019s love,\nwho died to set me free;\nit tells me of His precious blood,\nthe sinner\u2019s perfect plea. [Refrain]\n\n3 It tells of one whose loving heart\ncan feel my deepest woe;\nwho in each sorrow bears a part\nthat none can bear below. [Refrain]\n\n4 It bids my trembling heart rejoice;\nit dries each rising tear;\nit tells me in a still, small voice\nto trust and never fear. [Refrain]\n\n5 Jesus, the name I love so well,\nthe name I love to hear!\nNo saint of earth its worth can tell,\nno heart conceive how dear! [Refrain]",
-    "popularity": 17,
+    "popularity": 16,
     "publicationYear": null,
     "scriptureRefs": [
       "Isaiah 53:4",
