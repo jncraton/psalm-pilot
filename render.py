@@ -34,6 +34,13 @@ filled_index_template = index_template.render(hymns=hymns)
 with open('index.html', 'w', encoding='utf8') as hymns_page:
     hymns_page.write(filled_index_template)
 
+#load the recommendations page template
+recommendations_template = env.get_template('recommendations.jinja')
+filled_recommendations_template = recommendations_template.render(hymns=hymns)
+
+with open('recommendations.html', 'w', encoding='utf8') as rec_page:
+    rec_page.write(filled_recommendations_template)
+
 # Load the hymn page template
 hymn_template = env.get_template('hymn.jinja')
 
@@ -62,3 +69,4 @@ with open('service-worker.js', 'w', encoding='utf8') as f:
     f.write(rendered)
 
 print(f"Built service-worker.js with version: {version}")
+
