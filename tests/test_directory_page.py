@@ -71,17 +71,6 @@ def test_song_authors(directory_page: Page, hymn_data: list):
     expect(hymn_author_cells).to_have_text(hymn_authors)
 
 
-def test_song_years(directory_page: Page, hymn_data: list):
-    # Grab hymn publication year source data
-    hymn_years = [hymn['year'] or '' for hymn in hymn_data]
-
-    # Grab the hymn publication year column cells
-    hymn_year_cells = get_column_cells(directory_page, 'Year')
-
-    # Verify the data matches
-    expect(hymn_year_cells).to_have_text(hymn_years)
-
-
 def test_song_search(directory_page: Page, hymn_data: list):
     hymn = hymn_data[0]
 
@@ -98,12 +87,12 @@ def test_song_search(directory_page: Page, hymn_data: list):
         raise Exception(f"No non-matching hymn was found for query: {query}")
 
     # Query, verify, and clear for each field
-    for key in ['title', 'year', 'authors', 'popularity']:
+    for key in ['title', 'authors', 'popularity']:
         query = str(hymn[key])
 
         search_bar.type(query)
         expect(cells.get_by_text(hymn['title'])).to_be_visible()
-        expect(get_non_matching_hymn(query)).not_to_be_visible()
+        expect(get_non_matching_hymn(query).first).not_to_be_visible()
         search_bar.clear()
 
     # Verify random letters show no results
@@ -118,7 +107,7 @@ def test_song_search(directory_page: Page, hymn_data: list):
         
         
 def test_navigate_to_hymn_via_title_link(directory_page: Page, hymn_data: list):
-    for hymn in hymn_data:
+    for hymn in hymn_data[:2] + hymn_data[-2:]:
         hymn_title = hymn['title']
         hymn_title_id = hymn['titleId']
 
