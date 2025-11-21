@@ -1,10 +1,14 @@
 import json
+import os
 from jinja2 import Environment, FileSystemLoader
 import subprocess
 from pathlib import Path
 
+# Set current directory of script to www folder for writing
+os.chdir("www/")
+
 # Read in JSON hymn data
-with open('data/hymns.json', 'r') as file:
+with open('../data/hymns.json', 'r') as file:
     hymns = json.load(file)
 
 def get_git_short_hash():
@@ -20,7 +24,7 @@ def get_git_short_hash():
         return 'dev'
 
 # Set environment to templates folder
-env = Environment(loader=FileSystemLoader('templates'))
+env = Environment(loader=FileSystemLoader('../templates'))
 
 # Load the index template and fill with data
 index_template = env.get_template('index.jinja')
