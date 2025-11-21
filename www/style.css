@@ -30,6 +30,13 @@ table {
   overflow: hidden;
 }
 
+main textarea {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  height: 8em;
+}
+
 /*Nav and Search bar*/
 header nav {
   display: flex;
