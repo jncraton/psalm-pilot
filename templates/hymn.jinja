@@ -12,6 +12,17 @@
       <dd>{{ hymn.year }}</dd>
       <dt>Popularity</dt>
       <dd>{{ hymn.popularity }}%</dd>
+      <dt>Scripture References</dt>
+      <dd>
+      <details>
+      <summary>Show Scripture References</summary>
+      <ul>
+      {% for ref in hymn.scriptureRefs %}
+      <li>{{ ref }}</li>
+      {% endfor %}
+      </ul>
+      </details>
+      </dd>
       <dt>Lyrics</dt>
       <dd><blockquote>{{ hymn.text }}</blockquote></dd>
       <dt>More Information</dt>
