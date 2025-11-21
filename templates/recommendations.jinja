@@ -2,7 +2,7 @@
 
 {% set root_dir, page_title = '../', 'Recommendations' %}
 
-{% block script %}<script src="{{ root_dir or '' }}main.js"></script>{% endblock script %} 
+{% block script %}<script src="{{ root_dir or '' }}main.js" defer></script>{% endblock script %} 
 {% block header %}
 <input type="search" id="search" name="search" placeholder="Search hymns..." onkeyup="search_title()" />
 {% endblock header %} 
@@ -38,7 +38,9 @@
     
   </div>
 
-  <div>
-    <caption><h2>Service Recommendation</h2></caption>
+  <div class="textbox-response">
+    <h2>Service Recommendation</h2>
+    <div class="response-text"></div>
+
   </div>
 {% endblock %}

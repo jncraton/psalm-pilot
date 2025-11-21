@@ -43,3 +43,16 @@ if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('{{ root_dir }}service-worker.js')
   })
 }
+
+const recButton = document.querySelector('form')
+const textInput = document.querySelector('input[name="textbox"]')
+const responseBox = document.querySelector('.response-text')
+
+recButton.addEventListener('submit', async (e) => {
+  const msg = textInput.value
+  console.log(msg)
+  const reply = await chat(msg)
+  responseBox.textContent = reply
+  e.preventDefault()
+  return false
+})
