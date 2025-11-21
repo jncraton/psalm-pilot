@@ -49,10 +49,10 @@ const textInput = document.querySelector('input[name="textbox"]')
 const responseBox = document.querySelector('.response-text')
 
 recButton.addEventListener('submit', async (e) => {
+  e.preventDefault()
   const msg = textInput.value
   console.log(msg)
   const reply = await chat(msg)
   responseBox.textContent = reply
-  e.preventDefault()
   return false
 })
