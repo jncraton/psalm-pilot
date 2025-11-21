@@ -15,7 +15,18 @@
       <dt>Lyrics</dt>
       <dd><blockquote>{{ hymn.text }}</blockquote></dd>
       <dt>More Information</dt>
-      <dd><a href="https://hymnary.org/text/{{ hymn.titleId }}">hymnary.org</a></dd>
+      <dd><a href="https://hymnary.org/text/{{ hymn.titleId }} ">hymnary.org</a></dd>
+      <dt>Scripture References</dt>
+      <dd>
+      <details>
+      <summary>Show</summary>
+      <ul>
+      {% for ref in hymn.scriptureRefs %}
+      <li>{{ ref }}</li>
+      {% endfor %}
+      </ul>
+      </details>
+      </dd>
     </dl> 
   </div>
 {% endblock %}
