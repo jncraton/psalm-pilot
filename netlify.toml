@@ -1,0 +1,5 @@
+[build]
+  base = "."
+  publish = "www/"
+  command = 'pip3 install pandas && make install && make build && echo "/psalm-pilot/*  /:splat 200" > _redirects && echo "/ /psalm-pilot/ 301" >> _redirects'
+  
