@@ -1,5 +1,4 @@
 import os
-import re
 from playwright.sync_api import Page, Locator, expect
 
 
@@ -115,20 +114,3 @@ def test_song_search(directory_page: Page, hymn_data: list[dict[str, any]]):
     search_bar.clear()
     for i in range(cells.count()):
         expect(cells.nth(i)).to_be_visible()
-        
-        
-def test_navigate_to_hymn_via_title_link(directory_page: Page, hymn_data: list):
-    for hymn in hymn_data:
-        hymn_title = hymn['title']
-        hymn_title_id = hymn['titleId']
-
-        # Click the link to go to the hymn page
-        directory_page.get_by_role("link", name=hymn_title, exact=True).click()
-
-        # Confirm the URL is correct
-        expect(directory_page).to_have_url(
-            re.compile(f".*/hymns/{hymn_title_id}.html"))
-        expect(directory_page.locator("h2")).to_have_text(hymn_title)
-
-        # Go back to the directory page
-        directory_page.go_back()

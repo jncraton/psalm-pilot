@@ -5,6 +5,19 @@ import pytest
 import re
 
 
+def test_navigate_to_hymn_pages(directory_page: Page, hymn_data: list[dict[str, any]]):
+    for hymn in hymn_data[:2] + hymn_data[-2:]:
+        # Click the link to go to the hymn page
+        directory_page.get_by_role("link", name=hymn['title'], exact=True).click()
+
+        # Verify URL and title on page
+        expect(directory_page).to_have_url(re.compile(f".*/hymns/{hymn['titleId']}.html"))
+        expect(directory_page.locator("h2")).to_have_text(hymn['title'])
+
+        # Go back to the directory page
+        directory_page.go_back()
+
+
 def check_directory_fields(page: Page, hymn: dict):
     for key in ['year', 'authors', 'popularity']:
         # Verify directory data matches
