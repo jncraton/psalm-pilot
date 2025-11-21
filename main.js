@@ -48,7 +48,7 @@ const recButton = document.querySelector('form')
 const textInput = document.querySelector('input[name="textbox"]')
 const responseBox = document.querySelector('.response-text')
 
-recButton.addEventListener('submit', async (e) => {
+recButton.addEventListener('submit', async e => {
   e.preventDefault()
   const msg = textInput.value
   console.log(msg)
