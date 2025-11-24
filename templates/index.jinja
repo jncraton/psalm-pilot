@@ -11,7 +11,7 @@
       <tr>
         <th>Title</th>
         <th>Authors</th>
-        <th>Year</th>
+        <th>Example Text</th>
         <th>Popularity</th>
       </tr>
     </thead>
@@ -20,7 +20,7 @@
       <tr>
         <td><a href="hymns/{{ hymn.titleId }}.html">{{ hymn.title }}</a></td>
         <td>{{ hymn.authors or '' }}</td>
-        <td>{{ hymn.year or '' }}</td>
+        <td>{{ hymn.firstLine or '' }}...{{ hymn.refrainFirstLine or '' }}</td>
         <td>{{ hymn.popularity }}%</td>
       </tr>
       {% endfor %}

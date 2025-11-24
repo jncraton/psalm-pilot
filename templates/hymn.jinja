@@ -13,7 +13,7 @@
       <dt>Popularity</dt>
       <dd>{{ hymn.popularity }}%</dd>
       <dt>Lyrics</dt>
-      <dd><blockquote>{{ hymn.text }}</blockquote></dd>
+      <dd><blockquote>{{ hymn.text or "Lyrics for this song are unavailable." }}</blockquote></dd>
       <dt>More Information</dt>
       <dd><a href="https://hymnary.org/text/{{ hymn.titleId }}">hymnary.org</a></dd>
     </dl> 
