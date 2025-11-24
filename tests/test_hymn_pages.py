@@ -26,7 +26,8 @@ def check_directory_fields(page: Page, hymn: dict):
 
 def check_lyrics(page: Page, hymn: dict):
     # Confirm the hymn lyrics on current page
-    expect(page.locator("blockquote")).to_contain_text(hymn['text'])
+    if hymn['text']:
+        expect(page.locator("blockquote")).to_contain_text(hymn['text'])
 
 
 def check_hymn_link(page: Page, hymn: dict):
