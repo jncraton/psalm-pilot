@@ -40,7 +40,7 @@ async function chat(message, model = 'gemini-flash-lite-latest', tries = 3) {
 
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
-    navigator.serviceWorker.register('{{ root_dir }}service-worker.js')
+    navigator.serviceWorker.register('service-worker.js')
   })
 }
 

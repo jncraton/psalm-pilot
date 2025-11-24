@@ -81,8 +81,12 @@ caption {
   text-align: left;
 }
 
-main a {
-  color: red;
+:any-link {
+  color: var(--color);
+}
+
+nav :any-link {
+  color: white;
 }
 
 tbody td {
