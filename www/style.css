@@ -145,32 +145,3 @@ dt::before {
 dt::after {
   content: ': ';
 }
-
-/* Filters style */
-th:last-child a {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  text-decoration: none;
-  color: #000000;
-}
-
-.icon-span {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.icon-span i {
-  font-size: 11px;
-  line-height: 1;
-}
-
-.inactive-color {
-  color: #000000;
-}
-
-.active-color {
-  color: #000000;
-}
