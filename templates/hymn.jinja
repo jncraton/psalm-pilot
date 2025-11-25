@@ -13,7 +13,9 @@
       <dt>Popularity</dt>
       <dd>{{ hymn.popularity }}%</dd>
       <dd>
+      {% if hymn.scriptureRefs is iterable %}
       <dt>Scripture References</dt>
+      <dd>
       <details>
       <summary>Show</summary>
       <ul>
@@ -23,6 +25,7 @@
       </ul>
       </details>
       </dd>
+      {% endif %}
       <dt>Lyrics</dt>
       <dd><blockquote>{{ hymn.text }}</blockquote></dd>
       <dt>More Information</dt>
