@@ -1,0 +1,23 @@
+{% extends 'base.jinja' %}
+
+{% set page_title = 'Recommendations' %}
+
+{% block main %}
+  <h2>Recommendations</h2>
+  <div class="filters">
+
+    <div class="textbox">
+      <form>
+        <label for="textbox">Input for your service (date/time of year, scripture(s), sermon topic):</label>
+        <textarea type="text" name="textbox"></textarea>
+        <input type="submit" value="Get Recommendations">
+      </form>
+    
+  </div>
+
+  <div class="textbox-response">
+    <h2>Service Recommendation</h2>
+    <div class="response-text"></div>
+
+  </div>
+{% endblock %}

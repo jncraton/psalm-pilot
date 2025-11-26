@@ -17,10 +17,6 @@ main {
   overflow-x: auto;
 }
 
-:any-link {
-  color: var(--color);
-}
-
 header {
   background-color: var(--color);
   color: white;
@@ -34,20 +30,35 @@ table {
   overflow: hidden;
 }
 
+main textarea {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  height: 8em;
+}
+
 /*Nav and Search bar*/
 header nav {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: start;
+  align-items: center;
   gap: 1%;
 }
 
 header nav a {
   display: flex;
   gap: 5%;
+  color: white;
+  text-decoration: none;
+  margin-right: 10em;
+}
+
+header nav a:last-of-type {
+  flex-grow: 1;
 }
 
 header nav h1 {
-  flex-grow: 1;
   white-space: nowrap;
   margin: auto;
   color: white;
@@ -64,11 +75,18 @@ nav input[type='search'] {
   background-position: center left 0.4rem;
   background-size: 1.3em auto;
   padding-left: 2em;
-  align-self: end;
 }
 
 caption {
   text-align: left;
+}
+
+:any-link {
+  color: var(--color);
+}
+
+nav :any-link {
+  color: white;
 }
 
 tbody td {
