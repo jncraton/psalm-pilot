@@ -7,6 +7,7 @@
     <link rel="stylesheet" type="text/css" href="{{ root_dir or '' }}style.css" />
     <link rel="icon" type="image/svg+xml" href="{{ root_dir or '' }}favicon.svg">
     <link rel="manifest" href="{{ root_dir or '' }}manifest.webmanifest">
+    {% block script %}{% endblock script %}
     <script src="{{ root_dir or '' }}main.js" defer></script>
     <title>{{ page_title  or 'Psalm Pilot' }}</title>
   </head>

@@ -53,6 +53,6 @@ recButton.addEventListener('submit', async e => {
   const msg = textInput.value
   console.log(msg)
   const reply = await chat(msg)
-  responseBox.textContent = reply
+  responseBox.innerHTML = marked.parse(reply)
   return false
 })
