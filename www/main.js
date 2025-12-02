@@ -21,7 +21,7 @@ async function chat(message, model = 'gemini-flash-lite-latest', tries = 3) {
         'x-goog-api-key': localStorage.geminiKey,
       },
       body: `{contents:[{parts:[{text:${JSON.stringify(message)}}]}]}`,
-    },
+    }
   )
 
   try {
@@ -57,3 +57,8 @@ recButton.addEventListener('submit', async e => {
   return false
 })
 
+function prompt_recommendations() {
+  let sermon_date = document.querySelector('sermon-date')
+  let scriptures = document.querySelector('scripture')
+  let sermon_topic = document.querySelector('sermon-topic')
+}
