@@ -13,7 +13,7 @@ async function chat(message, model = 'gemini-flash-lite-latest', tries = 3) {
   localStorage.geminiKey = localStorage.geminiKey || prompt('Enter Gemini key')
 
   const res = await fetch(
-    `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent`,
+    `https://generativelanguage.googleapis.com/v1/models/${model}:generateContent`,
     {
       method: 'POST',
       headers: {
@@ -21,7 +21,7 @@ async function chat(message, model = 'gemini-flash-lite-latest', tries = 3) {
         'x-goog-api-key': localStorage.geminiKey,
       },
       body: `{contents:[{parts:[{text:${JSON.stringify(message)}}]}]}`,
-    },
+    }
   )
 
   try {
