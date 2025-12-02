@@ -58,5 +58,7 @@ recButton.addEventListener('submit', async e => {
 })
 
 function prompt_recommendations() {
-  let input = document.querySelector('sermon-date').value.toLowerCase()
+  let sermon_date = document.querySelector('sermon-date')
+  let scriptures = document.querySelector('scripture')
+  let sermon_topic = document.querySelector('sermon-topic')
 }
