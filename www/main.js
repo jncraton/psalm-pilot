@@ -62,5 +62,5 @@ async function prompt_recommendations() {
   const scripture = document.querySelector('#scripture').value
   const sermon_topic = document.querySelector('#sermon-topic').value
 
-  return { sermon_date, scriptures, sermon_topic }
+  return { sermon_date, scripture, sermon_topic }
 }
