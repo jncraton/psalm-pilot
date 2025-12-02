@@ -21,7 +21,7 @@ async function chat(message, model = 'gemini-flash-lite-latest', tries = 3) {
         'x-goog-api-key': localStorage.geminiKey,
       },
       body: `{contents:[{parts:[{text:${JSON.stringify(message)}}]}]}`,
-    }
+    },
   )
 
   try {
