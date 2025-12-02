@@ -46,7 +46,6 @@ header nav {
   flex-wrap: wrap;
   column-gap: 10vw;
   row-gap: 2vw;
-  
 }
 
 header nav a {
@@ -145,8 +144,6 @@ dt::after {
   content: ': ';
 }
 
-
-
 /* Recommendations page */
 a.recommendations-page {
   min-width: 200px;
@@ -156,11 +153,10 @@ a.recommendations-page {
   text-transform: uppercase;
   font-size: small;
 
-  display: flex; 
+  display: flex;
   align-content: center;
   justify-content: center;
   text-decoration: none;
-
 }
 
 a.recommendations-page:hover {
@@ -168,11 +164,10 @@ a.recommendations-page:hover {
   color: #a70000;
 }
 
-
 .textbox textarea {
-  resize: vertical;         
+  resize: vertical;
   white-space: pre-wrap;
-  overflow-wrap: break-word; 
+  overflow-wrap: break-word;
   border-radius: 10px;
   border: 1px solid #000000;
   padding: 5px 10px;
@@ -203,7 +198,6 @@ div.textbox input[type='submit'] {
   font-style: italic;
   opacity: 0.7;
 }
-
 
 div.textbox input[type='submit']:hover {
   border: 2px solid #000000;
