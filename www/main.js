@@ -57,8 +57,10 @@ recButton.addEventListener('submit', async e => {
   return false
 })
 
-function prompt_recommendations() {
-  let sermon_date = document.querySelector('sermon-date')
-  let scriptures = document.querySelector('scripture')
-  let sermon_topic = document.querySelector('sermon-topic')
+async function prompt_recommendations() {
+  const date = document.querySelector('#sermon-date').value
+  const scripture = document.querySelector('#scripture').value
+  const sermon_topic = document.querySelector('#sermon-topic').value
+
+  return { sermon_date, scripture, sermon_topic }
 }
