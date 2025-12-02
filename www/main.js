@@ -57,14 +57,58 @@ recButton.addEventListener('submit', async e => {
   return false
 })
 
-async function prompt_recommendations() {
+let hymns = []
+async function loadHymns() {
+  const res = await fetch('/data/hymns.json')
+  hymns = await res.json()
+}
+
+window.addEventListener('load', loadHymns)
+
+const form = document.querySelector('#recommendation-form')
+
+function prompt_recommendations() {
   const date = document.querySelector('#sermon-date').value
-  const scripture = document.querySelector('#scripture').value
-  const sermon_topic = document.querySelector('#sermon-topic').value
+  const topic = document.querySelector('#topic-textbox').value
+  const scripture = document.querySelector('#scripture-textbox').value
+
   return `
-Generate worship service hymn recommendations from these:
-Date: ${date}
-Scripture(s): ${scripture}
-Sermon topic: ${sermon_topic}
+You are a worship planning assistant.
+
+SERVICE CONTEXT
+- Date: ${date || 'Not known'}
+- Scriptures: ${scripture || 'Not known'}
+- Sermon topic: ${topic || 'Not known'}
+
+You are given a JSON array of hymns. Each hymn includes fields like:
+- titleId
+- title
+- authors
+- firstLine
+- refrainFirstLine
+- popularity
+- year
+- scriptureRefs
+- text
+
+HYMNS JSON:
+${JSON.stringify(hymns, null, 2)}
+
+TASK:
+From ONLY the hymns in the JSON array above, choose 3-5 hymns that best fit the scriptures and sermon topic from the service context. Use the time of year to pick ones that are relevant to the season (e.g. no christmas songs in august).
+Respond in Markdown with:
+- A bullet list of the chosen hymns (title and titleId)
+- 1-2 sentences for each explaining why it fits.
 `
 }
+
+form.addEventListener('submit', async e => {
+  e.preventDefault()
+
+  const prompt = prompt_recommendations()
+
+  const reply = await chat(prompt)
+  responseBox.innerHTML = marked.parse(reply)
+
+  return false
+})
