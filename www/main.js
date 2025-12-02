@@ -21,7 +21,7 @@ async function chat(message, model = 'gemini-flash-lite-latest', tries = 3) {
         'x-goog-api-key': localStorage.geminiKey,
       },
       body: `{contents:[{parts:[{text:${JSON.stringify(message)}}]}]}`,
-    },
+    }
   )
 
   try {
@@ -139,13 +139,12 @@ const bible_books = [
 ]
 
 function extractBooksFromScripturesInput(input_scriptures) {
-  if (!input_scriptures) return []
-  const text = input_scriptures.toLowerCase()
-  const found = new Set()
+  const lowercase_scriptures = input_scriptures.toLowerCase()
+  const found_books = new Set()
   for (const book of bible_books) {
-    if (text.includes(book.toLowerCase())) {
-      found.add(book)
+    if (lowercase_scriptures.includes(book.toLowerCase())) {
+      found_books.add(book)
     }
   }
-  return Array.from(found)
+  return Array.from(found_books)
 }
