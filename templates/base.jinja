@@ -7,6 +7,7 @@
     <link rel="stylesheet" type="text/css" href="{{ root_dir or '' }}style.css" />
     <link rel="icon" type="image/svg+xml" href="{{ root_dir or '' }}favicon.svg">
     <link rel="manifest" href="{{ root_dir or '' }}manifest.webmanifest">
+    {% block script %}{% endblock script %}
     <script src="{{ root_dir or '' }}main.js" defer></script>
     <title>{{ page_title  or 'Psalm Pilot' }}</title>
   </head>
@@ -18,7 +19,7 @@
           <img src="{{ root_dir or '' }}favicon.svg" alt="Psalm Pilot Logo" width="48" height="48">
           <h1>Psalm Pilot</h1>
         </a>
-        <a href="/recommendations.html" class="recommendations-page">Recommendations</a>
+        <a href="{{ root_dir or ''}}recommendations.html" class="recommendations-page">Recommendations</a>
           
         {% block header %}{% endblock header %} 
       </nav>

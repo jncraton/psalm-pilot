@@ -24,6 +24,12 @@ def check_directory_fields(page: Page, hymn: dict):
         expect(page.get_by_text(key.capitalize()).locator("+ dd")).to_contain_text(str(hymn[key]))
 
 
+def check_scripture_refs(page: Page, hymn: dict):
+    # Confirm all scripture references match
+    if hymn['scriptureRefs']:
+        expect(page.locator("li")).to_have_text(hymn['scriptureRefs'])
+
+
 def check_lyrics(page: Page, hymn: dict):
     # Confirm the hymn lyrics on current page
     if hymn['text']:
@@ -39,6 +45,7 @@ def check_hymn_link(page: Page, hymn: dict):
 
 @pytest.mark.parametrize("check", [
     check_directory_fields,
+    check_scripture_refs,
     check_lyrics,
     check_hymn_link,
 ])
