@@ -62,5 +62,10 @@ async function prompt_recommendations() {
   const scripture = document.querySelector('#scripture').value
   const sermon_topic = document.querySelector('#sermon-topic').value
 
-  return { sermon_date, scripture, sermon_topic }
+  return `
+Generate worship service hymn recommendations from these:
+Date: ${date}
+Scripture(s): ${scripture}
+Sermon topic: ${sermon_topic}
+`
 }
