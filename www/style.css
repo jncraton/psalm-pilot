@@ -42,6 +42,11 @@ header nav {
   display: flex;
   justify-content: start;
   align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  column-gap: 10vw;
+  row-gap: 2vw;
+  
 }
 
 header nav a {
@@ -49,7 +54,6 @@ header nav a {
   gap: 5%;
   color: white;
   text-decoration: none;
-  margin-right: 10em;
 }
 
 header nav h1 {
@@ -61,6 +65,7 @@ header nav h1 {
 nav input[type='search'] {
   height: 35px;
   width: min(400px, 25%);
+  min-width: 150px;
   border: 0;
   border-radius: 28px;
 
@@ -203,22 +208,4 @@ div.textbox input[type='submit']:hover {
   border: 2px solid #000000;
   background-color: #ffffff;
   color: #000000;
-}
-
-
-@media only screen and (max-width: 1264px) {
-  header nav {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: start;
-  align-items: center;
-  gap: 1%;
-  }
-  header nav a{
-  margin-bottom: 5px;
-  } 
-
-  nav input[type='search'] {
-  width: min(400px, 35%);
-  }
 }
