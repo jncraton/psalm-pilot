@@ -61,11 +61,91 @@ async function prompt_recommendations() {
   const date = document.querySelector('#sermon-date').value
   const scripture = document.querySelector('#scripture').value
   const sermon_topic = document.querySelector('#sermon-topic').value
-
   return `
 Generate worship service hymn recommendations from these:
 Date: ${date}
 Scripture(s): ${scripture}
 Sermon topic: ${sermon_topic}
 `
+}
+
+const bible_books = [
+  'Genesis',
+  'Exodus',
+  'Leviticus',
+  'Numbers',
+  'Deuteronomy',
+  'Joshua',
+  'Judges',
+  'Ruth',
+  '1 Samuel',
+  '2 Samuel',
+  '1 Kings',
+  '2 Kings',
+  '1 Chronicles',
+  '2 Chronicles',
+  'Ezra',
+  'Nehemiah',
+  'Esther',
+  'Job',
+  'Psalms',
+  'Proverbs',
+  'Ecclesiastes',
+  'Song of Solomon',
+  'Isaiah',
+  'Jeremiah',
+  'Lamentations',
+  'Ezekiel',
+  'Daniel',
+  'Hosea',
+  'Joel',
+  'Amos',
+  'Obadiah',
+  'Jonah',
+  'Micah',
+  'Nahum',
+  'Habakkuk',
+  'Zephaniah',
+  'Haggai',
+  'Zechariah',
+  'Malachi',
+  'Matthew',
+  'Mark',
+  'Luke',
+  'John',
+  'Acts',
+  'Romans',
+  '1 Corinthians',
+  '2 Corinthians',
+  'Galatians',
+  'Ephesians',
+  'Philippians',
+  'Colossians',
+  '1 Thessalonians',
+  '2 Thessalonians',
+  '1 Timothy',
+  '2 Timothy',
+  'Titus',
+  'Philemon',
+  'Hebrews',
+  'James',
+  '1 Peter',
+  '2 Peter',
+  '1 John',
+  '2 John',
+  '3 John',
+  'Jude',
+  'Revelation',
+]
+
+function extractBooksFromScripturesInput(input_scriptures) {
+  if (!input_scriptures) return []
+  const text = input_scriptures.toLowerCase()
+  const found = new Set()
+  for (const book of bible_books) {
+    if (text.includes(book.toLowerCase())) {
+      found.add(book)
+    }
+  }
+  return Array.from(found)
 }
