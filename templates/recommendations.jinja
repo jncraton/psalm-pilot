@@ -10,6 +10,13 @@
   <h2>Recommendations</h2>
   <div class="filters">
 
+    <div class="datebox">
+      <form>
+        <label for="sermon-date">Enter sermon date:</label>
+        <input type="date" id="sermon-date" name="sermonDate">
+      </form>
+    </div>
+
     <div class="textbox">
       <form>
         <label for="textbox">Input for your service (date/time of year, scripture(s), sermon topic):</label>
@@ -17,19 +24,11 @@
         <input type="submit" value="Get Recommendations">
       </form>
     
-  </div>
+    </div>
 
-  <div class="datebox">
-    <form>
-      <label for="sermon-date">Enter sermon date:</label>
-      <input type="date" id="sermon-date" name="sermonDate">
-      <button type="submit">Submit</button>
-    </form>
-  </div>
-
-  <div class="textbox-response">
-    <h2>Service Recommendation</h2>
-  <div class="response-text"></div>
+    <div class="textbox-response">
+      <h2>Service Recommendation</h2>
+    <div class="response-text"></div>
 
   </div>
 {% endblock %}
