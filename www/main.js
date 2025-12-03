@@ -21,7 +21,7 @@ async function chat(message, model = 'gemini-2.5-flash', tries = 3) {
         'x-goog-api-key': localStorage.geminiKey,
       },
       body: `{contents:[{parts:[{text:${JSON.stringify(message)}}]}]}`,
-    },
+    }
   )
 
   try {
@@ -59,7 +59,7 @@ recButton.addEventListener('submit', async e => {
 
 let hymns = []
 async function loadHymns() {
-  const res = await fetch('./data/hymns.json')
+  const res = await fetch('/hymns/hymns.json')
   hymns = await res.json()
 }
 
