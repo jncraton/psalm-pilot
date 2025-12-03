@@ -6,6 +6,7 @@ venv/
 __pycache__/
 
 # Ignore the hymns data unless it is in the right directory
+hymns.json
 hymns_list.json
 !data/hymns.json
 

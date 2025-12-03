@@ -54,11 +54,11 @@ for hymn in hymns:
         hymn_page.write(filled_hymn_template)
 
 # Create hymns list json file
-hymns = sorted(
+hymns_list = sorted(
     str(p.as_posix())
     for p in Path("hymns").rglob("*")
     if p.is_file())
-Path("hymns_list.json").write_text(json.dumps(hymns, indent=2), encoding="utf-8")
+Path("hymns_list.json").write_text(json.dumps(hymns_list, indent=2), encoding="utf-8")
 
 sw_template = env.get_template('service-worker.jinja')
     
@@ -70,3 +70,6 @@ with open('service-worker.js', 'w', encoding='utf8') as f:
 
 print(f"Built service-worker.js with version: {version}")
 
+# Copy the hymns json file over to the www/hymns directory for LLM context
+with open('hymns/hymns.json', 'w', encoding='utf8') as hymns_data_copy:
+    json.dump(hymns, hymns_data_copy, indent=2)
