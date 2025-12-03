@@ -5,9 +5,8 @@ venv/
 .venv/
 __pycache__/
 
-# Ignore the hymns data unless it is in the right directory
-hymns.json
-hymns_list.json
+# Ignore json except hymns data
+*.json
 !data/hymns.json
 
 # Ignore the rendered version of the web app
