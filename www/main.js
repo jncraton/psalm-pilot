@@ -99,6 +99,8 @@ Respond in Markdown with a service order recommendation that includes:
 
 form.addEventListener('submit', async e => {
   e.preventDefault()
+  responseBox.innerHTML = "Please be patient, I am working very slowly..."
+
 
   const prompt = prompt_recommendations()
 
