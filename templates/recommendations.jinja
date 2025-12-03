@@ -12,14 +12,25 @@
 
     <div class="textbox">
       <form>
-        <label for="textbox">Input for your service (date/time of year, scripture(s), sermon topic):</label>
-        <textarea type="text" name="textbox" placeholder="December 15, Advent 3
-John 1:6–8, 19–28
-Sermon Topic: The Light of the World"></textarea>
-        <input type="submit" value="Get Recommendations">
+        <div>
+          <label for="textbox">date/time of year</label>
+          <input id="time-of-year" type="text" placeholder="December 15, Advent 3">
+        </div>  
+        <div>  
+          <label for="textbox">scripture(s)</label>
+          <input id="scripture-s" type="text" placeholder="John 1:6–8, 19–28">
+        </div>  
+        <div> 
+          <label for="textbox">sermon topic</label>
+          <input id="sermon-topic" type="text" placeholder="Sermon Topic: The Light of the World">
+        </div>  
+        <div>  
+          <label for="textbox">Your result</label>
+          <textarea readonly type="text" name="textbox"></textarea>
+          <input type="submit" value="Get Recommendations">
+        </div>   
       </form>
-    
-  </div>
+    </div>
 
   <div class="textbox-response">
     <h2>Service Recommendation</h2>

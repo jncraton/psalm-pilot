@@ -164,6 +164,33 @@ a.recommendations-page:hover {
   color: #a70000;
 }
 
+.textbox form > div {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 18px;
+}
+
+form div input{
+  box-sizing: border-box;
+  margin-top: 10px;
+  height: 40px;
+  width: min(400px, 35%);
+  max-width: 250px;
+  border: 0;
+  border-radius: 28px;
+  border: 1px solid #000000;
+  color: #000000;
+  min-width: 100%;
+  padding-left: 10px;
+
+}
+
+form div input textarea::placeholder{
+  color: #c4c4c4;
+  font-style: italic;
+  opacity: 0.7;
+}
+
 .textbox textarea {
   resize: vertical;
   white-space: pre-wrap;
@@ -172,13 +199,14 @@ a.recommendations-page:hover {
   border: 1px solid #000000;
   padding: 5px 10px;
   min-height: 100px;
+  margin-top: 10px;
 }
 
 .textbox label {
   font-family: system-ui, sans-serif;
-  color: #1f1f1f;
-  margin-bottom: 0.4rem;
+  color: #000000;
   display: block;
+  text-transform: capitalize;
 }
 
 div.textbox input[type='submit'] {
@@ -191,10 +219,11 @@ div.textbox input[type='submit'] {
   background-color: #a70000;
   color: #ffffff;
   text-transform: uppercase;
+  min-width: 200px;
 }
 
 .textbox textarea::placeholder {
-  color: #8f8f8f;
+  color: #c4c4c4;
   font-style: italic;
   opacity: 0.7;
 }

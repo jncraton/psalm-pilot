@@ -56,3 +56,19 @@ recButton.addEventListener('submit', async e => {
   responseBox.innerHTML = marked.parse(reply)
   return false
 })
+
+const timeOfYear   = document.getElementById("time-of-year");
+const scriptureS   = document.getElementById("scripture-s");
+const sermonTopic  = document.getElementById("sermon-topic");
+
+function updateTextarea() {
+    textInput.value =
+      (timeOfYear.value || "") + "\n" +
+      (scriptureS.value || "") + "\n" +
+      (sermonTopic.value || "");
+  }
+
+  timeOfYear.addEventListener("input", updateTextarea);
+  scriptureS.addEventListener("input", updateTextarea);
+  sermonTopic.addEventListener("input", updateTextarea);
+          
