@@ -5,7 +5,7 @@ function search_title() {
   })
 }
 
-async function chat(message, model = 'gemini-2.5-flash', tries = 3) {
+async function chat(message, model = 'gemini-2.5-flash-lite', tries = 3) {
   if (tries < 1) {
     throw new Error('Chat retries exceeded')
   }
@@ -21,7 +21,7 @@ async function chat(message, model = 'gemini-2.5-flash', tries = 3) {
         'x-goog-api-key': localStorage.geminiKey,
       },
       body: `{contents:[{parts:[{text:${JSON.stringify(message)}}]}]}`,
-    },
+    }
   )
 
   try {
