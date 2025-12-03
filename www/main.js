@@ -97,10 +97,12 @@ ${JSON.stringify(hymns, null, 2)}
 TASK:
 From ONLY the hymns in the JSON array above, choose 3-5 hymns that best fit the scriptures and sermon topic from the service context. Use the time of year to pick ones that are relevant to the season (e.g. no christmas songs in august).
 Respond in Markdown with a service order recommendation that includes:
-- A bullet list of the chosen hymns (title and titleId)
+- additional scriptures that can be read
+- A list of the chosen hymns (title)
 - 1-2 sentences for each explaining why it fits.
-- link to the chosen hymn page on this application
-- scripture reading
+- link to the chosen hymn page using "https://jncraton.github.io/psalm-pilot/hymns/{titleid}"
+- anything you recommend give what the person reading it should say about it this includes the benediction
+- make sure to include where the sermon message should go in the order
 `
 }
 
