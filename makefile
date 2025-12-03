@@ -26,7 +26,7 @@ install:
 	pip install -r requirements.txt
 
 build:
-	python render.py
+	python ./build/render.py
 
 serve:
 	cd ./www && python -m http.server
