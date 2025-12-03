@@ -48,14 +48,14 @@ const recButton = document.querySelector('form')
 const textInput = document.querySelector('textarea')
 const responseBox = document.querySelector('.response-text')
 
-recButton.addEventListener('submit', async e => {
-  e.preventDefault()
-  const msg = textInput.value
-  console.log(msg)
-  const reply = await chat(msg)
-  responseBox.innerHTML = marked.parse(reply)
-  return false
-})
+// recButton.addEventListener('submit', async e => {
+//   e.preventDefault()
+//   const msg = textInput.value
+//   console.log(msg)
+//   const reply = await chat(msg)
+//   responseBox.innerHTML = marked.parse(reply)
+//   return false
+// })
 
 let hymns = []
 async function loadHymns() {
@@ -96,9 +96,11 @@ ${JSON.stringify(hymns, null, 2)}
 
 TASK:
 From ONLY the hymns in the JSON array above, choose 3-5 hymns that best fit the scriptures and sermon topic from the service context. Use the time of year to pick ones that are relevant to the season (e.g. no christmas songs in august).
-Respond in Markdown with:
+Respond in Markdown with a service order recommendation that includes:
 - A bullet list of the chosen hymns (title and titleId)
 - 1-2 sentences for each explaining why it fits.
+- link to the chosen hymn page on this application
+- scripture reading
 `
 }
 
@@ -108,6 +110,7 @@ form.addEventListener('submit', async e => {
   const prompt = prompt_recommendations()
 
   const reply = await chat(prompt)
+  console.log(reply)
   responseBox.innerHTML = marked.parse(reply)
 
   return false
