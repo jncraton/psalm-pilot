@@ -48,15 +48,6 @@ const recButton = document.querySelector('form')
 const textInput = document.querySelector('textarea')
 const responseBox = document.querySelector('.response-text')
 
-// recButton.addEventListener('submit', async e => {
-//   e.preventDefault()
-//   const msg = textInput.value
-//   console.log(msg)
-//   const reply = await chat(msg)
-//   responseBox.innerHTML = marked.parse(reply)
-//   return false
-// })
-
 let hymns = []
 async function loadHymns() {
   const res = await fetch('/hymns/hymns.json')
