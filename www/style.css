@@ -58,12 +58,13 @@ header nav h1 {
   white-space: nowrap;
   margin: auto;
   color: white;
+  align-self: center;
 }
 
 nav input[type='search'] {
   height: 35px;
   width: min(400px, 25%);
-  min-width: 150px;
+  min-width: 240px;
   border: 0;
   border-radius: 28px;
 
@@ -180,10 +181,23 @@ a.recommendations-page.active {
   font-weight: 600;
 }
 
-.textbox form > div {
+.datebox form > div {
   display: flex;
   flex-direction: column;
   margin-bottom: 18px;
+}
+
+.datebox .row {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 18px;
+  flex-direction: row
+}
+
+.datebox .row > div {
+  flex: 1; 
+  display: flex;
+  flex-direction: column;
 }
 
 form div input {
@@ -200,13 +214,7 @@ form div input {
   padding-left: 10px;
 }
 
-form div input textarea::placeholder {
-  color: #c4c4c4;
-  font-style: italic;
-  opacity: 0.7;
-}
-
-.textbox textarea {
+.datebox textarea {
   resize: vertical;
   white-space: pre-wrap;
   overflow-wrap: break-word;
@@ -217,14 +225,38 @@ form div input textarea::placeholder {
   margin-top: 10px;
 }
 
-.textbox label {
+.datebox label {
   font-family: system-ui, sans-serif;
   color: #000000;
   display: block;
   text-transform: capitalize;
 }
 
-div.textbox input[type='submit'] {
+.datebox input[type='text'],
+.datebox input[type='date'],
+.datebox textarea {
+  box-sizing: border-box;
+  margin-top: 10px;
+  height: 40px;
+  width: min(400px, 35%);
+  max-width: 250px;
+  border-radius: 28px;
+  border: 1px solid #000000;
+  color: #000000;
+  min-width: 100%;
+  padding: 5px 10px;
+}
+
+.datebox textarea {
+  resize: vertical;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+  border-radius: 10px;
+  min-height: 100px;
+}
+
+
+div.datebox input[type='submit'] {
   margin-top: 10px;
   height: 40px;
   width: min(400px, 35%);
@@ -237,20 +269,21 @@ div.textbox input[type='submit'] {
   min-width: 200px;
 }
 
-.textbox textarea::placeholder {
-  color: #c4c4c4;
+.datebox input::placeholder,
+.datebox textarea::placeholder {
+  color: #8f8f8f;
   font-style: italic;
   opacity: 0.7;
 }
 
-div.textbox input[type='submit']:hover {
+div.datebox input[type='submit']:hover {
   border: 2px solid #000000;
   background-color: #ffffff;
   color: #000000;
 }
 
 /* Mobile */
-@media (max-width: 1400px) {
+@media (max-width: 1200px) {
   header nav {
     flex-direction: column;
     align-items: stretch;
@@ -268,9 +301,9 @@ div.textbox input[type='submit']:hover {
 
   header nav > input[type='search'] {
     order: 2;
-    width: 100%;
-    align-items: center;
+    width: 60%;
     margin-bottom: 0;
+    align-self: center;
   }
 
   header nav > div {
@@ -280,5 +313,12 @@ div.textbox input[type='submit']:hover {
     justify-content: flex-start;
     align-self: flex-start;
     margin-top: 0.5rem;
+  }
+
+  .datebox .row {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 18px;
+  flex-direction: column
   }
 }

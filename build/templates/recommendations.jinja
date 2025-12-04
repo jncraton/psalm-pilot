@@ -10,31 +10,29 @@
   <h2>Recommendations</h2>
   <div class="filters">
 
-    <div class="textbox">
-      <form>
+    <div class="datebox">
+      <form id="recommendation-form">
+        <div class="row">
+          <div>
+            <label for="sermon-date">Enter sermon date:</label>
+            <input type="date" id="sermon-date" name="sermonDate">
+          </div>
+          <div>
+            <label for="topic-textbox">Enter the topic of the sermon:</label>
+            <input type="text" id="topic-textbox" name="topic-textbox" placeholder="Sermon Topic: The Light of the World">
+          </div>
+        </div>
         <div>
-          <label for="textbox">date/time of year</label>
-          <input id="time-of-year" type="text" placeholder="December 15, Advent 3">
-        </div>  
-        <div>  
-          <label for="textbox">scripture(s)</label>
-          <input id="scripture-s" type="text" placeholder="John 1:6–8, 19–28">
-        </div>  
-        <div> 
-          <label for="textbox">sermon topic</label>
-          <input id="sermon-topic" type="text" placeholder="Sermon Topic: The Light of the World">
-        </div>  
-        <div>  
-          <label for="textbox">Your result</label>
-          <textarea readonly type="text" name="textbox"></textarea>
+          <label for="scripture-textbox">Enter the Scripture(s) being used:</label>
+          <textarea id="scripture-textbox" name="scripture-textbox" placeholder="John 1:6–8, 19–28"></textarea>
           <input type="submit" value="Get Recommendations">
-        </div>   
+        </div>
       </form>
     </div>
 
-  <div class="textbox-response">
-    <h2>Service Recommendation</h2>
-  <div class="response-text"></div>
+    <div class="textbox-response">
+      <h2>Service Recommendation</h2>
+    <div class="response-text"></div>
 
   </div>
 {% endblock %}
