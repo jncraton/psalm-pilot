@@ -73,9 +73,6 @@ aPoints.forEach(btn => {
   }
 })
 
-timeOfYear.addEventListener('input', updateTextarea)
-scriptureS.addEventListener('input', updateTextarea)
-sermonTopic.addEventListener('input', updateTextarea)
 let hymns = []
 async function loadHymns() {
   const res = await fetch('/hymns/hymns.json')
