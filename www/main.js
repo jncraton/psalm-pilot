@@ -48,6 +48,31 @@ const recButton = document.querySelector('form')
 const textInput = document.querySelector('textarea')
 const responseBox = document.querySelector('.response-text')
 
+recButton.addEventListener('submit', async e => {
+  e.preventDefault()
+  const msg = textInput.value
+  console.log(msg)
+  const reply = await chat(msg)
+  responseBox.innerHTML = marked.parse(reply)
+  return false
+})
+
+//Pgaes Button
+const currentPath = window.location.pathname
+const aPoints = document.querySelectorAll(
+  'a.directory-page, a.recommendations-page',
+)
+
+aPoints.forEach(btn => {
+  const href = btn.getAttribute('href')
+  aPoints.forEach(link => link.classList.remove('active'))
+  if (href && currentPath.endsWith(href)) {
+    btn.classList.add('active')
+  } else if (href === '/') {
+    btn.classList.add('active')
+  }
+})
+
 let hymns = []
 async function loadHymns() {
   const res = await fetch('/hymns/hymns.json')
@@ -97,9 +122,53 @@ Respond in Markdown with a service order recommendation that includes:
 `
 }
 
+function validateRecommendationForm() {
+  const dateInput = document.querySelector('#sermon-date')
+  const topicInput = document.querySelector('#topic-textbox')
+  const scriptureInput = document.querySelector('#scripture-textbox')
+  const responseTitle = document.querySelector('.textbox-response h2')
+
+  const missing = []
+
+  if (!dateInput.value.trim()) {
+    missing.push('Sermon date')
+  }
+  if (!topicInput.value.trim()) {
+    missing.push('Topic of the sermon')
+  }
+  if (!scriptureInput.value.trim()) {
+    missing.push('Scripture(s) being used')
+  }
+
+  if (missing.length > 0) {
+    if (responseTitle) {
+      responseTitle.style.display = 'none'
+    }
+
+    responseBox.innerHTML = `
+      <p style="color:#a70000; font-weight:bold;">
+        Please complete the following fields: ${missing.join(', ')}.
+      </p>
+    `
+    return false
+  }
+
+  return true
+}
+
 if (form) {
   form.addEventListener('submit', async e => {
     e.preventDefault()
+
+    if (!validateRecommendationForm()) {
+      return false
+    }
+
+    const h2Title = document.querySelector('.textbox-response h2')
+    if (h2Title) {
+      h2Title.style.display = 'block'
+    }
+
     responseBox.innerHTML = 'Please be patient, I am working very slowly...'
 
     const prompt = prompt_recommendations()

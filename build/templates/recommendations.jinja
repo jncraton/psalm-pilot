@@ -12,15 +12,21 @@
 
     <div class="datebox">
       <form id="recommendation-form">
-        <label for="sermon-date">Enter sermon date:</label>
-        <input type="date" id="sermon-date" name="sermonDate">
-
-        <label for="topic-textbox">Enter the topic of the sermon:</label>
-        <input type="text" id="topic-textbox" name="topic-textbox"><br>
-
-        <label for="scripture-textbox">Enter the Scripture(s) being used:</label>
-        <textarea id="scripture-textbox" name="scripture-textbox"></textarea>
-        <input type="submit" value="Get Recommendations">
+        <div class="row">
+          <div>
+            <label for="sermon-date">Enter sermon date:</label>
+            <input type="date" id="sermon-date" name="sermonDate">
+          </div>
+          <div>
+            <label for="topic-textbox">Enter the topic of the sermon:</label>
+            <input type="text" id="topic-textbox" name="topic-textbox" placeholder="Sermon Topic: The Light of the World">
+          </div>
+        </div>
+        <div>
+          <label for="scripture-textbox">Enter the Scripture(s) being used:</label>
+          <textarea id="scripture-textbox" name="scripture-textbox" placeholder="John 1:6–8, 19–28"></textarea>
+          <input type="submit" value="Get Recommendations">
+        </div>
       </form>
     </div>
 
