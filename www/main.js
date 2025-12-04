@@ -57,6 +57,20 @@ recButton.addEventListener('submit', async e => {
   return false
 })
 
+
+//Pgaes Button
+const currentPath = window.location.pathname; 
+const aPoints = document.querySelectorAll("a.directory-page, a.recommendations-page")
+
+aPoints.forEach(btn => {
+  const href = btn.getAttribute("href");
+
+  if (href && currentPath.endsWith(href)) {
+    btn.classList.add("active");
+  };
+});
+
+//Recomendation input
 const timeOfYear = document.getElementById('time-of-year')
 const scriptureS = document.getElementById('scripture-s')
 const sermonTopic = document.getElementById('sermon-topic')

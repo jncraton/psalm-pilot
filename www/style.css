@@ -20,6 +20,7 @@ main {
 header {
   background-color: var(--color);
   color: white;
+  padding-block: 0;
 }
 
 table {
@@ -43,7 +44,6 @@ header nav {
   justify-content: start;
   align-items: center;
   justify-content: space-between;
-  flex-wrap: wrap;
   column-gap: 10vw;
   row-gap: 2vw;
 }
@@ -145,21 +145,34 @@ dt::after {
 }
 
 /* Recommendations page */
-a.recommendations-page {
-  min-width: 200px;
+header nav div{
+  display: flex;
+  align-self: flex-end;
+}
+
+a.directory,
+a.recommendations-page{
+  min-width: 50px;
   border: 2px solid #ffffff;
-  border-radius: 28px;
-  padding: 8px 6px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  padding: 2px 6px;
   text-transform: uppercase;
   font-size: small;
 
   display: flex;
-  align-content: center;
   justify-content: center;
   text-decoration: none;
 }
 
-a.recommendations-page:hover {
+a.directory:hover,
+a.recommendations-page:hover{
+  background-color: #ffffff;
+  color: #a70000;
+}
+
+a.directory.active,
+a.recommendations-page.active {
   background-color: #ffffff;
   color: #a70000;
 }
@@ -231,4 +244,39 @@ div.textbox input[type='submit']:hover {
   border: 2px solid #000000;
   background-color: #ffffff;
   color: #000000;
+}
+
+
+/* Mobile */
+@media (max-width: 1400px) {
+  header nav {
+    flex-direction: column;   
+    align-items: stretch;
+    row-gap: 0.5rem;
+  }
+
+  header nav > a:first-child {
+    order: 1;
+    align-self: center;          
+  }
+
+  header nav > a:first-child {
+    align-self: center;
+  }
+
+  header nav > input[type='search'] {
+    order: 2;
+    width: 100%;
+    align-items: center;
+    margin-bottom: 0;
+  }
+
+  header nav > div {
+    order: 3;
+    display: flex;
+    gap: 0.5rem;
+    justify-content: flex-start;    
+    align-self: flex-start;       
+    margin-top: 0.5rem;
+  }
 }
