@@ -91,21 +91,23 @@ Respond in Markdown with a service order recommendation that includes:
 - additional scriptures that can be read
 - A list of the chosen hymns (title)
 - 1-2 sentences for each explaining why it fits.
-- link to the chosen hymn page using "https://jncraton.github.io/psalm-pilot/hymns/{titleid}"
+- link to the chosen hymn page using "https://jncraton.github.io/psalm-pilot/hymns/{titleId}.html"
 - anything you recommend give what the person reading it should say about it this includes the benediction
 - make sure to include where the sermon message should go in the order
 `
 }
 
-form.addEventListener('submit', async e => {
-  e.preventDefault()
-  responseBox.innerHTML = 'Please be patient, I am working very slowly...'
+if (form) {
+  form.addEventListener('submit', async e => {
+    e.preventDefault()
+    responseBox.innerHTML = 'Please be patient, I am working very slowly...'
 
-  const prompt = prompt_recommendations()
+    const prompt = prompt_recommendations()
 
-  const reply = await chat(prompt)
-  console.log(reply)
-  responseBox.innerHTML = marked.parse(reply)
+    const reply = await chat(prompt)
+    console.log(reply)
+    responseBox.innerHTML = marked.parse(reply)
 
-  return false
-})
+    return false
+  })
+}
