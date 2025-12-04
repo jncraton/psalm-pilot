@@ -177,6 +177,7 @@ a.directory-page.active,
 a.recommendations-page.active {
   background-color: #ffffff;
   color: #a70000;
+  font-weight: 600;
 }
 
 .textbox form > div {
