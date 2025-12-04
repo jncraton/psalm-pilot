@@ -144,14 +144,14 @@ dt::after {
 }
 
 /* Recommendations page */
-header nav div{
+header nav div {
   display: flex;
   align-self: flex-end;
   gap: 0.5rem;
 }
 
 a.directory-page,
-a.recommendations-page{
+a.recommendations-page {
   min-width: 50px;
   border: 2px solid #ffffff;
   border-top-left-radius: 10px;
@@ -166,7 +166,7 @@ a.recommendations-page{
 }
 
 a.directory-page:hover,
-a.recommendations-page:hover{
+a.recommendations-page:hover {
   background-color: #ffffff;
   color: #a70000;
 }
@@ -246,18 +246,17 @@ div.textbox input[type='submit']:hover {
   color: #000000;
 }
 
-
 /* Mobile */
 @media (max-width: 1400px) {
   header nav {
-    flex-direction: column;   
+    flex-direction: column;
     align-items: stretch;
     row-gap: 0.5rem;
   }
 
   header nav > a:first-child {
     order: 1;
-    align-self: center;          
+    align-self: center;
   }
 
   header nav > a:first-child {
@@ -275,8 +274,8 @@ div.textbox input[type='submit']:hover {
     order: 3;
     display: flex;
     gap: 0.5rem;
-    justify-content: flex-start;    
-    align-self: flex-start;       
+    justify-content: flex-start;
+    align-self: flex-start;
     margin-top: 0.5rem;
   }
 }

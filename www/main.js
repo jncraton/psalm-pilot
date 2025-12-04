@@ -57,20 +57,21 @@ recButton.addEventListener('submit', async e => {
   return false
 })
 
-
 //Pgaes Button
-const currentPath = window.location.pathname; 
-const aPoints = document.querySelectorAll("a.directory-page, a.recommendations-page")
+const currentPath = window.location.pathname
+const aPoints = document.querySelectorAll(
+  'a.directory-page, a.recommendations-page',
+)
 
 aPoints.forEach(btn => {
-  const href = btn.getAttribute("href");
-  aPoints.forEach(link => link.classList.remove('active'));
+  const href = btn.getAttribute('href')
+  aPoints.forEach(link => link.classList.remove('active'))
   if (href && currentPath.endsWith(href)) {
-    btn.classList.add("active");
+    btn.classList.add('active')
   } else if (href === '/') {
-    btn.classList.add("active");
+    btn.classList.add('active')
   }
-});
+})
 
 //Recomendation input
 const timeOfYear = document.getElementById('time-of-year')
