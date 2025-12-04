@@ -153,10 +153,12 @@ header nav div {
 a.directory-page,
 a.recommendations-page {
   min-width: 50px;
-  border: 2px solid #ffffff;
+  border-left: 2px solid #ffffff;
+  border-right: 2px solid #ffffff;
+  border-top: 2px solid #ffffff;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
-  padding: 2px 6px;
+  padding: 6px 10px;
   text-transform: uppercase;
   font-size: small;
 
