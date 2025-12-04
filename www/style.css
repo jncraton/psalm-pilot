@@ -242,7 +242,6 @@ form div input {
   font-family: system-ui, sans-serif;
   color: #000000;
   display: block;
-  text-transform: capitalize;
 }
 
 .datebox input[type='text'],
