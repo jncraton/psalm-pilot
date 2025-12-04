@@ -62,11 +62,13 @@ recButton.addEventListener('submit', async e => {
 const currentPath = window.location.pathname; 
 const aPoints = document.querySelectorAll("a.directory-page, a.recommendations-page")
 
-aPoints.forEach(link => {
-  const href = link.getAttribute("href");
-
-  if (currentPath === href || (currentPath === "/index.html" && href === "/")) {
-    link.classList.add("active");
+aPoints.forEach(btn => {
+  const href = btn.getAttribute("href");
+  aPoints.forEach(link => link.classList.remove('active'));
+  if (href && currentPath.endsWith(href)) {
+    btn.classList.add("active");
+  } else if (href === '/') {
+    btn.classList.add("active");
   }
 });
 
