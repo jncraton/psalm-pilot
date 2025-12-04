@@ -200,6 +200,19 @@ a.recommendations-page.active {
   flex-direction: column;
 }
 
+/* Light gray text inside date input */
+input[type='date']::-webkit-datetime-edit,
+input[type='date']::-webkit-datetime-edit-text,
+input[type='date']::-webkit-datetime-edit-month-field,
+input[type='date']::-webkit-datetime-edit-day-field,
+input[type='date']::-webkit-datetime-edit-year-field {
+  color: #9d9d9d;
+}
+
+input[type='date']::-webkit-calendar-picker-indicator {
+  opacity: 0.6;
+}
+
 form div input {
   box-sizing: border-box;
   margin-top: 10px;
