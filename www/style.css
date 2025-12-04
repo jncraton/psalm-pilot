@@ -44,7 +44,6 @@ header nav {
   justify-content: start;
   align-items: center;
   justify-content: space-between;
-  column-gap: 10vw;
   row-gap: 2vw;
 }
 
