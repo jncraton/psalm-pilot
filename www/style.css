@@ -265,6 +265,7 @@ form div input {
   overflow-wrap: break-word;
   border-radius: 10px;
   min-height: 100px;
+  margin-bottom: 18px;
 }
 
 div.datebox input[type='submit'] {
@@ -277,7 +278,7 @@ div.datebox input[type='submit'] {
   background-color: #a70000;
   color: #ffffff;
   text-transform: uppercase;
-  min-width: 200px;
+  min-width: 470px;
 }
 
 .datebox input::placeholder,
@@ -291,6 +292,10 @@ div.datebox input[type='submit']:hover {
   border: 2px solid #000000;
   background-color: #ffffff;
   color: #000000;
+}
+
+.textbox-response h2 {
+  display: none;
 }
 
 /* Mobile */

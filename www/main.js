@@ -122,9 +122,53 @@ Respond in Markdown with a service order recommendation that includes:
 `
 }
 
+function validateRecommendationForm() {
+  const dateInput = document.querySelector('#sermon-date')
+  const topicInput = document.querySelector('#topic-textbox')
+  const scriptureInput = document.querySelector('#scripture-textbox')
+  const responseTitle = document.querySelector('.textbox-response h2')
+
+  const missing = []
+
+  if (!dateInput.value.trim()) {
+    missing.push('Sermon date')
+  }
+  if (!topicInput.value.trim()) {
+    missing.push('Topic of the sermon')
+  }
+  if (!scriptureInput.value.trim()) {
+    missing.push('Scripture(s) being used')
+  }
+
+  if (missing.length > 0) {
+    if (responseTitle) {
+      responseTitle.style.display = 'none'
+    }
+
+    responseBox.innerHTML = `
+      <p style="color:#a70000; font-weight:bold;">
+        Please complete the following fields: ${missing.join(', ')}.
+      </p>
+    `
+    return false
+  }
+
+  return true
+}
+
 if (form) {
   form.addEventListener('submit', async e => {
     e.preventDefault()
+
+    if (!validateRecommendationForm()) {
+      return false
+    }
+
+    const h2Title = document.querySelector('.textbox-response h2')
+    if (h2Title) {
+      h2Title.style.display = 'block'
+    }
+
     responseBox.innerHTML = 'Please be patient, I am working very slowly...'
 
     const prompt = prompt_recommendations()
