@@ -10,18 +10,23 @@
   <h2>Recommendations</h2>
   <div class="filters">
 
-    <div class="textbox">
-      <form>
-        <label for="textbox">Input for your service (date/time of year, scripture(s), sermon topic):</label>
-        <textarea type="text" name="textbox"></textarea>
+    <div class="datebox">
+      <form id="recommendation-form">
+        <label for="sermon-date">Enter sermon date:</label>
+        <input type="date" id="sermon-date" name="sermonDate">
+
+        <label for="topic-textbox">Enter the topic of the sermon:</label>
+        <input type="text" id="topic-textbox" name="topic-textbox"><br>
+
+        <label for="scripture-textbox">Enter the Scripture(s) being used:</label>
+        <textarea id="scripture-textbox" name="scripture-textbox"></textarea>
         <input type="submit" value="Get Recommendations">
       </form>
-    
-  </div>
+    </div>
 
-  <div class="textbox-response">
-    <h2>Service Recommendation</h2>
-  <div class="response-text"></div>
+    <div class="textbox-response">
+      <h2>Service Recommendation</h2>
+    <div class="response-text"></div>
 
   </div>
 {% endblock %}
