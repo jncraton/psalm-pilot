@@ -59,6 +59,17 @@ def test_song_popularity(directory_page: Page, hymn_data: list[dict[str, any]]):
     expect(hymn_popularity_cells).to_have_text(hymn_popularity)
 
 
+def test_song_example_text(directory_page: Page, hymn_data: list[dict[str, any]]):
+    # Grab hymn popularity source data
+    hymn_popularity = [f"{hymn['firstLine'] or ''}...{hymn['refrainFirstLine'] or ''}" for hymn in hymn_data]
+
+    # Grab the hymn popularity column cells
+    hymn_popularity_cells = get_column_cells(directory_page, 'Example Text')
+
+    # Verify the data matches
+    expect(hymn_popularity_cells).to_have_text(hymn_popularity)
+
+
 def test_song_authors(directory_page: Page, hymn_data: list[dict[str, any]]):
     # Grab hymn authors source data, converting None to empty string
     hymn_authors = [hymn['authors'] or '' for hymn in hymn_data]
