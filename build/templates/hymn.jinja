@@ -10,6 +10,8 @@
       <dd>{{ hymn.authors }}</dd>
       <dt>Year</dt>
       <dd>{{ hymn.year }}</dd>
+      <dt>Example Text</dt>
+      <dd>{{ hymn.firstLine or '' }}...{{ hymn.refrainFirstLine or '' }}</dd>
       <dt>Popularity</dt>
       <dd>{{ hymn.popularity }}%</dd>
       <dd>
