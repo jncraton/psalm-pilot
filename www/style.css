@@ -150,7 +150,7 @@ header nav div{
   gap: 0.5rem;
 }
 
-a.directory,
+a.directory-page,
 a.recommendations-page{
   min-width: 50px;
   border: 2px solid #ffffff;
@@ -165,13 +165,13 @@ a.recommendations-page{
   text-decoration: none;
 }
 
-a.directory:hover,
+a.directory-page:hover,
 a.recommendations-page:hover{
   background-color: #ffffff;
   color: #a70000;
 }
 
-a.directory.active,
+a.directory-page.active,
 a.recommendations-page.active {
   background-color: #ffffff;
   color: #a70000;
