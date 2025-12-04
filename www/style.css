@@ -191,11 +191,11 @@ a.recommendations-page.active {
   display: flex;
   gap: 20px;
   margin-bottom: 18px;
-  flex-direction: row
+  flex-direction: row;
 }
 
 .datebox .row > div {
-  flex: 1; 
+  flex: 1;
   display: flex;
   flex-direction: column;
 }
@@ -254,7 +254,6 @@ form div input {
   border-radius: 10px;
   min-height: 100px;
 }
-
 
 div.datebox input[type='submit'] {
   margin-top: 10px;
@@ -316,9 +315,9 @@ div.datebox input[type='submit']:hover {
   }
 
   .datebox .row {
-  display: flex;
-  gap: 20px;
-  margin-bottom: 18px;
-  flex-direction: column
+    display: flex;
+    gap: 20px;
+    margin-bottom: 18px;
+    flex-direction: column;
   }
 }
