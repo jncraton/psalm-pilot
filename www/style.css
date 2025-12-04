@@ -147,6 +147,7 @@ dt::after {
 header nav div{
   display: flex;
   align-self: flex-end;
+  gap: 0.5rem;
 }
 
 a.directory,
