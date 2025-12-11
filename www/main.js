@@ -91,7 +91,7 @@ Respond in Markdown with a service order recommendation that includes:
 - additional scriptures that can be read
 - A list of the chosen hymns (title)
 - 1-2 sentences for each explaining why it fits.
-- link to the chosen hymn page using "https://jncraton.github.io/psalm-pilot/hymns/{titleId}.html"
+- link to the chosen hymn page as [{title}](https://jncraton.github.io/psalm-pilot/hymns/{titleId})
 - anything you recommend give what the person reading it should say about it this includes the benediction
 - make sure to include where the sermon message should go in the order
 `
