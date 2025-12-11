@@ -50,7 +50,7 @@ const responseBox = document.querySelector('.response-text')
 
 let hymns = []
 async function loadHymns() {
-  const res = await fetch('/hymns/hymns.json')
+  const res = await fetch('./hymns/hymns.json')
   hymns = await res.json()
 }
 
