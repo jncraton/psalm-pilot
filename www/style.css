@@ -30,11 +30,29 @@ table {
   overflow: hidden;
 }
 
-main textarea {
+textarea {
   display: block;
   box-sizing: border-box;
+  resize: block;
   width: 100%;
   height: 8em;
+}
+
+button,
+input[type='submit'],
+input[type='button'] {
+  background-color: var(--highlight);
+}
+
+button,
+input,
+textarea {
+  font-size: inherit;
+  font-family: inherit;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  margin-block: 0.5em;
+  padding: 0.5em;
 }
 
 /*Nav and Search bar*/
@@ -123,6 +141,10 @@ th:first-child {
 
 th:last-child {
   border-top-right-radius: 7.5px;
+}
+
+label {
+  display: block;
 }
 
 /*Hymn page styling*/
