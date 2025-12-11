@@ -76,10 +76,11 @@ header nav span:last-of-type {
 }
 
 header nav span:last-of-type > a {
-  border: 1px solid white;
+  border: 2px solid white;
   border-bottom: 0;
   padding: 0.4em;
   display: inline-block;
+  border-radius: 8px 8px 0 0;
 }
 
 header nav h1 {
